@@ -1,0 +1,267 @@
+{
+  "IndexPage": {
+    "meta_title": "Boomerang Soluções · Governança técnica do lado do cliente",
+    "meta_description": "Assumimos a governança técnica dos seus projetos críticos de software, automação e infraestrutura. Cobramos os fornecedores até o aceite final, e você fala só com a gente."
+  },
+  "LandingNav": {
+    "home_label": "Boomerang Soluções, início",
+    "logo_alt": "Boomerang Soluções",
+    "main_navigation_label": "Navegação principal",
+    "problem_link": "O problema",
+    "fronts_link": "Como atuamos",
+    "moments_link": "Quando nos chamar",
+    "services_link": "Serviços",
+    "contact_button": "Fale com a gente",
+    "locale_link": "EN",
+    "locale_link_label": "Read in English",
+    "open_menu_label": "Abrir menu",
+    "close_menu_label": "Fechar menu"
+  },
+  "Hero": {
+    "eyebrow": "Representantes técnicos do lado do cliente",
+    "title": "Seu projeto sai da sua mão e volta funcionando<dot>.</dot>",
+    "description": "Assumimos a governança técnica dos seus projetos críticos de software, automação e infraestrutura. Cobramos os fornecedores até o aceite final, e você fala só com a gente.",
+    "primary_cta": "Pedir um diagnóstico em 3 a 5 dias",
+    "secondary_cta": "Como funciona",
+    "marquee_item_1": "Aditivo de prazo",
+    "marquee_item_2": "Escopo inflado",
+    "marquee_item_3": "Sistemas que não conversam",
+    "marquee_item_4": "Projeto elétrico × automação",
+    "marquee_item_5": "Troca de ERP core",
+    "marquee_item_6": "Comissionamento em campo",
+    "marquee_item_7": "Responsabilidade solidária",
+    "marquee_item_8": "Proposta antes da assinatura"
+  },
+  "BoomerangTrajectory": {
+    "svg_label": "Trajetória do boomerang: o projeto sai da sua mão, passa por diagnóstico, desenho, contratação e gestão da entrega, e volta funcionando.",
+    "start_label": "SUA MÃO",
+    "stage_label": "Etapa",
+    "stages": {
+      "need": {
+        "name": "Necessidade",
+        "desc": "O projeto sai da sua mão como uma necessidade de negócio."
+      },
+      "diagnosis": {
+        "name": "Diagnóstico",
+        "desc": "Revisamos propostas, código e projeto. Achamos o risco antes que vire custo."
+      },
+      "design": {
+        "name": "Desenho",
+        "desc": "Estruturamos a arquitetura e as exigências técnicas da solução."
+      },
+      "hiring": {
+        "name": "Contratação",
+        "desc": "Conduzimos RFP e sourcing. Escopo mal definido não passa."
+      },
+      "delivery": {
+        "name": "Gestão da entrega",
+        "desc": "Cobramos prazo, qualidade e escopo dos fornecedores até o aceite."
+      },
+      "return": {
+        "name": "Volta funcionando",
+        "desc": "Testado, comissionado e aceito. De volta na sua mão."
+      }
+    }
+  },
+  "ProblemSection": {
+    "eyebrow": "01 — O problema",
+    "title": "Você contratou soluções. Está gerenciando conflitos.",
+    "description": "Quem entende do assunto está do outro lado da mesa. O desenvolvedor empurra aditivos, os sistemas não conversam e, em campo, o projeto elétrico não bate com a automação. Cada fornecedor responde pela sua parte. Ninguém responde pelo todo."
+  },
+  "ScenarioComparison": {
+    "toggle_label": "Comparar cenários",
+    "without_button": "Sem a Boomerang",
+    "with_button": "Com a Boomerang",
+    "without_title": "O jogo de empurra.",
+    "without_point_1": "Três contratos, três versões da verdade. Você vira o integrador sem ter sido contratado para isso.",
+    "without_point_2": "Cada atraso vira aditivo. Sem base técnica, você não sabe o que é justo.",
+    "without_point_3": "O resultado: caixa desperdiçado e perda de controle sobre o próprio investimento.",
+    "with_title": "Um responsável técnico. Do seu lado.",
+    "with_point_1": "Assumimos a governança técnica de ponta a ponta. Você decide prazo, custo e prioridade.",
+    "with_point_2": "Cobramos prazo, qualidade e escopo dos fornecedores até o aceite final.",
+    "with_point_3": "Eliminamos riscos financeiros, fiscais e operacionais antes que virem custo.",
+    "without_svg_label": "Sem a Boomerang: você se liga a três fornecedores, e o problema é empurrado de um para o outro.",
+    "with_svg_label": "Com a Boomerang: você fala com um só responsável, que coordena e cobra os três fornecedores e devolve a entrega aceita.",
+    "node_you": "Você",
+    "node_software": "Software",
+    "node_automation": "Automação",
+    "node_electrical": "Elétrica",
+    "node_boomerang": "Boomerang",
+    "quote_software": "“Não é comigo.”",
+    "quote_automation": "“É da automação.”",
+    "quote_electrical": "“É do software.”",
+    "delivered_label": "Entregue e aceito",
+    "suppliers_caption": "cobrados por prazo, qualidade e escopo"
+  },
+  "FrontsSection": {
+    "eyebrow": "02 — Como atuamos",
+    "title": "Do código ao quadro elétrico.",
+    "description": "Três frentes, uma só responsabilidade. Da auditoria de código à compatibilização de infraestrutura."
+  },
+  "FrontsAccordion": {
+    "items_title": "O que fazemos",
+    "digital": {
+      "title": "Projetos digitais",
+      "body": "Governança de arquitetura, qualidade de código e esteiras de desenvolvimento. Garantimos que a fábrica de software entregue o produto certo, e não o que é mais fácil de faturar.",
+      "item_1": "Revisão de arquitetura e de código",
+      "item_2": "Governança das esteiras de desenvolvimento",
+      "item_3": "Barragem de aditivos de escopo abusivos",
+      "item_4": "Aceite técnico das entregas"
+    },
+    "cyber_physical": {
+      "title": "Projetos ciberfísicos",
+      "body": "Convergência entre a infraestrutura ativa e a camada digital, como IoT e automação. É aqui que o projeto elétrico e o de automação precisam bater, e quase nunca batem sozinhos.",
+      "item_1": "Compatibilização entre infraestrutura e automação",
+      "item_2": "Engenharia de interfaces entre sistemas e máquinas",
+      "item_3": "Acompanhamento do comissionamento em campo"
+    },
+    "compliance": {
+      "title": "Blindagem e compliance",
+      "body": "Auditoria de contratos técnicos e fiscalização de subempreiteiros, para que a sua empresa não herde riscos de responsabilidade solidária ou subsidiária.",
+      "item_1": "Auditoria de contratos técnicos",
+      "item_2": "Fiscalização de subempreiteiros",
+      "item_3": "Redução de riscos fiscais e trabalhistas"
+    }
+  },
+  "MomentsSection": {
+    "eyebrow": "03 — Quando nos chamar",
+    "title": "Em que momento está o seu projeto?",
+    "description": "Nossa atuação não depende do seu setor. Depende do risco. Escolha a situação mais parecida com a sua."
+  },
+  "MomentPicker": {
+    "group_label": "Situação do projeto",
+    "moment_label": "Momento: {moment}",
+    "start_label": "Por onde começar",
+    "cta": "Quero conversar sobre isso",
+    "stalled": {
+      "situation": "O projeto travou e o prazo estourou",
+      "moment": "Fundação",
+      "tag": "Intervenção rápida",
+      "headline": "Apontamos responsabilidades e estancamos o prejuízo.",
+      "body": "Entramos com uma intervenção técnica rápida: auditamos o que foi entregue, o que foi cobrado e o que falta. Você sai com o mapa do problema e de quem responde por ele.",
+      "service": "Technical Health Check, em 3 a 5 dias"
+    },
+    "expansion": {
+      "situation": "Vou expandir, automatizar ou trocar o ERP",
+      "moment": "Expansão",
+      "tag": "Antes de contratar",
+      "headline": "Definimos as exigências técnicas antes de você assinar.",
+      "body": "Nova planta, automação ou troca do ERP core. Estruturamos o que precisa ser entregue e como vai ser aceito, antes da contratação dos fornecedores.",
+      "service": "Advisory e Auditoria, por fase"
+    },
+    "integration": {
+      "situation": "O equipamento chegou e a infraestrutura não suporta",
+      "moment": "Integração",
+      "tag": "Engenharia de interfaces",
+      "headline": "Fazemos a máquina, o sistema e a instalação conversarem.",
+      "body": "O maquinário ou o sistema chegou, mas a infraestrutura não acompanha. Resolvemos a engenharia de interfaces e conduzimos o comissionamento em campo.",
+      "service": "Governança Integral ou Advisory por fase"
+    }
+  },
+  "ServicesSection": {
+    "eyebrow": "04 — Serviços",
+    "title": "Comece pelo diagnóstico. Fique pelo resultado.",
+    "description": "Três formas de trabalhar juntos, da checagem pontual à governança completa. Na última, ganhamos mais quando você economiza.",
+    "billing_label": "Cobrança",
+    "health_check": {
+      "badge": "Comece por aqui",
+      "title": "Technical Health Check",
+      "description": "Diagnóstico de 3 a 5 dias para revisar propostas antes da assinatura ou auditar projetos atrasados. Revela os riscos financeiros escondidos.",
+      "billing": "Escopo fechado · [VALOR]",
+      "cta": "Pedir o Health Check"
+    },
+    "advisory": {
+      "badge": "Por fase",
+      "title": "Advisory e Auditoria",
+      "description": "Validação técnica nos marcos que decidem o projeto: RFP, sourcing de fornecedores e comissionamento.",
+      "billing": "Por milestone",
+      "cta": "Conversar sobre uma fase"
+    },
+    "governance": {
+      "badge": "Retainer",
+      "title": "Governança Integral",
+      "description": "Assumimos a gestão técnica do projeto do início ao aceite, com remuneração atrelada ao seu resultado.",
+      "billing": "Taxa fixa + success fee",
+      "billing_note": "atrelado a prazo, orçamento e aditivos evitados",
+      "cta": "Falar sobre governança"
+    }
+  },
+  "DnaSection": {
+    "eyebrow": "05 — Nosso DNA técnico",
+    "title": "Falamos a língua<br></br>do <word></word>.",
+    "title_label": "Falamos a língua do engenheiro, do desenvolvedor e do dono do negócio.",
+    "engineering_title": "Engenharia",
+    "engineering_body": "Projeto elétrico, automação e comissionamento em campo.",
+    "it_title": "Tecnologia da informação",
+    "it_body": "Arquitetura de software, qualidade de código e integração de sistemas.",
+    "management_title": "Gestão técnica",
+    "management_body": "Projetos e produtos conduzidos com pragmatismo: prazo, custo e decisão."
+  },
+  "RotatingWord": {
+    "engineer": "engenheiro",
+    "developer": "desenvolvedor",
+    "owner": "dono do negócio"
+  },
+  "ContactSection": {
+    "eyebrow": "06 — Próximo passo",
+    "title": "Em até 5 dias você sabe onde está o risco<dot>.</dot>",
+    "description": "Conte o que está acontecendo. Respondemos com os próximos passos do Technical Health Check."
+  },
+  "ContactForm": {
+    "name_label": "Seu nome",
+    "company_label": "Empresa",
+    "email_label": "E-mail de trabalho",
+    "moment_label": "Em que momento está o projeto?",
+    "moment_stalled": "O projeto travou ou atrasou",
+    "moment_expansion": "Vou expandir ou trocar o ERP",
+    "moment_integration": "O equipamento chegou e não encaixa",
+    "moment_other": "Outro",
+    "message_label": "O que está acontecendo?",
+    "submit_button": "Pedir um Technical Health Check",
+    "privacy_note": "Sem compromisso. Seus dados ficam só com a gente.",
+    "success_title": "Recebemos. O boomerang já saiu da sua mão.",
+    "success_body": "Respondemos em até [PRAZO DE RESPOSTA] com os próximos passos.",
+    "reset_button": "Enviar outro pedido",
+    "moment_placeholder": "Selecione uma opção",
+    "name_error": "Informe seu nome.",
+    "email_error": "Informe um e-mail válido.",
+    "moment_error": "Escolha o momento do projeto.",
+    "submitting_button": "Enviando…",
+    "submit_error": "Não foi possível enviar seu pedido."
+  },
+  "LandingFooter": {
+    "logo_alt": "Boomerang Soluções",
+    "footer_navigation_label": "Navegação do rodapé",
+    "contact_link": "Contato",
+    "linkedin_link": "LinkedIn",
+    "legal_line": "{legalName} · CNPJ {cnpj}"
+  },
+  "SignIn": {
+    "meta_title": "Entrar",
+    "meta_description": "Acesse sua conta de forma simples e segura."
+  },
+  "SignUp": {
+    "meta_title": "Criar conta",
+    "meta_description": "Crie sua conta em poucos passos."
+  },
+  "Dashboard": {
+    "hello_message": "Olá, {email}!",
+    "alternative_message": "Precisa de recursos avançados? Multi-tenancy e times, papéis e permissões, Shadcn UI, tipagem de ponta a ponta com oRPC, pagamentos com Stripe, modo claro e escuro. Experimente <url></url>.",
+    "max_message": "Ou precisa de autenticação self-hosted (Better Auth)? Experimente <url></url>."
+  },
+  "DashboardLayout": {
+    "meta_title": "Painel",
+    "meta_description": "Gerencie sua conta pelo painel.",
+    "dashboard_link": "Painel",
+    "user_profile_link": "Gerenciar sua conta",
+    "sign_out": "Sair"
+  },
+  "BaseTemplate": {
+    "description": "Representantes técnicos do lado do cliente",
+    "footer_text": "© {year} {name}. Feito com <author></author>.",
+    "main_navigation_label": "Navegação principal"
+  },
+  "LocaleSwitcher": {
+    "change_language": "Mudar idioma"
+  }
+}
