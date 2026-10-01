@@ -9,6 +9,9 @@
     "not_found_handling": "none",
     "binding": "ASSETS"
   },
+  // Serve production on workers.dev and give each preview its own workers.dev URL
+  "workers_dev": true,
+  "preview_urls": true,
   // Required by Workers Builds preview deployments (`wrangler preview`)
   "previews": {}
 }
