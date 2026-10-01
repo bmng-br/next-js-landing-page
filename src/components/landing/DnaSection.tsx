@@ -13,11 +13,8 @@ export const DnaSection = async () => {
   ];
 
   return (
-    <section
-      id={SectionIds.dna}
-      className="dark scroll-mt-4 bg-graphite-950 pt-32 pb-24 text-paper"
-    >
-      <Container className="flex flex-col gap-16">
+    <section id={SectionIds.dna} className="dark bg-graphite-950 py-section text-paper">
+      <Container className="flex flex-col gap-section-gap">
         <div className="flex flex-col gap-5">
           <Eyebrow className="text-aqua">{t('eyebrow')}</Eyebrow>
           <h2

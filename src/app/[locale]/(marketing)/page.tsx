@@ -34,7 +34,8 @@ export default async function IndexPage(props: IndexPageProps) {
 
   return (
     <>
-      <HeroSection nav={<LandingNav />} />
+      <LandingNav />
+      <HeroSection />
       <main>
         <ContactMomentProvider>
           <ProblemSection />

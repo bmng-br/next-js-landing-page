@@ -28,7 +28,7 @@ const MarqueeGroup = (props: { items: string[] }) => (
   </ul>
 );
 
-export const HeroSection = async (props: { nav: React.ReactNode }) => {
+export const HeroSection = async () => {
   const t = await getTranslations('Hero');
   const marqueeItems = MARQUEE_KEYS.map((key) => t(key));
 
@@ -41,15 +41,13 @@ export const HeroSection = async (props: { nav: React.ReactNode }) => {
       />
 
       <Container className="relative">
-        {props.nav}
-
         <BoomerangJourney>
           <div className="flex flex-col gap-7">
             <div className="flex items-center gap-3 text-xs leading-4 font-bold tracking-[0.14em] text-aqua uppercase">
               <span className="h-0.5 w-7 bg-aqua" />
               {t('eyebrow')}
             </div>
-            <h1 className="m-0 text-[clamp(46px,6.6vw,96px)] leading-[0.98] font-bold tracking-[-0.045em]">
+            <h1 className="m-0 text-[clamp(44px,min(6.6vw,9svh),96px)] leading-[0.98] font-bold tracking-[-0.045em]">
               {t.rich('title', {
                 dot: (chunks) => <span className="text-pink">{chunks}</span>,
               })}

@@ -71,7 +71,7 @@ export const MomentPicker = () => {
       <div
         key={selected}
         aria-live="polite"
-        className="flex animate-word-in flex-col gap-6 rounded-2xl border border-t-4 border-mist-300 border-t-teal bg-white p-10"
+        className="flex animate-word-in flex-col gap-5 rounded-2xl border border-t-4 border-mist-300 border-t-teal bg-white p-8 lg:p-9"
       >
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="text-xs font-bold tracking-[0.14em] text-teal uppercase">

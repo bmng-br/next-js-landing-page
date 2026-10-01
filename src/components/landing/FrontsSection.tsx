@@ -8,8 +8,8 @@ export const FrontsSection = async () => {
   const t = await getTranslations('FrontsSection');
 
   return (
-    <section id={SectionIds.fronts} className="scroll-mt-4 pb-32">
-      <Container className="flex flex-col gap-12">
+    <section id={SectionIds.fronts} className="pb-section">
+      <Container className="flex flex-col gap-section-gap">
         <SectionIntro eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
         <FrontsAccordion />
       </Container>

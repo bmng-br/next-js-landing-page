@@ -73,7 +73,7 @@ const WithoutDiagram = () => {
       // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role -- an inline SVG diagram needs role="img"
       role="img"
       aria-label={t('without_svg_label')}
-      className="block max-w-[600px] animate-fade-in"
+      className="block max-h-[min(420px,40svh)] max-w-[600px] animate-fade-in"
     >
       {SUPPLIER_NODES.map((node) => (
         <line
@@ -137,7 +137,7 @@ const WithDiagram = () => {
       // oxlint-disable-next-line jsx-a11y/prefer-tag-over-role -- an inline SVG diagram needs role="img"
       role="img"
       aria-label={t('with_svg_label')}
-      className="block max-w-[600px] animate-fade-in"
+      className="block max-h-[min(420px,40svh)] max-w-[600px] animate-fade-in"
     >
       <line x1="300" y1="72" x2="300" y2="164" strokeWidth={3} className="stroke-teal" />
       {SUPPLIER_NODES.map((node) => (
@@ -199,7 +199,7 @@ export const ScenarioComparison = () => {
 
   return (
     <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] overflow-hidden rounded-2xl border border-mist-300 bg-white">
-      <div className="flex flex-col gap-7 px-10 py-11">
+      <div className="flex flex-col gap-6 px-10 py-[clamp(1.75rem,4svh,2.75rem)]">
         <fieldset className="m-0 inline-flex gap-1 self-start rounded-xl border-0 bg-mist-100 p-1">
           <legend className="sr-only">{t('toggle_label')}</legend>
           <ToggleButton
@@ -226,7 +226,7 @@ export const ScenarioComparison = () => {
           </h3>
           <ol className="m-0 flex list-none flex-col border-b border-mist-200 p-0">
             {POINTS.map((point) => (
-              <li key={point.key} className="flex gap-4 border-t border-mist-200 py-4">
+              <li key={point.key} className="flex gap-4 border-t border-mist-200 py-3.5">
                 <span
                   className={`min-w-6 text-sm font-bold ${isWith ? 'text-teal' : 'text-graphite-700'}`}
                 >

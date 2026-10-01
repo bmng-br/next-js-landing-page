@@ -33,6 +33,12 @@
   --color-pink-soft: #f25891;
   --color-pink-deep: #b3124f;
 
+  /* Vertical rhythm scales with the viewport height so sections fit short screens */
+  --spacing-section: clamp(3.5rem, 8svh, 8rem);
+  --spacing-section-gap: clamp(2rem, 5svh, 3.5rem);
+  /* Height of the sticky navigation bar */
+  --spacing-nav: 4.5rem;
+
   --shadow-lift: 0 1px 2px rgb(21 24 26 / 0.12), 0 2px 8px rgb(21 24 26 / 0.08);
 
   --animate-fade-in: fade-in 0.45s ease;
@@ -81,6 +87,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--spacing-nav);
   }
 
   body {

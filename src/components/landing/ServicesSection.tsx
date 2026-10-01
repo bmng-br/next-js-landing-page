@@ -53,8 +53,8 @@ export const ServicesSection = async () => {
   const t = await getTranslations('ServicesSection');
 
   return (
-    <section id={SectionIds.services} className="scroll-mt-4 py-32">
-      <Container className="flex flex-col gap-14">
+    <section id={SectionIds.services} className="py-section">
+      <Container className="flex flex-col gap-section-gap">
         <SectionIntro eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
         <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] items-stretch gap-4">
           <ServiceCard

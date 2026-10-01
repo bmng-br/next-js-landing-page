@@ -73,11 +73,11 @@ export const BoomerangJourney = (props: { children: React.ReactNode }) => {
     <>
       <div
         id={SectionIds.top}
-        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,520px),1fr))] items-center gap-x-12 gap-y-6 pt-14 pb-10"
+        className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,520px),1fr))] items-center gap-x-12 gap-y-6 pt-[clamp(1rem,3svh,3.5rem)] pb-[clamp(1rem,3svh,2.5rem)]"
       >
         {props.children}
 
-        <div className="relative w-full max-w-[680px] justify-self-center">
+        <div className="relative w-full max-w-[min(680px,72svh)] justify-self-center">
           <svg
             viewBox="0 0 720 560"
             width="100%"
@@ -146,7 +146,7 @@ export const BoomerangJourney = (props: { children: React.ReactNode }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] items-center gap-x-10 gap-y-5 border-t border-graphite-850 pt-[26px] pb-[30px]">
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] items-center gap-x-10 gap-y-5 border-t border-graphite-850 py-5">
         <div className="flex items-baseline gap-3.5">
           <div className="text-xs font-bold tracking-[0.14em] text-graphite-400 uppercase">
             {t('stage_label')}

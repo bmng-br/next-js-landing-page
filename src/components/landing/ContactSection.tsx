@@ -9,12 +9,9 @@ export const ContactSection = async () => {
   const t = await getTranslations('ContactSection');
 
   return (
-    <section
-      id={SectionIds.contact}
-      className="dark scroll-mt-4 bg-graphite-950 pt-24 pb-32 text-paper"
-    >
+    <section id={SectionIds.contact} className="dark bg-graphite-950 pb-section text-paper">
       <Container>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-x-20 gap-y-12 border-t border-graphite-850 pt-24">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,420px),1fr))] items-start gap-x-20 gap-y-12 border-t border-graphite-850 pt-section">
           <div className="flex flex-col gap-6">
             <Eyebrow className="text-aqua">{t('eyebrow')}</Eyebrow>
             <h2 className="m-0 text-[clamp(40px,5vw,72px)] leading-none font-bold tracking-[-0.045em]">
