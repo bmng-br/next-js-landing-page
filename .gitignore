@@ -60,3 +60,7 @@ build-archive.log
 /test-results/
 /playwright-report/
 /playwright/.cache/
+/dist/
+.vinext/
+.cloudflare/
+.wrangler/
