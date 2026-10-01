@@ -1,10 +1,16 @@
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import { Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { DemoBadge } from '@/components/DemoBadge';
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
+});
 
 export const metadata: Metadata = {
   icons: [
@@ -53,13 +59,9 @@ export default async function RootLayout(props: {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={montserrat.variable}>
       <body>
-        <NextIntlClientProvider>
-          {props.children}
-
-          <DemoBadge />
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
       </body>
     </html>
   );

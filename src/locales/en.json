@@ -1,56 +1,240 @@
 {
-  "RootLayout": {
-    "home_link": "Home",
-    "about_link": "About",
-    "counter_link": "Counter",
-    "portfolio_link": "Portfolio",
-    "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
+  "IndexPage": {
+    "meta_title": "Boomerang Soluções · Technical governance on the client's side",
+    "meta_description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us."
   },
-  "BaseTemplate": {
-    "description": "Starter code for your Nextjs Boilerplate with Tailwind CSS",
-    "footer_text": "© {year} {name}. Made with <author></author>.",
-    "main_navigation_label": "Main navigation"
+  "LandingNav": {
+    "home_label": "Boomerang Soluções, home",
+    "logo_alt": "Boomerang Soluções",
+    "main_navigation_label": "Main navigation",
+    "problem_link": "The problem",
+    "fronts_link": "How we work",
+    "moments_link": "When to call us",
+    "services_link": "Services",
+    "contact_button": "Talk to us",
+    "locale_link": "PT",
+    "locale_link_label": "Ler em português",
+    "open_menu_label": "Open menu",
+    "close_menu_label": "Close menu"
   },
-  "Index": {
-    "meta_title": "Next.js Boilerplate Presentation",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
-    "sponsors_title": "Sponsors",
-    "zap_emoji_label": "Zap"
+  "Hero": {
+    "eyebrow": "Technical representatives on the client's side",
+    "title": "Your project leaves your hand and comes back working<dot>.</dot>",
+    "description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us.",
+    "primary_cta": "Request a diagnosis in 3 to 5 days",
+    "secondary_cta": "How it works",
+    "marquee_item_1": "Deadline extensions",
+    "marquee_item_2": "Inflated scope",
+    "marquee_item_3": "Systems that don't talk",
+    "marquee_item_4": "Electrical design × automation",
+    "marquee_item_5": "Core ERP replacement",
+    "marquee_item_6": "Field commissioning",
+    "marquee_item_7": "Joint liability",
+    "marquee_item_8": "Proposal review before signing"
   },
-  "Counter": {
-    "meta_title": "Counter",
-    "meta_description": "An example of DB operation",
-    "security_powered_by": "Security, bot detection and rate limiting powered by"
+  "BoomerangTrajectory": {
+    "svg_label": "The boomerang's path: the project leaves your hand, goes through diagnosis, design, procurement and delivery management, and comes back working.",
+    "start_label": "YOUR HAND",
+    "stage_label": "Stage",
+    "stages": {
+      "need": {
+        "name": "Need",
+        "desc": "The project leaves your hand as a business need."
+      },
+      "diagnosis": {
+        "name": "Diagnosis",
+        "desc": "We review proposals, code and designs. We find the risk before it becomes a cost."
+      },
+      "design": {
+        "name": "Design",
+        "desc": "We structure the architecture and technical requirements of the solution."
+      },
+      "hiring": {
+        "name": "Procurement",
+        "desc": "We run the RFP and sourcing. Poorly defined scope doesn't get through."
+      },
+      "delivery": {
+        "name": "Delivery management",
+        "desc": "We hold suppliers to deadline, quality and scope until acceptance."
+      },
+      "return": {
+        "name": "Back and working",
+        "desc": "Tested, commissioned and accepted. Back in your hand."
+      }
+    }
   },
-  "CounterForm": {
-    "presentation": "The counter is stored in the database and incremented by the value you provide.",
-    "label_increment": "Increment by",
-    "button_increment": "Increment",
-    "error_increment_range": "Value must be between 1 and 3"
+  "ProblemSection": {
+    "eyebrow": "01 — The problem",
+    "title": "You hired solutions. You're managing conflicts.",
+    "description": "The people who understand the subject sit on the other side of the table. The developer pushes change orders, the systems don't talk to each other and, in the field, the electrical design doesn't match the automation. Each supplier answers for its own part. Nobody answers for the whole."
   },
-  "CurrentCount": {
-    "count": "Count: {count}"
+  "ScenarioComparison": {
+    "toggle_label": "Compare scenarios",
+    "without_button": "Without Boomerang",
+    "with_button": "With Boomerang",
+    "without_title": "The blame game.",
+    "without_point_1": "Three contracts, three versions of the truth. You become the integrator without being hired for it.",
+    "without_point_2": "Every delay becomes a change order. Without technical grounding, you can't tell what's fair.",
+    "without_point_3": "The result: wasted cash and loss of control over your own investment.",
+    "with_title": "One technical lead. On your side.",
+    "with_point_1": "We take over technical governance end to end. You decide on deadline, cost and priority.",
+    "with_point_2": "We hold suppliers to deadline, quality and scope until final acceptance.",
+    "with_point_3": "We eliminate financial, tax and operational risks before they become costs.",
+    "without_svg_label": "Without Boomerang: you are tied to three suppliers, and the problem gets pushed from one to the other.",
+    "with_svg_label": "With Boomerang: you talk to a single lead, who coordinates and holds the three suppliers accountable and hands back an accepted delivery.",
+    "node_you": "You",
+    "node_software": "Software",
+    "node_automation": "Automation",
+    "node_electrical": "Electrical",
+    "node_boomerang": "Boomerang",
+    "quote_software": "“Not my problem.”",
+    "quote_automation": "“Ask automation.”",
+    "quote_electrical": "“Ask software.”",
+    "delivered_label": "Delivered and accepted",
+    "suppliers_caption": "held to deadline, quality and scope"
   },
-  "About": {
-    "meta_title": "About",
-    "meta_description": "About page description",
-    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
-    "translation_powered_by": "Translation powered by"
+  "FrontsSection": {
+    "eyebrow": "02 — How we work",
+    "title": "From the code to the electrical panel.",
+    "description": "Three fronts, one single accountability. From code audits to infrastructure compatibility."
   },
-  "Portfolio": {
-    "meta_title": "Portfolio",
-    "meta_description": "Welcome to my portfolio page!",
-    "presentation": "Welcome to my portfolio page! Here you will find a carefully curated collection of my work and accomplishments. Through this portfolio, I'm to showcase my expertise, creativity, and the value I can bring to your projects.",
-    "portfolio_name": "Portfolio {name}",
-    "error_reporting_powered_by": "Error reporting powered by"
+  "FrontsAccordion": {
+    "items_title": "What we do",
+    "digital": {
+      "title": "Digital projects",
+      "body": "Governance of architecture, code quality and development pipelines. We make sure the software house delivers the right product, not the one that's easiest to bill.",
+      "item_1": "Architecture and code review",
+      "item_2": "Governance of development pipelines",
+      "item_3": "Blocking abusive scope change orders",
+      "item_4": "Technical acceptance of deliveries"
+    },
+    "cyber_physical": {
+      "title": "Cyber-physical projects",
+      "body": "Convergence between active infrastructure and the digital layer, such as IoT and automation. This is where the electrical and automation designs need to match, and they almost never do on their own.",
+      "item_1": "Infrastructure and automation compatibility",
+      "item_2": "Interface engineering between systems and machines",
+      "item_3": "Oversight of field commissioning"
+    },
+    "compliance": {
+      "title": "Protection and compliance",
+      "body": "Auditing of technical contracts and oversight of subcontractors, so your company doesn't inherit joint or secondary liability risks.",
+      "item_1": "Technical contract audits",
+      "item_2": "Subcontractor oversight",
+      "item_3": "Reduction of tax and labor risks"
+    }
   },
-  "PortfolioSlug": {
-    "meta_title": "Portfolio {slug}",
-    "meta_description": "Portfolio {slug} description",
-    "header": "Portfolio {slug}",
-    "content": "Created a set of promotional materials and branding elements for a corporate event. Crafted a visually unified theme, encompassing a logo, posters, banners, and digital assets. Integrated the client's brand identity while infusing it with a contemporary and innovative approach.",
-    "code_review_powered_by": "Code review powered by"
+  "MomentsSection": {
+    "eyebrow": "03 — When to call us",
+    "title": "What stage is your project at?",
+    "description": "Our work doesn't depend on your industry. It depends on the risk. Pick the situation closest to yours."
+  },
+  "MomentPicker": {
+    "group_label": "Project situation",
+    "moment_label": "Stage: {moment}",
+    "start_label": "Where to start",
+    "cta": "I want to talk about this",
+    "stalled": {
+      "situation": "The project stalled and the deadline blew up",
+      "moment": "Foundation",
+      "tag": "Rapid intervention",
+      "headline": "We assign responsibilities and stop the losses.",
+      "body": "We step in with a rapid technical intervention: we audit what was delivered, what was billed and what's missing. You walk away with a map of the problem and of who answers for it.",
+      "service": "Technical Health Check, in 3 to 5 days"
+    },
+    "expansion": {
+      "situation": "I'm going to expand, automate or replace the ERP",
+      "moment": "Expansion",
+      "tag": "Before hiring",
+      "headline": "We define the technical requirements before you sign.",
+      "body": "A new plant, automation or a core ERP replacement. We structure what needs to be delivered and how it will be accepted, before suppliers are hired.",
+      "service": "Advisory and Audit, per phase"
+    },
+    "integration": {
+      "situation": "The equipment arrived and the infrastructure can't support it",
+      "moment": "Integration",
+      "tag": "Interface engineering",
+      "headline": "We get the machine, the system and the installation talking.",
+      "body": "The machinery or the system arrived, but the infrastructure can't keep up. We solve the interface engineering and run field commissioning.",
+      "service": "Full Governance or Advisory per phase"
+    }
+  },
+  "ServicesSection": {
+    "eyebrow": "04 — Services",
+    "title": "Start with the diagnosis. Stay for the results.",
+    "description": "Three ways to work together, from a one-off check to full governance. With the last one, we earn more when you save.",
+    "billing_label": "Billing",
+    "health_check": {
+      "badge": "Start here",
+      "title": "Technical Health Check",
+      "description": "A 3 to 5 day diagnosis to review proposals before signing or audit delayed projects. It reveals the hidden financial risks.",
+      "billing": "Fixed scope · [PRICE]",
+      "cta": "Request the Health Check"
+    },
+    "advisory": {
+      "badge": "Per phase",
+      "title": "Advisory and Audit",
+      "description": "Technical validation at the milestones that decide the project: RFP, supplier sourcing and commissioning.",
+      "billing": "Per milestone",
+      "cta": "Talk about a phase"
+    },
+    "governance": {
+      "badge": "Retainer",
+      "title": "Full Governance",
+      "description": "We take over the technical management of the project from kickoff to acceptance, with fees tied to your results.",
+      "billing": "Fixed fee + success fee",
+      "billing_note": "tied to deadline, budget and avoided change orders",
+      "cta": "Talk about governance"
+    }
+  },
+  "DnaSection": {
+    "eyebrow": "05 — Our technical DNA",
+    "title": "We speak the language<br></br>of the <word></word>.",
+    "title_label": "We speak the language of the engineer, the developer and the business owner.",
+    "engineering_title": "Engineering",
+    "engineering_body": "Electrical design, automation and field commissioning.",
+    "it_title": "Information technology",
+    "it_body": "Software architecture, code quality and systems integration.",
+    "management_title": "Technical management",
+    "management_body": "Projects and products run with pragmatism: deadline, cost and decision."
+  },
+  "RotatingWord": {
+    "engineer": "engineer",
+    "developer": "developer",
+    "owner": "business owner"
+  },
+  "ContactSection": {
+    "eyebrow": "06 — Next step",
+    "title": "Within 5 days you know where the risk is<dot>.</dot>",
+    "description": "Tell us what's happening. We'll reply with the next steps for the Technical Health Check."
+  },
+  "ContactForm": {
+    "name_label": "Your name",
+    "company_label": "Company",
+    "email_label": "Work email",
+    "moment_label": "What stage is the project at?",
+    "moment_stalled": "The project stalled or is delayed",
+    "moment_expansion": "I'm going to expand or replace the ERP",
+    "moment_integration": "The equipment arrived and doesn't fit",
+    "moment_other": "Other",
+    "message_label": "What's happening?",
+    "submit_button": "Request a Technical Health Check",
+    "privacy_note": "No commitment. Your data stays with us.",
+    "success_title": "Got it. The boomerang has left your hand.",
+    "success_body": "We'll reply within [RESPONSE TIME] with the next steps.",
+    "reset_button": "Send another request",
+    "moment_placeholder": "Select an option",
+    "name_error": "Enter your name.",
+    "email_error": "Enter a valid email.",
+    "moment_error": "Choose the project stage.",
+    "submitting_button": "Sending…",
+    "submit_error": "We couldn’t send your request."
+  },
+  "LandingFooter": {
+    "logo_alt": "Boomerang Soluções",
+    "footer_navigation_label": "Footer navigation",
+    "contact_link": "Contact",
+    "linkedin_link": "LinkedIn",
+    "legal_line": "{legalName} · CNPJ {cnpj}"
   },
   "SignIn": {
     "meta_title": "Sign in",
@@ -71,6 +255,11 @@
     "dashboard_link": "Dashboard",
     "user_profile_link": "Manage your account",
     "sign_out": "Sign out"
+  },
+  "BaseTemplate": {
+    "description": "Technical representatives on the client's side",
+    "footer_text": "© {year} {name}. Made with <author></author>.",
+    "main_navigation_label": "Main navigation"
   },
   "LocaleSwitcher": {
     "change_language": "Change language"

@@ -1,3 +1,421 @@
 @layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
 
 @import 'tailwindcss';
+
+@theme inline {
+  --font-sans: var(--font-montserrat), Arial, sans-serif;
+}
+
+/* Boomerang brand palette (see the visual identity manual) */
+@theme {
+  --color-paper: #f5f5f3;
+
+  --color-mist-100: #ecece9;
+  --color-mist-200: #e4e4e1;
+  --color-mist-300: #dcdcd9;
+  --color-mist-400: #d0d0cc;
+  --color-mist-500: #c9c9c5;
+
+  --color-graphite-200: #d5d6d8;
+  --color-graphite-300: #b8babd;
+  --color-graphite-400: #a7a9ad;
+  --color-graphite-500: #8a8d92;
+  --color-graphite-600: #6b7075;
+  --color-graphite-700: #45494d;
+  --color-graphite-800: #3a3f44;
+  --color-graphite-850: #2e3236;
+  --color-graphite-900: #262a2e;
+  --color-graphite-950: #15181a;
+
+  --color-teal: #197a75;
+  --color-aqua: #27bcb4;
+  --color-pink: #ee367e;
+  --color-pink-soft: #f25891;
+  --color-pink-deep: #b3124f;
+
+  /* Vertical rhythm scales with the viewport height so sections fit short screens */
+  --spacing-section: clamp(3.5rem, 8svh, 8rem);
+  --spacing-section-gap: clamp(2rem, 5svh, 3.5rem);
+  /* Height of the sticky navigation bar */
+  --spacing-nav: 4.5rem;
+
+  --shadow-lift: 0 1px 2px rgb(21 24 26 / 0.12), 0 2px 8px rgb(21 24 26 / 0.08);
+
+  --animate-fade-in: fade-in 0.45s ease;
+  --animate-word-in: word-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  --animate-marquee: marquee 48s linear infinite;
+  --animate-flow: flow 1.4s linear infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes word-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.35em);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -20;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--spacing-nav);
+  }
+
+  body {
+    @apply bg-paper font-sans text-graphite-950 antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-3 outline-teal;
+  }
+
+  .dark :focus-visible {
+    @apply outline-aqua;
+  }
+}
+
+/* Hero boomerang trajectory */
+@layer components {
+  .traj-draw {
+    stroke-dasharray: 1431;
+    stroke-dashoffset: 1431;
+    animation: traj-draw 12s linear infinite;
+  }
+
+  .traj-dot,
+  .traj-ring {
+    offset-path: path(
+      'M130,470 C300,505 585,450 592,285 C600,120 470,48 358,68 C225,92 102,240 130,470'
+    );
+    offset-rotate: 0deg;
+  }
+
+  .traj-dot {
+    animation:
+      traj-travel 12s linear infinite,
+      traj-arrive 12s linear infinite;
+  }
+
+  .traj-ring {
+    animation:
+      traj-travel 12s linear infinite,
+      traj-ring 1.8s ease-out infinite;
+  }
+
+  @keyframes traj-draw {
+    0% {
+      stroke-dashoffset: 1431;
+      opacity: 1;
+    }
+    85% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    96% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes traj-travel {
+    0% {
+      offset-distance: 0%;
+    }
+    85%,
+    100% {
+      offset-distance: 100%;
+    }
+  }
+
+  @keyframes traj-arrive {
+    0%,
+    84% {
+      fill: var(--color-paper);
+    }
+    86%,
+    100% {
+      fill: var(--color-pink);
+    }
+  }
+
+  @keyframes traj-ring {
+    0% {
+      opacity: 0.5;
+      stroke-width: 1.5;
+    }
+    100% {
+      opacity: 0;
+      stroke-width: 12;
+    }
+  }
+}
+
+/* "Without Boomerang" diagram: the problem bounces between suppliers */
+@layer components {
+  .push-token {
+    animation: push 8s ease-in-out infinite;
+  }
+
+  .say-software {
+    animation: say-software 8s linear infinite;
+  }
+
+  .say-automation {
+    animation: say-automation 8s linear infinite;
+  }
+
+  .say-electrical {
+    animation: say-electrical 8s linear infinite;
+  }
+
+  @keyframes push {
+    0%,
+    8% {
+      transform: translate(110px, 268px);
+    }
+    17% {
+      transform: translate(205px, 212px);
+    }
+    25%,
+    33% {
+      transform: translate(300px, 268px);
+    }
+    42% {
+      transform: translate(395px, 212px);
+    }
+    50%,
+    58% {
+      transform: translate(490px, 268px);
+    }
+    67% {
+      transform: translate(395px, 212px);
+    }
+    75%,
+    83% {
+      transform: translate(300px, 268px);
+    }
+    92% {
+      transform: translate(205px, 212px);
+    }
+    100% {
+      transform: translate(110px, 268px);
+    }
+  }
+
+  @keyframes say-software {
+    0%,
+    9% {
+      opacity: 1;
+    }
+    12%,
+    88% {
+      opacity: 0;
+    }
+    92%,
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes say-automation {
+    0%,
+    24% {
+      opacity: 0;
+    }
+    26%,
+    33% {
+      opacity: 1;
+    }
+    36%,
+    74% {
+      opacity: 0;
+    }
+    76%,
+    83% {
+      opacity: 1;
+    }
+    86%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes say-electrical {
+    0%,
+    49% {
+      opacity: 0;
+    }
+    51%,
+    58% {
+      opacity: 1;
+    }
+    61%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+/* "With Boomerang" diagram: suppliers report up, delivery goes back to the client */
+@layer components {
+  .report-software {
+    animation: report-software 3s linear infinite;
+  }
+
+  .report-automation {
+    animation: report-automation 3s linear infinite 0.8s;
+  }
+
+  .report-electrical {
+    animation: report-electrical 3s linear infinite 1.6s;
+  }
+
+  .deliver {
+    animation: deliver 3s ease-in-out infinite;
+  }
+
+  @keyframes report-software {
+    0% {
+      transform: translate(110px, 304px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      transform: translate(300px, 216px);
+      opacity: 1;
+    }
+    78%,
+    100% {
+      transform: translate(300px, 216px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes report-automation {
+    0% {
+      transform: translate(300px, 304px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      transform: translate(300px, 216px);
+      opacity: 1;
+    }
+    78%,
+    100% {
+      transform: translate(300px, 216px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes report-electrical {
+    0% {
+      transform: translate(490px, 304px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    70% {
+      transform: translate(300px, 216px);
+      opacity: 1;
+    }
+    78%,
+    100% {
+      transform: translate(300px, 216px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes deliver {
+    0%,
+    55% {
+      transform: translate(300px, 164px);
+      opacity: 0;
+    }
+    62% {
+      opacity: 1;
+    }
+    92% {
+      transform: translate(300px, 72px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(300px, 72px);
+      opacity: 0;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
+
+  /* Show the static end state of the diagrams instead of moving parts */
+  .traj-draw {
+    stroke-dashoffset: 0;
+  }
+
+  /* The dot rests at the start of the path ("your hand") */
+  .traj-dot {
+    animation: none;
+  }
+
+  .traj-ring,
+  .push-token,
+  .report-software,
+  .report-automation,
+  .report-electrical,
+  .deliver {
+    display: none;
+  }
+}

@@ -8,35 +8,49 @@ import { expect, test } from '@playwright/test';
 // You can run them locally or on CI to ensure that the application is ready for deployment.
 
 test.describe('Sanity', () => {
-  test.describe('Static pages', () => {
-    test('should display the homepage', async ({ page }) => {
+  test.describe('Landing page', () => {
+    test('displays the hero heading', async ({ page }) => {
       await page.goto('/');
 
       await expect(
         page.getByRole('heading', {
-          name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS',
+          name: 'Seu projeto sai da sua mão e volta funcionando.',
         }),
       ).toBeVisible();
     });
 
-    test('should navigate to the about page', async ({ page }) => {
+    test('shows the confirmation after submitting the contact form', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByRole('link', { name: 'About' }).click();
+      await page.getByLabel('Seu nome').fill('Maria');
+      await page.getByLabel('E-mail de trabalho').fill('maria@example.com');
+      await page
+        .getByLabel('Em que momento está o projeto?')
+        .selectOption({ label: 'O projeto travou ou atrasou' });
+      await page.getByRole('button', { name: 'Pedir um Technical Health Check' }).click();
 
-      await expect(page).toHaveURL(/about$/u);
-
-      await expect(page.getByText('Welcome to our About page', { exact: false })).toBeVisible();
+      await expect(page.getByRole('status')).toContainText(
+        'Recebemos. O boomerang já saiu da sua mão.',
+      );
+      await expect(page.getByRole('status')).toBeFocused();
     });
 
-    test('should navigate to the portfolio page', async ({ page }) => {
+    test('shows inline errors when submitting an empty contact form', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByRole('link', { name: 'Portfolio' }).click();
+      await page.getByRole('button', { name: 'Pedir um Technical Health Check' }).click();
 
-      await expect(page).toHaveURL(/portfolio$/u);
+      await expect(page.getByLabel('Seu nome')).toHaveAccessibleDescription('Informe seu nome.');
+      await expect(page.getByLabel('Seu nome')).toBeFocused();
+    });
 
-      await expect(page.locator('main').getByRole('link', { name: /^Portfolio/u })).toHaveCount(6);
+    test('pre-fills the contact form from the triage section', async ({ page }) => {
+      await page.goto('/');
+
+      await page.getByText('Vou expandir, automatizar ou trocar o ERP').click();
+      await page.getByRole('link', { name: 'Quero conversar sobre isso' }).click();
+
+      await expect(page.getByLabel('Em que momento está o projeto?')).toHaveValue('expansion');
     });
   });
 });
