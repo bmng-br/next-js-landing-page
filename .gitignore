@@ -64,3 +64,6 @@ build-archive.log
 .vinext/
 .cloudflare/
 .wrangler/
+
+# Local Claude Code settings (machine-specific paths)
+/.claude/
