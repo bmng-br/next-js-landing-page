@@ -242,10 +242,6 @@
     "meta_title": "Entrar",
     "meta_description": "Acesse sua conta de forma simples e segura."
   },
-  "SignUp": {
-    "meta_title": "Criar conta",
-    "meta_description": "Crie sua conta em poucos passos."
-  },
   "Dashboard": {
     "hello_message": "Olá, {email}!",
     "alternative_message": "Precisa de recursos avançados? Multi-tenancy e times, papéis e permissões, Shadcn UI, tipagem de ponta a ponta com oRPC, pagamentos com Stripe, modo claro e escuro. Experimente <url></url>.",

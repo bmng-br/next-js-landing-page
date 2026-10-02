@@ -19,9 +19,7 @@ export default async function AuthLayout(props: {
       }}
       localization={clerkLocale}
       signInUrl="/sign-in"
-      signUpUrl="/sign-up"
       signInFallbackRedirectUrl="/dashboard"
-      signUpFallbackRedirectUrl="/dashboard"
       afterSignOutUrl="/"
     >
       {props.children}

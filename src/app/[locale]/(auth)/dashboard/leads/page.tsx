@@ -1,14 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { isDashboardAllowed } from '@/libs/DashboardAccess';
 import { listLeads } from '@/libs/Leads';
-import { canViewLeads } from '@/libs/LeadsAccess';
 import { CONTACT_MOMENTS } from '@/validations/ContactValidation';
 
 export default async function LeadsPage(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
-  if (!(await canViewLeads())) {
+  if (!(await isDashboardAllowed())) {
     notFound();
   }
 
