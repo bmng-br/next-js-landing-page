@@ -205,7 +205,9 @@
   "ContactSection": {
     "eyebrow": "06 — Próximo passo",
     "title": "Em até 5 dias você sabe onde está o risco<dot>.</dot>",
-    "description": "Conte o que está acontecendo. Respondemos com os próximos passos do Technical Health Check."
+    "description": "Conte o que está acontecendo. Respondemos com os próximos passos do Technical Health Check.",
+    "phone_sp_label": "SP",
+    "phone_mg_label": "MG"
   },
   "ContactForm": {
     "name_label": "Seu nome",
@@ -254,7 +256,8 @@
     "meta_description": "Gerencie sua conta pelo painel.",
     "dashboard_link": "Painel",
     "user_profile_link": "Gerenciar sua conta",
-    "sign_out": "Sair"
+    "sign_out": "Sair",
+    "leads_link": "Contatos"
   },
   "BaseTemplate": {
     "description": "Representantes técnicos do lado do cliente",
@@ -263,5 +266,21 @@
   },
   "LocaleSwitcher": {
     "change_language": "Mudar idioma"
+  },
+  "LeadNotification": {
+    "subject": "Novo contato pelo site: {name}",
+    "intro": "Um novo contato chegou pelo formulário do site.",
+    "not_saved_warning": "Um novo contato chegou pelo site, mas NÃO foi salvo no banco de dados. Guarde este e-mail.",
+    "name_label": "Nome",
+    "company_label": "Empresa",
+    "email_label": "E-mail",
+    "moment_label": "Momento do projeto",
+    "language_label": "Idioma",
+    "message_label": "Mensagem"
+  },
+  "LeadsPage": {
+    "title": "Contatos recebidos",
+    "empty": "Nenhum contato recebido ainda.",
+    "moment_label": "Momento do projeto"
   }
 }

@@ -15,9 +15,17 @@ export const AppConfig = {
   },
   // FIXME: Replace the placeholders with the real contact and company details
   contact: {
-    email: 'contato@boomerangsolucoes.com.br',
-    phone: '[+55 00 00000-0000]',
+    email: 'contato@bmng.com.br',
+    phones: [
+      { region: 'sp', display: '+55 31 93624-5393', tel: '+5531936245393' },
+      { region: 'mg', display: '+55 31 93618-3916', tel: '+5531936183916' },
+    ] as const,
     linkedinUrl: '#',
+  },
+  // Alerts for new contact form leads, sent through the Worker's EMAIL binding
+  leadNotifications: {
+    from: 'site@avisos.bmng.com.br',
+    to: 'contato@bmng.com.br',
   },
   company: {
     legalName: 'Boomerang Soluções em Tecnologia LTDA',

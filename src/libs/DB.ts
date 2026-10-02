@@ -1,16 +1,37 @@
-import { createDbConnection } from '@/utils/DBConnection';
+import type { NodePgDatabase } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { Client } from 'pg';
+import * as schema from '@/models/Schema';
 import { Env } from './Env';
+import { logger } from './Logger';
 
-declare global {
-  var cachedDrizzle: ReturnType<typeof createDbConnection> | undefined;
-}
+/**
+ * Closes a connection without making the caller wait for the server's acknowledgement.
+ * On Workers the socket is torn down with the request anyway, and some servers (like local
+ * PGlite) never close their side, which would otherwise hang the response.
+ * @param client The connected client to close.
+ */
+const closeInBackground = async (client: Client) => {
+  try {
+    await client.end();
+  } catch (error) {
+    logger.warn(`Database connection did not close cleanly: ${String(error)}`);
+  }
+};
 
-// Stores the db connection in the global scope to prevent multiple instances due to hot reloading with Next.js
-const db = globalThis.cachedDrizzle ?? createDbConnection();
+/**
+ * Runs database work on a short-lived connection.
+ * Cloudflare Workers can't reuse a socket across requests, so each call opens and closes its own.
+ * @param work The work to run with the Drizzle client.
+ * @returns The work's result.
+ */
+export const withDb = async <T>(work: (db: NodePgDatabase<typeof schema>) => Promise<T>) => {
+  const client = new Client({ connectionString: Env.DATABASE_URL });
+  await client.connect();
 
-// Only store in global during development to prevent hot reload issues
-if (Env.NODE_ENV !== 'production') {
-  globalThis.cachedDrizzle = db;
-}
-
-export { db };
+  try {
+    return await work(drizzle({ client, schema }));
+  } finally {
+    void closeInBackground(client);
+  }
+};

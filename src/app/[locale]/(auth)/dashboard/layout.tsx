@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { Link } from '@/libs/I18nNavigation';
+import { canViewLeads } from '@/libs/LeadsAccess';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
 type DashboardLayoutProps = {
@@ -30,6 +31,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
     locale,
     namespace: 'DashboardLayout',
   });
+  const showLeads = await canViewLeads();
 
   return (
     <BaseTemplate
@@ -48,6 +50,16 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
               {t('user_profile_link')}
             </Link>
           </li>
+          {showLeads && (
+            <li>
+              <Link
+                href="/dashboard/leads/"
+                className="border-none text-gray-700 hover:text-gray-900"
+              >
+                {t('leads_link')}
+              </Link>
+            </li>
+          )}
         </>
       }
       rightNav={
