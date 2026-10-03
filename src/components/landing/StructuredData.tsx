@@ -23,6 +23,8 @@ export const StructuredData = async (props: { locale: string }) => {
     description: t('meta_description'),
     email: AppConfig.contact.email,
     areaServed: { '@type': 'Country', name: 'Brazil' },
+    taxID: AppConfig.company.cnpj,
+    sameAs: [AppConfig.contact.linkedinUrl],
     contactPoint: AppConfig.contact.phones.map((phone) => ({
       '@type': 'ContactPoint',
       telephone: phone.tel,
