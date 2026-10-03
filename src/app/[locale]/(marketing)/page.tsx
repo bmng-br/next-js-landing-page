@@ -14,6 +14,10 @@ import { StructuredData } from '@/components/landing/StructuredData';
 import { AppConfig } from '@/utils/AppConfig';
 import { getBaseUrl, getLanguageAlternates, getLocalizedUrl } from '@/utils/Helpers';
 
+// The landing page has no per-visitor content: cache it at the edge (Workers Cache) for a day.
+// The cache is keyed by Worker version, so every deploy serves fresh content immediately.
+export const revalidate = 86_400;
+
 type IndexPageProps = {
   params: Promise<{ locale: string }>;
 };

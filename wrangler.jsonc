@@ -22,4 +22,8 @@
   ],
   // Required by Workers Builds preview deployments (`wrangler preview`)
   "previews": {},
+  // Workers Cache: vinext serves ISR pages (export const revalidate) from Cloudflare's edge cache.
+  // Entries are keyed by Worker version, so each deploy starts with a fresh cache.
+  "cache": { "enabled": true },
+  "version_metadata": { "binding": "CF_VERSION_METADATA" },
 }

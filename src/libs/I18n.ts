@@ -12,9 +12,11 @@ import { routing } from './I18nRouting';
 // 2. Run manually the workflow on GitHub Actions
 // 3. Every 24 hours at 5am, the workflow will run automatically
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  // Typically corresponds to the `[locale]` segment
-  const requested = await requestLocale;
+export default getRequestConfig(async (params) => {
+  // Prefer an explicitly passed locale (e.g. `getTranslations({ locale })` in metadata): awaiting
+  // `requestLocale` may read request headers, which makes the page uncacheable at the edge.
+  // Otherwise it typically corresponds to the `[locale]` segment.
+  const requested = params.locale ?? (await params.requestLocale);
   const locale = hasLocale(routing.locales, requested) ? requested : routing.defaultLocale;
 
   return {
