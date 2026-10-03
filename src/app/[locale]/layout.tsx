@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getMessages, getNow, getTimeZone, setRequestLocale } from 'next-intl/server';
 import { Montserrat } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { routing } from '@/libs/I18nRouting';
@@ -58,10 +58,24 @@ export default async function RootLayout(props: {
 
   setRequestLocale(locale);
 
+  // Pass everything explicitly: letting the provider look these up can read request headers,
+  // which marks the page as dynamic and keeps it out of the edge cache
+  const messages = await getMessages({ locale });
+  const timeZone = await getTimeZone({ locale });
+  const now = await getNow({ locale });
+
   return (
     <html lang={locale} className={montserrat.variable}>
       <body>
-        <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
+        <NextIntlClientProvider
+          locale={locale}
+          messages={messages}
+          timeZone={timeZone}
+          formats={{}}
+          now={now}
+        >
+          {props.children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
