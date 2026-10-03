@@ -1,7 +1,9 @@
 {
   "IndexPage": {
     "meta_title": "Boomerang Soluções · Technical governance on the client's side",
-    "meta_description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us."
+    "meta_description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us.",
+    "og_locale": "en_US",
+    "og_image_alt": "Boomerang Soluções: your project leaves your hand and comes back working."
   },
   "LandingNav": {
     "home_label": "Boomerang Soluções, home",

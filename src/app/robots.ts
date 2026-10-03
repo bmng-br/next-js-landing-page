@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/dashboard',
+      // Private area and its sign-in page, in every locale
+      disallow: ['/dashboard', '/*/dashboard', '/sign-in', '/*/sign-in'],
     },
     sitemap: `${getBaseUrl()}/sitemap.xml`,
   };

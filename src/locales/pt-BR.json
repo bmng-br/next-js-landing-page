@@ -1,7 +1,9 @@
 {
   "IndexPage": {
     "meta_title": "Boomerang Soluções · Governança técnica do lado do cliente",
-    "meta_description": "Assumimos a governança técnica dos seus projetos críticos de software, automação e infraestrutura. Cobramos os fornecedores até o aceite final, e você fala só com a gente."
+    "meta_description": "Assumimos a governança técnica dos seus projetos críticos de software, automação e infraestrutura. Cobramos os fornecedores até o aceite final, e você fala só com a gente.",
+    "og_locale": "pt_BR",
+    "og_image_alt": "Boomerang Soluções: seu projeto sai da sua mão e volta funcionando."
   },
   "LandingNav": {
     "home_label": "Boomerang Soluções, início",

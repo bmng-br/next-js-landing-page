@@ -9,6 +9,9 @@ const baseConfig: NextConfig = {
     position: 'bottom-right',
   },
   poweredByHeader: false,
+  // Render metadata in <head> for every visitor instead of streaming it into <body>:
+  // vinext doesn't detect crawlers, so Googlebot and Lighthouse were getting it in the body
+  htmlLimitedBots: /.*/u,
   reactStrictMode: true,
   reactCompiler: process.env.NODE_ENV === 'production', // Keep the development environment fast
   experimental: {
