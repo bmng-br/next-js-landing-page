@@ -10,6 +10,9 @@ import { LandingNav } from '@/components/landing/LandingNav';
 import { MomentsSection } from '@/components/landing/MomentsSection';
 import { ProblemSection } from '@/components/landing/ProblemSection';
 import { ServicesSection } from '@/components/landing/ServicesSection';
+import { StructuredData } from '@/components/landing/StructuredData';
+import { AppConfig } from '@/utils/AppConfig';
+import { getBaseUrl, getLanguageAlternates, getLocalizedUrl } from '@/utils/Helpers';
 
 type IndexPageProps = {
   params: Promise<{ locale: string }>;
@@ -22,9 +25,39 @@ export async function generateMetadata(props: IndexPageProps): Promise<Metadata>
     namespace: 'IndexPage',
   });
 
+  const title = t('meta_title');
+  const description = t('meta_description');
+  const url = getLocalizedUrl(locale);
+  const image = {
+    url: `/og/${locale}.png`,
+    width: 1200,
+    height: 630,
+    alt: t('og_image_alt'),
+  };
+
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    metadataBase: new URL(getBaseUrl()),
+    title,
+    description,
+    alternates: {
+      canonical: url,
+      languages: getLanguageAlternates(),
+    },
+    openGraph: {
+      type: 'website',
+      url,
+      siteName: AppConfig.name,
+      title,
+      description,
+      locale: t('og_locale'),
+      images: [image],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -34,6 +67,7 @@ export default async function IndexPage(props: IndexPageProps) {
 
   return (
     <>
+      <StructuredData locale={locale} />
       <LandingNav />
       <HeroSection />
       <main>

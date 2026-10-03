@@ -26,3 +26,22 @@ export const getI18nPath = (url: string, locale: string) => {
 
   return `/${locale}${url}`;
 };
+
+/**
+ * Builds the absolute URL of a page in a given locale, without a trailing slash.
+ * @param locale The locale identifier.
+ * @param path The application-relative path, empty for the home page.
+ * @returns The absolute localized URL.
+ */
+export const getLocalizedUrl = (locale: string, path = '') =>
+  `${getBaseUrl()}${getI18nPath(path, locale)}`;
+
+/**
+ * Lists the absolute URL of a page in every locale, plus `x-default` for unmatched languages.
+ * @param path The application-relative path, empty for the home page.
+ * @returns A map of hreflang codes to absolute URLs.
+ */
+export const getLanguageAlternates = (path = '') => ({
+  ...Object.fromEntries(routing.locales.map((locale) => [locale, getLocalizedUrl(locale, path)])),
+  'x-default': getLocalizedUrl(routing.defaultLocale, path),
+});
