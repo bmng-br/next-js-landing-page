@@ -24,7 +24,16 @@ export const ContactSection = async () => {
               <a href={`mailto:${AppConfig.contact.email}`} className="text-aqua hover:text-paper">
                 {AppConfig.contact.email}
               </a>
-              <div>{AppConfig.contact.phone}</div>
+              {AppConfig.contact.phones.map((phone) => (
+                <a
+                  key={phone.region}
+                  href={`tel:${phone.tel}`}
+                  className="text-paper no-underline hover:text-aqua"
+                >
+                  <span className="text-graphite-400">{t(`phone_${phone.region}_label`)}</span>{' '}
+                  {phone.display}
+                </a>
+              ))}
             </div>
           </div>
           <ContactForm />

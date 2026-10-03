@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { CONTACT_MOMENTS, ContactValidation } from '@/validations/ContactValidation';
 import { useContactMoment } from './ContactMomentContext';
@@ -45,6 +45,7 @@ const FieldError = (props: { id: string; show: boolean; children: React.ReactNod
 
 export const ContactForm = () => {
   const t = useTranslations('ContactForm');
+  const locale = useLocale();
   const contactMoment = useContactMoment();
   const [status, setStatus] = useState<Status>('idle');
   const [invalidFields, setInvalidFields] = useState<RequiredField[]>([]);
@@ -96,7 +97,7 @@ export const ContactForm = () => {
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(result.request),
+      body: JSON.stringify({ ...result.request, locale }),
     }).catch(() => null);
 
     setStatus(response?.ok ? 'success' : 'error');

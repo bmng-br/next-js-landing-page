@@ -205,7 +205,9 @@
   "ContactSection": {
     "eyebrow": "06 — Next step",
     "title": "Within 5 days you know where the risk is<dot>.</dot>",
-    "description": "Tell us what's happening. We'll reply with the next steps for the Technical Health Check."
+    "description": "Tell us what's happening. We'll reply with the next steps for the Technical Health Check.",
+    "phone_sp_label": "SP",
+    "phone_mg_label": "MG"
   },
   "ContactForm": {
     "name_label": "Your name",
@@ -240,10 +242,6 @@
     "meta_title": "Sign in",
     "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
   },
-  "SignUp": {
-    "meta_title": "Sign up",
-    "meta_description": "Effortlessly create an account through our intuitive sign-up process."
-  },
   "Dashboard": {
     "hello_message": "Hello {email}!",
     "alternative_message": "Need advanced features? Multi-tenancy & Teams, Roles & Permissions, Shadcn UI, End-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>.",
@@ -254,7 +252,8 @@
     "meta_description": "Manage your account from the dashboard.",
     "dashboard_link": "Dashboard",
     "user_profile_link": "Manage your account",
-    "sign_out": "Sign out"
+    "sign_out": "Sign out",
+    "leads_link": "Contacts"
   },
   "BaseTemplate": {
     "description": "Technical representatives on the client's side",
@@ -263,5 +262,21 @@
   },
   "LocaleSwitcher": {
     "change_language": "Change language"
+  },
+  "LeadNotification": {
+    "subject": "New website contact: {name}",
+    "intro": "A new contact arrived through the website form.",
+    "not_saved_warning": "A new contact arrived through the website, but it was NOT saved to the database. Keep this email.",
+    "name_label": "Name",
+    "company_label": "Company",
+    "email_label": "Email",
+    "moment_label": "Project stage",
+    "language_label": "Language",
+    "message_label": "Message"
+  },
+  "LeadsPage": {
+    "title": "Received contacts",
+    "empty": "No contacts received yet.",
+    "moment_label": "Project stage"
   }
 }

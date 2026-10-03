@@ -2,8 +2,8 @@ import type { KnipConfig } from 'knip';
 
 const config: KnipConfig = {
   // Files to exclude from Knip analysis
-  // The DB client, form and test-data libraries are kept for upcoming features (e.g. contact form backend)
-  ignore: ['src/libs/I18n.ts', 'src/types/I18n.ts', 'src/libs/DB.ts', 'src/utils/DBConnection.ts'],
+  // The form and test-data libraries are kept for upcoming features
+  ignore: ['src/libs/I18n.ts', 'src/types/I18n.ts'],
   // Dependencies to ignore during analysis
   ignoreDependencies: [
     '@clerk/shared',

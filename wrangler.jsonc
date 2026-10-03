@@ -7,11 +7,19 @@
   "assets": {
     "directory": "dist/client",
     "not_found_handling": "none",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
   },
   // Serve production on workers.dev and give each preview its own workers.dev URL
   "workers_dev": true,
   "preview_urls": true,
+  // Lead alerts: only from the notifications subdomain, only to the team inbox
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "contato@bmng.com.br",
+      "allowed_sender_addresses": ["site@avisos.bmng.com.br"],
+    },
+  ],
   // Required by Workers Builds preview deployments (`wrangler preview`)
-  "previews": {}
+  "previews": {},
 }
