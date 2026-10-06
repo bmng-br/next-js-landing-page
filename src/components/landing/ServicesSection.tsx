@@ -14,9 +14,10 @@ const ServiceCard = (props: {
   billingNote?: string;
   cta: string;
   featured?: boolean;
+  className?: string;
 }) => (
   <article
-    className={`flex flex-col gap-[22px] rounded-2xl bg-white px-8 py-9 ${
+    className={`flex flex-col gap-[22px] rounded-2xl bg-white px-8 py-9 ${props.className ?? ''} ${
       props.featured ? 'border-2 border-graphite-950' : 'border border-mist-300'
     }`}
   >
@@ -49,6 +50,14 @@ const ServiceCard = (props: {
   </article>
 );
 
+const SERVICES = [
+  'diagnosis',
+  'design_hiring',
+  'processes',
+  'project_management',
+  'ongoing_governance',
+] as const;
+
 export const ServicesSection = async () => {
   const t = await getTranslations('ServicesSection');
 
@@ -56,36 +65,27 @@ export const ServicesSection = async () => {
     <section id={SectionIds.services} className="py-section">
       <Container className="flex flex-col gap-section-gap">
         <SectionIntro eyebrow={t('eyebrow')} title={t('title')} description={t('description')} />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] items-stretch gap-4">
-          <ServiceCard
-            num="01"
-            badge={t('health_check.badge')}
-            title={t('health_check.title')}
-            description={t('health_check.description')}
-            billingLabel={t('billing_label')}
-            billing={t('health_check.billing')}
-            cta={t('health_check.cta')}
-            featured
-          />
-          <ServiceCard
-            num="02"
-            badge={t('advisory.badge')}
-            title={t('advisory.title')}
-            description={t('advisory.description')}
-            billingLabel={t('billing_label')}
-            billing={t('advisory.billing')}
-            cta={t('advisory.cta')}
-          />
-          <ServiceCard
-            num="03"
-            badge={t('governance.badge')}
-            title={t('governance.title')}
-            description={t('governance.description')}
-            billingLabel={t('billing_label')}
-            billing={t('governance.billing')}
-            billingNote={t('governance.billing_note')}
-            cta={t('governance.cta')}
-          />
+        <div className="grid items-stretch gap-4 md:grid-cols-2 lg:grid-cols-6">
+          {SERVICES.map((key, index) => (
+            <ServiceCard
+              key={key}
+              num={String(index + 1).padStart(2, '0')}
+              badge={t(`${key}.badge`)}
+              title={t(`${key}.title`)}
+              description={t(`${key}.description`)}
+              billingLabel={t('billing_label')}
+              billing={t(`${key}.billing`)}
+              billingNote={
+                key === 'project_management' ? t('project_management.billing_note') : undefined
+              }
+              cta={t(`${key}.cta`)}
+              featured={index === 0}
+              // Large screens: three cards, then two wider ones; the odd last card fills its row on tablets
+              className={
+                index < 3 ? 'lg:col-span-2' : `lg:col-span-3 ${index === 4 ? 'md:col-span-2' : ''}`
+              }
+            />
+          ))}
         </div>
       </Container>
     </section>

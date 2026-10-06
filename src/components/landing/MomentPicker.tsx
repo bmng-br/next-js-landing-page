@@ -6,13 +6,13 @@ import { ButtonLink } from './ButtonLink';
 import { useContactMoment } from './ContactMomentContext';
 import { SectionIds } from './SectionIds';
 
-const MOMENT_KEYS = ['stalled', 'expansion', 'integration'] as const;
+const MOMENT_KEYS = ['organize', 'expansion', 'stalled', 'integration', 'ongoing'] as const;
 
 type MomentKey = (typeof MOMENT_KEYS)[number];
 
 export const MomentPicker = () => {
   const t = useTranslations('MomentPicker');
-  const [selected, setSelected] = useState<MomentKey>('stalled');
+  const [selected, setSelected] = useState<MomentKey>('organize');
   const contactMoment = useContactMoment();
 
   return (

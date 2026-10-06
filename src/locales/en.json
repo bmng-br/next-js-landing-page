@@ -1,9 +1,9 @@
 {
   "IndexPage": {
-    "meta_title": "Boomerang Soluções · Technical governance on the client's side",
-    "meta_description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us.",
+    "meta_title": "Boomerang Soluções · Processes and technology, side by side with you",
+    "meta_description": "We solve business problems that run through processes and technology. We learn how you operate, organize your processes, design the solution and follow the delivery until the results show up.",
     "og_locale": "en_US",
-    "og_image_alt": "Boomerang Soluções: your project leaves your hand and comes back working."
+    "og_image_alt": "Boomerang Soluções: from problem to result, side by side with you."
   },
   "LandingNav": {
     "home_label": "Boomerang Soluções, home",
@@ -20,70 +20,74 @@
     "close_menu_label": "Close menu"
   },
   "Hero": {
-    "eyebrow": "Technical representatives on the client's side",
-    "title": "Your project leaves your hand and comes back working<dot>.</dot>",
-    "description": "We take over the technical governance of your critical software, automation and infrastructure projects. We hold suppliers accountable until final acceptance, and you only talk to us.",
-    "primary_cta": "Request a diagnosis in 3 to 5 days",
+    "eyebrow": "Processes and technology, from diagnosis to delivery",
+    "title": "From problem to result, side by side with you<dot>.</dot>",
+    "description": "We learn how you operate, organize your processes, design the solution and follow the delivery until the results show up. You see everything and you decide.",
+    "primary_cta": "Book a free conversation",
     "secondary_cta": "How it works",
-    "marquee_item_1": "Deadline extensions",
-    "marquee_item_2": "Inflated scope",
-    "marquee_item_3": "Systems that don't talk",
-    "marquee_item_4": "Electrical design × automation",
-    "marquee_item_5": "Core ERP replacement",
-    "marquee_item_6": "Field commissioning",
-    "marquee_item_7": "Joint liability",
-    "marquee_item_8": "Proposal review before signing"
+    "marquee_item_1": "Processes that live in people’s heads",
+    "marquee_item_2": "Information lost in emails",
+    "marquee_item_3": "Side spreadsheets",
+    "marquee_item_4": "Systems no one designed for",
+    "marquee_item_5": "Proposals you can’t compare",
+    "marquee_item_6": "Time and cost change orders",
+    "marquee_item_7": "Systems that don’t talk to each other",
+    "marquee_item_8": "Vendors passing the buck"
   },
   "BoomerangTrajectory": {
-    "svg_label": "The boomerang's path: the project leaves your hand, goes through diagnosis, design, procurement and delivery management, and comes back working.",
+    "svg_label": "Boomerang trajectory: the project goes through diagnosis, design and hiring, processes, implementation and delivery, and comes back working.",
     "start_label": "YOUR HAND",
     "stage_label": "Stage",
     "stages": {
       "need": {
-        "name": "Need",
-        "desc": "The project leaves your hand as a business need."
+        "name": "The need",
+        "desc": "It all starts with a free conversation to understand your situation."
       },
       "diagnosis": {
         "name": "Diagnosis",
-        "desc": "We review proposals, code and designs. We find the risk before it becomes a cost."
+        "label": "Diagnosis",
+        "desc": "We learn the business, current processes, systems, contracts and the real pain."
       },
       "design": {
-        "name": "Design",
-        "desc": "We structure the architecture and technical requirements of the solution."
+        "name": "Design and hiring",
+        "label": "Design",
+        "desc": "We design the solution, weigh buying, customizing or building, and support the hiring."
       },
       "hiring": {
-        "name": "Procurement",
-        "desc": "We run the RFP and sourcing. Poorly defined scope doesn't get through."
+        "name": "Processes",
+        "label": "Processes",
+        "desc": "We redesign flows, roles, rules and metrics. We simplify before we automate."
       },
       "delivery": {
-        "name": "Delivery management",
-        "desc": "We hold suppliers to deadline, quality and scope until acceptance."
+        "name": "Implementation",
+        "label": "Implementation",
+        "desc": "We coordinate vendors and partners through build and testing, and prepare your team."
       },
       "return": {
-        "name": "Back and working",
-        "desc": "Tested, commissioned and accepted. Back in your hand."
+        "name": "Delivery",
+        "desc": "Signed off, accepted and followed through the warranty period."
       }
     }
   },
   "ProblemSection": {
     "eyebrow": "01 — The problem",
-    "title": "You hired solutions. You're managing conflicts.",
-    "description": "The people who understand the subject sit on the other side of the table. The developer pushes change orders, the systems don't talk to each other and, in the field, the electrical design doesn't match the automation. Each supplier answers for its own part. Nobody answers for the whole."
+    "title": "Your company grew. The way it works didn’t.",
+    "description": "Processes live in people’s heads, information gets lost between emails, messages and side spreadsheets, and every team does things its own way. When a project comes up to fix it, the decision usually sits with whoever is selling, not whoever is buying."
   },
   "ScenarioComparison": {
     "toggle_label": "Compare scenarios",
     "without_button": "Without Boomerang",
     "with_button": "With Boomerang",
-    "without_title": "The blame game.",
-    "without_point_1": "Three contracts, three versions of the truth. You become the integrator without being hired for it.",
-    "without_point_2": "Every delay becomes a change order. Without technical grounding, you can't tell what's fair.",
-    "without_point_3": "The result: wasted cash and loss of control over your own investment.",
-    "with_title": "One technical lead. On your side.",
-    "with_point_1": "We take over technical governance end to end. You decide on deadline, cost and priority.",
-    "with_point_2": "We hold suppliers to deadline, quality and scope until final acceptance.",
-    "with_point_3": "We eliminate financial, tax and operational risks before they become costs.",
+    "without_title": "You manage the conflict, not the business.",
+    "without_point_1": "Systems bought to fix a process no one designed, so they don’t fix it.",
+    "without_point_2": "Proposals you can’t compare, and time and cost change orders halfway through.",
+    "without_point_3": "In the end you pay more, get less, and the original problem is still there.",
+    "with_title": "Technical authority on the side of whoever pays.",
+    "with_point_1": "You stay in control: proposals, schedule, costs and risks are visible at all times.",
+    "with_point_2": "We hold vendors to deadline, quality and scope, with you informed and part of every decision.",
+    "with_point_3": "We take no commission from vendors. Our recommendation is based only on what is best for your business.",
     "without_svg_label": "Without Boomerang: you are tied to three suppliers, and the problem gets pushed from one to the other.",
-    "with_svg_label": "With Boomerang: you talk to a single lead, who coordinates and holds the three suppliers accountable and hands back an accepted delivery.",
+    "with_svg_label": "With Boomerang: we coordinate and hold the three vendors accountable together with you, and the delivery comes back accepted.",
     "node_you": "You",
     "node_software": "Software",
     "node_automation": "Automation",
@@ -97,107 +101,138 @@
   },
   "FrontsSection": {
     "eyebrow": "02 — How we work",
-    "title": "From the code to the electrical panel.",
-    "description": "Three fronts, one single accountability. From code audits to infrastructure compatibility."
+    "title": "From process to technology.",
+    "description": "We look at the whole problem. First we understand how the work gets done; only then do we decide whether something needs to be bought, customized or built, and sometimes it doesn’t."
   },
   "FrontsAccordion": {
     "items_title": "What we do",
-    "digital": {
-      "title": "Digital projects",
-      "body": "Governance of architecture, code quality and development pipelines. We make sure the software house delivers the right product, not the one that's easiest to bill.",
-      "item_1": "Architecture and code review",
-      "item_2": "Governance of development pipelines",
-      "item_3": "Blocking abusive scope change orders",
-      "item_4": "Technical acceptance of deliveries"
+    "processes": {
+      "title": "Processes",
+      "body": "Process before tools. We understand how the work happens today and redesign how it will happen, with your team validating each step.",
+      "item_1": "Process mapping and redesign",
+      "item_2": "Flows, roles, rules and metrics",
+      "item_3": "Simplification before automation",
+      "item_4": "Processes documented and validated with your team"
     },
-    "cyber_physical": {
-      "title": "Cyber-physical projects",
-      "body": "Convergence between active infrastructure and the digital layer, such as IoT and automation. This is where the electrical and automation designs need to match, and they almost never do on their own.",
-      "item_1": "Infrastructure and automation compatibility",
-      "item_2": "Interface engineering between systems and machines",
-      "item_3": "Oversight of field commissioning"
+    "technology": {
+      "title": "Technology",
+      "body": "We explain the technical side in business terms, so you know what you are buying and why. Then we coordinate the implementation through to sign-off.",
+      "item_1": "Choosing and implementing systems or custom apps",
+      "item_2": "Integration between systems",
+      "item_3": "Cloud migration",
+      "item_4": "Infrastructure for a new site"
     },
-    "compliance": {
-      "title": "Protection and compliance",
-      "body": "Auditing of technical contracts and oversight of subcontractors, so your company doesn't inherit joint or secondary liability risks.",
-      "item_1": "Technical contract audits",
-      "item_2": "Subcontractor oversight",
-      "item_3": "Reduction of tax and labor risks"
+    "specialists": {
+      "title": "Specialist network",
+      "body": "When the solution calls for expertise we don’t have in-house, we bring in people who do: software development, information security, infrastructure and networks, electrical engineering and automation, data and artificial intelligence.",
+      "item_1": "Specialists presented with the reason for the choice and open pricing",
+      "item_2": "You approve who joins the project",
+      "item_3": "Boomerang stays responsible for the result"
     }
   },
   "MomentsSection": {
     "eyebrow": "03 — When to call us",
-    "title": "What stage is your project at?",
-    "description": "Our work doesn't depend on your industry. It depends on the risk. Pick the situation closest to yours."
+    "title": "Where is your company right now?",
+    "description": "We work with companies in any industry. What matters is where the business is. Pick the situation closest to yours."
   },
   "MomentPicker": {
-    "group_label": "Project situation",
-    "moment_label": "Stage: {moment}",
-    "start_label": "Where to start",
-    "cta": "I want to talk about this",
-    "stalled": {
-      "situation": "The project stalled and the deadline blew up",
-      "moment": "Foundation",
-      "tag": "Rapid intervention",
-      "headline": "We assign responsibilities and stop the losses.",
-      "body": "We step in with a rapid technical intervention: we audit what was delivered, what was billed and what's missing. You walk away with a map of the problem and of who answers for it.",
-      "service": "Technical Health Check, in 3 to 5 days"
+    "group_label": "Company moment",
+    "moment_label": "Moment: {moment}",
+    "start_label": "Where we come in",
+    "cta": "Let’s talk about this",
+    "organize": {
+      "situation": "The work depends on a few people",
+      "moment": "Organize",
+      "tag": "Get the house in order",
+      "headline": "We get processes out of people’s heads.",
+      "body": "Every team does things its own way and information gets lost. We understand how the work happens and organize the processes before thinking about any tool.",
+      "service": "Diagnosis and Processes"
     },
     "expansion": {
-      "situation": "I'm going to expand, automate or replace the ERP",
-      "moment": "Expansion",
-      "tag": "Before hiring",
-      "headline": "We define the technical requirements before you sign.",
-      "body": "A new plant, automation or a core ERP replacement. We structure what needs to be delivered and how it will be accepted, before suppliers are hired.",
-      "service": "Advisory and Audit, per phase"
+      "situation": "I need a new system and don’t know where to start",
+      "moment": "Start",
+      "tag": "Before any vendor",
+      "headline": "We design the solution before you talk to any vendor.",
+      "body": "A new system, an integration or an IT restructuring. We weigh buying, customizing or building, and you compare proposals fairly, with scope, cost and schedule defined.",
+      "service": "Diagnosis and Design & Hiring"
+    },
+    "stalled": {
+      "situation": "The project stalled and change orders keep coming",
+      "moment": "Unblock",
+      "tag": "Fast intervention",
+      "headline": "We find where it got stuck and take back control.",
+      "body": "Deadlines blew up or change orders keep arriving. A quick diagnosis shows what was delivered, what is missing and who is responsible for what. Then we stay by your side managing the project.",
+      "service": "Quick diagnosis, then Project Management"
     },
     "integration": {
-      "situation": "The equipment arrived and the infrastructure can't support it",
-      "moment": "Integration",
-      "tag": "Interface engineering",
-      "headline": "We get the machine, the system and the installation talking.",
-      "body": "The machinery or the system arrived, but the infrastructure can't keep up. We solve the interface engineering and run field commissioning.",
-      "service": "Full Governance or Advisory per phase"
+      "situation": "The system arrived and doesn’t talk to the rest",
+      "moment": "Integrate",
+      "tag": "Fit into operations",
+      "headline": "We make what arrived work with what you already have.",
+      "body": "The system or equipment arrived, but it doesn’t talk to what you already have or doesn’t fit your operations. We adjust the processes and coordinate the vendors involved.",
+      "service": "Processes and vendor coordination"
+    },
+    "ongoing": {
+      "situation": "The company grew and needs ongoing oversight",
+      "moment": "Oversee",
+      "tag": "Ongoing",
+      "headline": "A processes and technology team, without hiring one.",
+      "body": "The company grew and needs someone overseeing processes and technology on an ongoing basis, with reports in business language.",
+      "service": "Ongoing Governance"
     }
   },
   "ServicesSection": {
     "eyebrow": "04 — Services",
-    "title": "Start with the diagnosis. Stay for the results.",
-    "description": "Three ways to work together, from a one-off check to full governance. With the last one, we earn more when you save.",
+    "title": "Five ways to work with us.",
+    "description": "From a one-off diagnosis to ongoing oversight. Hire the full journey or join at the stage your company is in.",
     "billing_label": "Billing",
-    "health_check": {
+    "diagnosis": {
       "badge": "Start here",
-      "title": "Technical Health Check",
-      "description": "A 3 to 5 day diagnosis to review proposals before signing or audit delayed projects. It reveals the hidden financial risks.",
-      "billing": "Fixed scope · [PRICE]",
-      "cta": "Request the Health Check"
+      "title": "Diagnosis",
+      "description": "For those who need to decide what to do, review a proposal before signing, or understand why something isn’t working.",
+      "billing": "Fixed price",
+      "cta": "Request a diagnosis"
     },
-    "advisory": {
-      "badge": "Per phase",
-      "title": "Advisory and Audit",
-      "description": "Technical validation at the milestones that decide the project: RFP, supplier sourcing and commissioning.",
-      "billing": "Per milestone",
-      "cta": "Talk about a phase"
+    "design_hiring": {
+      "badge": "Stage 2",
+      "title": "Design & Hiring",
+      "description": "For those with a project ahead who want to hire right from the start.",
+      "billing": "Fixed price per stage",
+      "cta": "Talk about a project"
     },
-    "governance": {
-      "badge": "Retainer",
-      "title": "Full Governance",
-      "description": "We take over the technical management of the project from kickoff to acceptance, with fees tied to your results.",
-      "billing": "Fixed fee + success fee",
-      "billing_note": "tied to deadline, budget and avoided change orders",
+    "processes": {
+      "badge": "Stage 3",
+      "title": "Processes",
+      "description": "For those who need to adjust how the work happens for a new solution, or get more out of what they already have.",
+      "billing": "Fixed price per scope",
+      "cta": "Talk about processes"
+    },
+    "project_management": {
+      "badge": "Stages 4 and 5",
+      "title": "Project Management",
+      "description": "For those who need someone overseeing vendors and partners through implementation and delivery.",
+      "billing": "Monthly fee + bonus",
+      "billing_note": "bonus for meeting deadline and budget, on targets set in the contract before the start",
+      "cta": "Talk about management"
+    },
+    "ongoing_governance": {
+      "badge": "Cross-stage",
+      "title": "Ongoing Governance",
+      "description": "For those who want a permanent processes and technology function without building a team.",
+      "billing": "Fixed monthly fee",
       "cta": "Talk about governance"
     }
   },
   "DnaSection": {
-    "eyebrow": "05 — Our technical DNA",
+    "eyebrow": "05 — Our DNA",
     "title": "We speak the language<br></br>of the <word></word>.",
     "title_label": "We speak the language of the engineer, the developer and the business owner.",
-    "engineering_title": "Engineering",
-    "engineering_body": "Electrical design, automation and field commissioning.",
-    "it_title": "Information technology",
-    "it_body": "Software architecture, code quality and systems integration.",
-    "management_title": "Technical management",
-    "management_body": "Projects and products run with pragmatism: deadline, cost and decision."
+    "management_title": "Project and product management",
+    "management_body": "Critical systems integration, multi-vendor programs and deliveries in regulated environments, in Brazil and abroad.",
+    "processes_title": "Processes",
+    "processes_body": "Generalists by choice: we look at the whole problem, from process to technology.",
+    "technology_title": "Technology and engineering",
+    "technology_body": "We round out our delivery capacity with a network of specialists we select and coordinate."
   },
   "RotatingWord": {
     "engineer": "engineer",
@@ -206,8 +241,8 @@
   },
   "ContactSection": {
     "eyebrow": "06 — Next step",
-    "title": "Within 5 days you know where the risk is<dot>.</dot>",
-    "description": "Tell us what's happening. We'll reply with the next steps for the Technical Health Check.",
+    "title": "A conversation, then a diagnosis<dot>.</dot>",
+    "description": "It all starts with a free conversation to understand your situation. Then we send a Diagnosis proposal with a fixed scope and price.",
     "phone_sp_label": "SP",
     "phone_mg_label": "MG"
   },
@@ -215,30 +250,32 @@
     "name_label": "Your name",
     "company_label": "Company",
     "email_label": "Work email",
-    "moment_label": "What stage is the project at?",
-    "moment_stalled": "The project stalled or is delayed",
-    "moment_expansion": "I'm going to expand or replace the ERP",
-    "moment_integration": "The equipment arrived and doesn't fit",
-    "moment_other": "Other",
     "message_label": "What's happening?",
-    "submit_button": "Request a Technical Health Check",
+    "submit_button": "Book a conversation",
     "privacy_note": "No commitment. Your data stays with us.",
     "success_title": "Got it. The boomerang has left your hand.",
     "success_body": "We'll reply within [RESPONSE TIME] with the next steps.",
     "reset_button": "Send another request",
-    "moment_placeholder": "Select an option",
     "name_error": "Enter your name.",
     "email_error": "Enter a valid email.",
-    "moment_error": "Choose the project stage.",
     "submitting_button": "Sending…",
-    "submit_error": "We couldn’t send your request."
+    "submit_error": "We couldn’t send your request.",
+    "moment_label": "Where is your company right now?",
+    "moment_organize": "I need to organize our processes",
+    "moment_expansion": "I need a new system",
+    "moment_stalled": "The project stalled or is late",
+    "moment_integration": "The system arrived and doesn’t fit",
+    "moment_ongoing": "I want ongoing oversight",
+    "moment_other": "Other",
+    "moment_placeholder": "Select an option",
+    "moment_error": "Choose where your company is."
   },
   "LandingFooter": {
     "logo_alt": "Boomerang Soluções",
     "footer_navigation_label": "Footer navigation",
     "contact_link": "Contact",
     "linkedin_link": "LinkedIn",
-    "legal_line": "{legalName} · CNPJ {cnpj}"
+    "legal_line": "{legalName} · CNPJ {cnpj} · Barueri, São Paulo"
   },
   "SignIn": {
     "meta_title": "Sign in",
@@ -258,7 +295,7 @@
     "leads_link": "Contacts"
   },
   "BaseTemplate": {
-    "description": "Technical representatives on the client's side",
+    "description": "Processes and technology, side by side with you",
     "footer_text": "© {year} {name}. Made with <author></author>.",
     "main_navigation_label": "Main navigation"
   },
@@ -272,13 +309,13 @@
     "name_label": "Name",
     "company_label": "Company",
     "email_label": "Email",
-    "moment_label": "Project stage",
+    "moment_label": "Company moment",
     "language_label": "Language",
     "message_label": "Message"
   },
   "LeadsPage": {
     "title": "Received contacts",
     "empty": "No contacts received yet.",
-    "moment_label": "Project stage"
+    "moment_label": "Company moment"
   }
 }

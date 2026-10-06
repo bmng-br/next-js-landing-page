@@ -6,18 +6,18 @@ import { useState } from 'react';
 const FRONTS = [
   {
     num: '01',
-    key: 'digital',
-    items: ['digital.item_1', 'digital.item_2', 'digital.item_3', 'digital.item_4'],
+    key: 'processes',
+    items: ['processes.item_1', 'processes.item_2', 'processes.item_3', 'processes.item_4'],
   },
   {
     num: '02',
-    key: 'cyber_physical',
-    items: ['cyber_physical.item_1', 'cyber_physical.item_2', 'cyber_physical.item_3'],
+    key: 'technology',
+    items: ['technology.item_1', 'technology.item_2', 'technology.item_3', 'technology.item_4'],
   },
   {
     num: '03',
-    key: 'compliance',
-    items: ['compliance.item_1', 'compliance.item_2', 'compliance.item_3'],
+    key: 'specialists',
+    items: ['specialists.item_1', 'specialists.item_2', 'specialists.item_3'],
   },
 ] as const;
 

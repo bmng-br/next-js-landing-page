@@ -134,7 +134,7 @@ export const BoomerangJourney = (props: { children: React.ReactNode }) => {
                 textAnchor={station.anchor}
                 className="fill-graphite-200 text-[17px] font-semibold"
               >
-                {t(`stages.${station.key}.name`)}
+                {t(`stages.${station.key}.label`)}
               </text>
             ))}
             <text x="96" y="522" className="fill-paper text-[15px] font-bold tracking-[0.1em]">

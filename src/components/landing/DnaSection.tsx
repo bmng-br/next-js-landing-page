@@ -7,9 +7,9 @@ import { SectionIds } from './SectionIds';
 export const DnaSection = async () => {
   const t = await getTranslations('DnaSection');
   const pillars = [
-    { title: t('engineering_title'), body: t('engineering_body') },
-    { title: t('it_title'), body: t('it_body') },
     { title: t('management_title'), body: t('management_body') },
+    { title: t('processes_title'), body: t('processes_body') },
+    { title: t('technology_title'), body: t('technology_body') },
   ];
 
   return (
