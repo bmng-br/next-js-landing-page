@@ -254,7 +254,7 @@
     "submit_button": "Book a conversation",
     "privacy_note": "No commitment. Your data stays with us.",
     "success_title": "Got it. The boomerang has left your hand.",
-    "success_body": "We'll reply within [RESPONSE TIME] with the next steps.",
+    "success_body": "We'll reply within 3 to 5 business days with the next steps.",
     "reset_button": "Send another request",
     "name_error": "Enter your name.",
     "email_error": "Enter a valid email.",
