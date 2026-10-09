@@ -10,7 +10,6 @@
     "logo_alt": "Boomerang Soluções",
     "main_navigation_label": "Navegação principal",
     "problem_link": "O problema",
-    "fronts_link": "Como atuamos",
     "moments_link": "Quando nos chamar",
     "services_link": "Serviços",
     "contact_button": "Fale com a gente",
@@ -35,37 +34,45 @@
     "marquee_item_8": "Fornecedor empurrando responsabilidade"
   },
   "BoomerangTrajectory": {
-    "svg_label": "Trajetória do boomerang: o projeto passa por diagnóstico, desenho e contratação, processos, implantação e entrega, e volta funcionando.",
-    "start_label": "SUA MÃO",
-    "stage_label": "Etapa",
+    "svg_label": "Trajetória do boomerang: o seu projeto sai da sua mão e passa por diagnóstico, desenho e contratação, processos e implantação. Em cada etapa você decide, e ele volta a você entregue.",
+    "start_label": "VOCÊ DECIDE",
+    "stage_label": "O seu projeto",
+    "pause_button": "Pausar animação",
+    "play_button": "Retomar animação",
+    "replay_button": "Repetir animação",
     "stages": {
       "need": {
         "name": "Necessidade",
-        "desc": "Tudo começa com uma conversa sem custo para entender o seu cenário."
+        "you": "Você nos conta o cenário numa conversa sem custo."
       },
       "diagnosis": {
         "name": "Diagnóstico",
         "label": "Diagnóstico",
-        "desc": "Entendemos o negócio, os processos, os sistemas, os contratos e a dor real."
+        "we": "Nós entendemos o negócio, os processos, os sistemas e os contratos.",
+        "you": "Você vê tudo o que encontramos."
       },
       "design": {
         "name": "Desenho e contratação",
-        "label": "Desenho",
-        "desc": "Desenhamos a solução, avaliamos comprar, customizar ou desenvolver e apoiamos a contratação."
+        "label": "Desenho e contratação",
+        "we": "Nós desenhamos a solução e comparamos comprar, customizar ou desenvolver.",
+        "you": "Você decide e aprova quem entra."
       },
-      "hiring": {
+      "processes": {
         "name": "Processos",
         "label": "Processos",
-        "desc": "Redesenhamos fluxos, papéis, regras e indicadores. Simplificamos antes de automatizar."
+        "we": "Nós redesenhamos fluxos, papéis, regras e indicadores.",
+        "you": "A sua equipe valida cada passo."
       },
-      "delivery": {
+      "implementation": {
         "name": "Implantação",
         "label": "Implantação",
-        "desc": "Coordenamos fornecedores e parceiros na construção e nos testes, e preparamos a sua equipe."
+        "we": "Nós coordenamos fornecedores e parceiros e preparamos a sua equipe.",
+        "you": "Você acompanha cada passo e decide."
       },
       "return": {
         "name": "Entrega",
-        "desc": "Homologada, aceita e acompanhada durante a garantia."
+        "you": "Você aceita o resultado.",
+        "we": "Nós seguimos responsáveis por ele durante a garantia."
       }
     }
   },
@@ -94,44 +101,13 @@
     "node_electrical": "Elétrica",
     "node_boomerang": "Boomerang",
     "quote_software": "“Não é comigo.”",
-    "quote_automation": "“É da automação.”",
+    "quote_automation": "“É responsabilidade da Elétrica.”",
     "quote_electrical": "“É do software.”",
     "delivered_label": "Entregue e aceito",
     "suppliers_caption": "cobrados por prazo, qualidade e escopo"
   },
-  "FrontsSection": {
-    "eyebrow": "02 — Como atuamos",
-    "title": "Do processo à tecnologia.",
-    "description": "Olhamos o problema inteiro. Primeiro entendemos como o trabalho acontece; só depois decidimos se é preciso comprar, customizar ou desenvolver algo, e às vezes não é."
-  },
-  "FrontsAccordion": {
-    "items_title": "O que fazemos",
-    "processes": {
-      "title": "Processos",
-      "body": "Processo antes de ferramenta. Entendemos como o trabalho acontece hoje e redesenhamos como ele vai acontecer, com a sua equipe validando cada passo.",
-      "item_1": "Mapeamento e redesenho de processos",
-      "item_2": "Fluxos, papéis, regras e indicadores",
-      "item_3": "Simplificação antes da automação",
-      "item_4": "Processos documentados e validados com a equipe"
-    },
-    "technology": {
-      "title": "Tecnologia",
-      "body": "Explicamos o técnico na linguagem do negócio, para que você saiba o que está comprando e por quê. Depois coordenamos a implantação até o aceite.",
-      "item_1": "Escolha e implantação de sistemas ou aplicativos sob medida",
-      "item_2": "Integração entre sistemas",
-      "item_3": "Migração para nuvem",
-      "item_4": "Infraestrutura de uma nova unidade"
-    },
-    "specialists": {
-      "title": "Rede de especialistas",
-      "body": "Quando a solução pede um conhecimento que não temos em casa, trazemos quem tem: desenvolvimento de software, segurança da informação, infraestrutura e redes, engenharia elétrica e automação, dados e inteligência artificial.",
-      "item_1": "Especialistas apresentados com o motivo da escolha e o preço aberto",
-      "item_2": "Você aprova quem entra no projeto",
-      "item_3": "A Boomerang continua responsável pelo resultado"
-    }
-  },
   "MomentsSection": {
-    "eyebrow": "03 — Quando nos chamar",
+    "eyebrow": "02 — Quando nos chamar",
     "title": "Em que momento está a sua empresa?",
     "description": "Atendemos empresas de qualquer setor. O que importa é o momento do negócio. Escolha a situação mais parecida com a sua."
   },
@@ -139,7 +115,7 @@
     "group_label": "Momento da empresa",
     "moment_label": "Momento: {moment}",
     "start_label": "Por onde entramos",
-    "cta": "Quero conversar sobre isso",
+    "cta": "Agendar uma conversa",
     "organize": {
       "situation": "O trabalho depende de poucas pessoas",
       "moment": "Organizar",
@@ -185,7 +161,6 @@
     "eyebrow": "04 — Serviços",
     "title": "Cinco formas de contratar.",
     "description": "Do diagnóstico pontual ao acompanhamento contínuo. Contrate a jornada completa ou entre na etapa em que a sua empresa está.",
-    "billing_label": "Cobrança",
     "diagnosis": {
       "badge": "Comece por aqui",
       "title": "Diagnóstico",
@@ -197,34 +172,31 @@
       "badge": "Etapa 2",
       "title": "Desenho & Contratação",
       "description": "Para quem tem um projeto pela frente e quer contratar certo desde o início.",
-      "billing": "Valor fechado por etapa",
-      "cta": "Conversar sobre um projeto"
+      "billing": "Valor fechado por etapa"
     },
     "processes": {
       "badge": "Etapa 3",
       "title": "Processos",
       "description": "Para quem precisa ajustar como o trabalho acontece para uma nova solução, ou tirar mais do que já tem.",
-      "billing": "Valor fechado por escopo",
-      "cta": "Conversar sobre processos"
+      "billing": "Valor fechado por escopo"
     },
     "project_management": {
       "badge": "Etapas 4 e 5",
       "title": "Gestão do Projeto",
       "description": "Para quem precisa de alguém acompanhando fornecedores e parceiros na implantação até a entrega.",
       "billing": "Mensalidade + bônus",
-      "billing_note": "bônus por prazo e orçamento cumpridos, sobre metas definidas em contrato antes do início",
-      "cta": "Falar sobre gestão"
+      "billing_note": "bônus por prazo e orçamento cumpridos, sobre metas definidas em contrato antes do início"
     },
     "ongoing_governance": {
       "badge": "Transversal",
       "title": "Governança Contínua",
       "description": "Para quem quer uma área de processos e tecnologia permanente, sem montar uma equipe.",
-      "billing": "Mensalidade fixa",
-      "cta": "Falar sobre governança"
-    }
+      "billing": "Mensalidade fixa"
+    },
+    "other_cta": "Agendar uma conversa sem custo"
   },
   "DnaSection": {
-    "eyebrow": "05 — Nosso DNA",
+    "eyebrow": "03 — Nosso DNA",
     "title": "Falamos a língua<br></br>do <word></word>.",
     "title_label": "Falamos a língua do engenheiro, do desenvolvedor e do dono do negócio.",
     "management_title": "Gestão de projetos e produtos",
@@ -232,7 +204,10 @@
     "processes_title": "Processos",
     "processes_body": "Generalistas por escolha: olhamos o problema inteiro, do processo à tecnologia.",
     "technology_title": "Tecnologia e engenharia",
-    "technology_body": "Completamos a capacidade de entrega com uma rede de especialistas selecionados e coordenados por nós."
+    "technology_body": "Quando a solução pede um conhecimento que não temos em casa, trazemos quem tem: desenvolvimento de software, segurança da informação, infraestrutura e redes, engenharia elétrica e automação, dados e inteligência artificial.",
+    "technology_item_1": "Especialistas apresentados com o motivo da escolha e o preço aberto",
+    "technology_item_2": "Você aprova quem entra no projeto",
+    "technology_item_3": "A Boomerang continua responsável pelo resultado"
   },
   "RotatingWord": {
     "engineer": "engenheiro",
@@ -240,7 +215,7 @@
     "owner": "dono do negócio"
   },
   "ContactSection": {
-    "eyebrow": "06 — Próximo passo",
+    "eyebrow": "05 — Próximo passo",
     "title": "Uma conversa, depois um diagnóstico<dot>.</dot>",
     "description": "Tudo começa com uma conversa sem custo para entender o seu cenário. Em seguida, enviamos uma proposta de Diagnóstico com escopo e valor fechados.",
     "phone_sp_label": "SP",
@@ -248,27 +223,27 @@
   },
   "ContactForm": {
     "name_label": "Seu nome",
-    "company_label": "Empresa",
+    "company_label": "Empresa (opcional)",
     "email_label": "E-mail de trabalho",
-    "message_label": "O que está acontecendo?",
+    "message_label": "O que está acontecendo? (opcional)",
     "submit_button": "Agendar uma conversa",
+    "reply_note": "Respondemos em 3 a 5 dias úteis.",
     "privacy_note": "Sem compromisso. Seus dados ficam só com a gente.",
     "success_title": "Recebemos. O boomerang já saiu da sua mão.",
     "success_body": "Respondemos em 3 a 5 dias úteis com os próximos passos.",
     "reset_button": "Enviar outro pedido",
     "name_error": "Informe seu nome.",
-    "email_error": "Informe um e-mail válido.",
+    "email_error": "Informe um e-mail válido, como nome@empresa.com.br.",
     "submitting_button": "Enviando…",
-    "submit_error": "Não foi possível enviar seu pedido.",
-    "moment_label": "Em que momento está a sua empresa?",
+    "submit_error": "Não foi possível enviar seu pedido. Escreva para <mail>{email}</mail>.",
+    "moment_label": "Em que momento está a sua empresa? (opcional)",
     "moment_organize": "Preciso organizar os processos",
     "moment_expansion": "Preciso de um sistema novo",
     "moment_stalled": "O projeto travou ou atrasou",
     "moment_integration": "O sistema chegou e não encaixa",
     "moment_ongoing": "Quero acompanhamento contínuo",
     "moment_other": "Outro",
-    "moment_placeholder": "Selecione uma opção",
-    "moment_error": "Escolha o momento da empresa."
+    "moment_placeholder": "Selecione uma opção"
   },
   "LandingFooter": {
     "logo_alt": "Boomerang Soluções",

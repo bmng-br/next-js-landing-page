@@ -7,9 +7,12 @@ import { useContactMoment } from './ContactMomentContext';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-type RequiredField = 'name' | 'email' | 'moment';
+type RequiredField = 'name' | 'email';
 
-const REQUIRED_FIELDS: RequiredField[] = ['name', 'email', 'moment'];
+const REQUIRED_FIELDS: RequiredField[] = ['name', 'email'];
+
+/** Gives up on a request that never answers, so the form can offer the email fallback. */
+const SUBMIT_TIMEOUT_MS = 15_000;
 
 const fieldClassName =
   'min-h-[50px] rounded-[10px] border-[1.5px] bg-white px-4 font-sans text-base font-normal text-graphite-950 aria-invalid:border-pink';
@@ -43,7 +46,7 @@ const FieldError = (props: { id: string; show: boolean; children: React.ReactNod
     </span>
   );
 
-export const ContactForm = () => {
+export const ContactForm = (props: { email: string }) => {
   const t = useTranslations('ContactForm');
   const locale = useLocale();
   const contactMoment = useContactMoment();
@@ -78,7 +81,9 @@ export const ContactForm = () => {
   const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const result = validate(Object.fromEntries(new FormData(form)));
+    const values = Object.fromEntries(new FormData(form));
+    // The moment is optional: visitors who skip it are filed under "other"
+    const result = validate({ ...values, moment: values.moment === '' ? 'other' : values.moment });
     setInvalidFields(result.invalidFields);
 
     if (!result.request) {
@@ -93,11 +98,11 @@ export const ContactForm = () => {
 
     setStatus('submitting');
 
-    // TODO: Replace the placeholder endpoint once the backend (email or CRM) is defined
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ...result.request, locale }),
+      signal: AbortSignal.timeout(SUBMIT_TIMEOUT_MS),
     }).catch(() => null);
 
     setStatus(response?.ok ? 'success' : 'error');
@@ -105,8 +110,27 @@ export const ContactForm = () => {
 
   const isInvalid = (field: RequiredField) => invalidFields.includes(field);
 
+  // Flags a filled field as soon as it loses focus; empty ones are only flagged on submit
+  const validateOnBlur = (field: RequiredField) => (event: React.FocusEvent<HTMLInputElement>) => {
+    const { value } = event.currentTarget;
+
+    if (value === '') {
+      return;
+    }
+
+    const isValid = ContactValidation.shape[field].safeParse(value).success;
+
+    setInvalidFields((current) => {
+      const others = current.filter((elt) => elt !== field);
+
+      return isValid ? others : [...others, field];
+    });
+  };
+
   const fieldProps = (field: RequiredField) => ({
     name: field,
+    onBlur: validateOnBlur(field),
+    maxLength: field === 'name' ? 200 : 320,
     'aria-invalid': isInvalid(field),
     'aria-describedby': isInvalid(field) ? `contact-${field}-error` : undefined,
   });
@@ -136,6 +160,7 @@ export const ContactForm = () => {
           <input
             type="text"
             name="company"
+            maxLength={200}
             autoComplete="organization"
             className={`${fieldClassName} border-graphite-500`}
           />
@@ -157,31 +182,26 @@ export const ContactForm = () => {
       <label className={labelClassName}>
         {t('moment_label')}
         <select
-          required
+          name="moment"
           value={contactMoment.moment ?? ''}
           onChange={(event) => {
             contactMoment.setMoment(CONTACT_MOMENTS.find((elt) => elt === event.target.value));
           }}
           className={`${fieldClassName} border-graphite-500 px-3.5`}
-          {...fieldProps('moment')}
         >
-          <option value="" disabled>
-            {t('moment_placeholder')}
-          </option>
+          <option value="">{t('moment_placeholder')}</option>
           {CONTACT_MOMENTS.map((moment) => (
             <option key={moment} value={moment}>
               {t(`moment_${moment}`)}
             </option>
           ))}
         </select>
-        <FieldError id="contact-moment-error" show={isInvalid('moment')}>
-          {t('moment_error')}
-        </FieldError>
       </label>
       <label className={labelClassName}>
         {t('message_label')}
         <textarea
           name="message"
+          maxLength={5000}
           rows={3}
           className={`${fieldClassName} resize-y border-graphite-500 py-3.5 leading-6`}
         />
@@ -191,9 +211,17 @@ export const ContactForm = () => {
           role="alert"
           className="rounded-[10px] border-[1.5px] border-pink px-4 py-3 text-sm leading-[21px] font-semibold"
         >
-          {t('submit_error')}
+          {t.rich('submit_error', {
+            email: props.email,
+            mail: (chunks) => (
+              <a href={`mailto:${props.email}`} className="underline">
+                {chunks}
+              </a>
+            ),
+          })}
         </div>
       )}
+      <div className="text-sm leading-[21px] font-semibold">{t('reply_note')}</div>
       <button
         type="submit"
         disabled={status === 'submitting'}
@@ -201,7 +229,7 @@ export const ContactForm = () => {
       >
         {status === 'submitting' ? t('submitting_button') : t('submit_button')}
       </button>
-      <div className="text-[13px] leading-5 text-graphite-700">{t('privacy_note')}</div>
+      <div className="text-sm leading-[21px] text-graphite-700">{t('privacy_note')}</div>
     </form>
   );
 };

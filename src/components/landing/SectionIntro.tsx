@@ -10,7 +10,14 @@ export const SectionIntro = (props: {
     <div className="flex flex-col gap-5">
       <Eyebrow className={props.eyebrowClassName}>{props.eyebrow}</Eyebrow>
       <h2 className="m-0 text-[clamp(34px,min(4.6vw,6svh),64px)] leading-[1.02] font-bold tracking-[-0.04em]">
-        {props.title}
+        {props.title.endsWith('.') ? (
+          <>
+            {props.title.slice(0, -1)}
+            <span className="text-pink">.</span>
+          </>
+        ) : (
+          props.title
+        )}
       </h2>
     </div>
     <p className="m-0 text-lg leading-[29px] text-graphite-700">{props.description}</p>

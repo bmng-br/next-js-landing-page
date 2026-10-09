@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { ButtonLink } from './ButtonLink';
 import { useContactMoment } from './ContactMomentContext';
 import { SectionIds } from './SectionIds';
@@ -16,21 +16,20 @@ export const MomentPicker = () => {
   const contactMoment = useContactMoment();
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))] gap-6">
-      <fieldset
-        role="radiogroup"
-        aria-label={t('group_label')}
-        className="m-0 flex flex-col gap-3 border-0 p-0"
-      >
-        {MOMENT_KEYS.map((key) => {
-          const isChecked = selected === key;
+    <div
+      role="radiogroup"
+      aria-label={t('group_label')}
+      className="grid gap-3 lg:grid-cols-2 lg:grid-rows-[repeat(5,auto)_1fr] lg:gap-x-6"
+    >
+      {MOMENT_KEYS.map((key) => {
+        const isChecked = selected === key;
 
-          return (
-            // oxlint-disable-next-line jsx-a11y/label-has-associated-control -- the label text is in nested spans
+        return (
+          <Fragment key={key}>
+            {/* oxlint-disable-next-line jsx-a11y/label-has-associated-control -- the label text is in nested spans */}
             <label
-              key={key}
-              className={`flex min-h-22 cursor-pointer items-center gap-[18px] rounded-[14px] bg-white px-6 py-[18px] text-graphite-950 transition-colors duration-200 hover:border-graphite-950 has-focus-visible:outline-2 has-focus-visible:outline-offset-3 has-focus-visible:outline-teal ${
-                isChecked ? 'border-2 border-graphite-950' : 'border border-mist-400'
+              className={`flex min-h-22 cursor-pointer scroll-mt-4 items-center gap-[18px] rounded-[14px] border-2 bg-white px-6 py-[18px] text-graphite-950 transition-colors duration-200 hover:border-graphite-950 has-focus-visible:outline-2 has-focus-visible:outline-offset-3 has-focus-visible:outline-teal lg:col-start-1 ${
+                isChecked ? 'border-graphite-950' : 'border-mist-400'
               }`}
             >
               <input
@@ -38,8 +37,14 @@ export const MomentPicker = () => {
                 name="moment"
                 value={key}
                 checked={isChecked}
-                onChange={() => {
+                onChange={(event) => {
+                  const label = event.currentTarget.closest('label');
                   setSelected(key);
+                  contactMoment.setMoment(key);
+                  // Below lg the answer opens under the option, so bring the pair into view
+                  if (!window.matchMedia('(min-width: 1024px)').matches) {
+                    requestAnimationFrame(() => label?.scrollIntoView({ block: 'start' }));
+                  }
                 }}
                 className="sr-only"
               />
@@ -64,44 +69,38 @@ export const MomentPicker = () => {
                 </span>
               </span>
             </label>
-          );
-        })}
-      </fieldset>
 
-      <div
-        key={selected}
-        aria-live="polite"
-        className="flex animate-word-in flex-col gap-5 rounded-2xl border border-t-4 border-mist-300 border-t-teal bg-white p-8 lg:p-9"
-      >
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="text-xs font-bold tracking-[0.14em] text-teal uppercase">
-            {t('moment_label', { moment: t(`${selected}.moment`) })}
-          </div>
-          <div className="rounded-lg bg-mist-100 px-3 py-[7px] text-[13px] font-bold text-graphite-950">
-            {t(`${selected}.tag`)}
-          </div>
-        </div>
-        <div className="text-[clamp(26px,2.6vw,34px)] leading-[1.15] font-bold tracking-[-0.03em]">
-          {t(`${selected}.headline`)}
-        </div>
-        <p className="m-0 text-[17px] leading-7 text-graphite-700">{t(`${selected}.body`)}</p>
-        <div className="flex flex-col gap-1.5 border-t border-mist-200 pt-5">
-          <div className="text-xs font-bold tracking-[0.14em] text-graphite-700 uppercase">
-            {t('start_label')}
-          </div>
-          <div className="text-xl leading-7 font-bold">{t(`${selected}.service`)}</div>
-        </div>
-        <ButtonLink
-          href={`#${SectionIds.contact}`}
-          variant="ink"
-          className="self-start"
-          onClick={() => {
-            contactMoment.setMoment(selected);
-          }}
-        >
-          {t('cta')}
-        </ButtonLink>
-      </div>
+            {isChecked && (
+              <div
+                aria-live="polite"
+                className="mb-3 flex animate-word-in flex-col gap-5 rounded-2xl border border-mist-300 bg-white p-6 sm:p-8 lg:col-start-2 lg:row-span-6 lg:row-start-1 lg:mb-0 lg:p-9"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="text-xs font-bold tracking-[0.14em] text-teal uppercase">
+                    {t('moment_label', { moment: t(`${key}.moment`) })}
+                  </div>
+                  <div className="rounded-lg bg-mist-100 px-3 py-[7px] text-[13px] font-bold text-graphite-950">
+                    {t(`${key}.tag`)}
+                  </div>
+                </div>
+                <div className="text-[clamp(26px,2.6vw,34px)] leading-[1.15] font-bold tracking-[-0.03em]">
+                  {t(`${key}.headline`)}
+                </div>
+                <p className="m-0 text-[17px] leading-7 text-graphite-700">{t(`${key}.body`)}</p>
+                <div className="flex flex-col gap-1.5 border-t border-mist-200 pt-5">
+                  <div className="text-xs font-bold tracking-[0.14em] text-graphite-700 uppercase">
+                    {t('start_label')}
+                  </div>
+                  <div className="text-xl leading-7 font-bold">{t(`${key}.service`)}</div>
+                </div>
+                <ButtonLink href={`#${SectionIds.contact}`} variant="ink" className="self-start">
+                  {t('cta')}
+                </ButtonLink>
+              </div>
+            )}
+          </Fragment>
+        );
+      })}
     </div>
   );
 };

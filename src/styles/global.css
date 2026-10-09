@@ -43,8 +43,8 @@
 
   --animate-fade-in: fade-in 0.45s ease;
   --animate-word-in: word-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
-  --animate-marquee: marquee 48s linear infinite;
-  --animate-flow: flow 1.4s linear infinite;
+  --animate-marquee: marquee 120s linear infinite;
+  --animate-flow: flow 1.4s linear 9;
 
   @keyframes fade-in {
     from {
@@ -103,12 +103,13 @@
   }
 }
 
-/* Hero boomerang trajectory */
+/* Hero boomerang trajectory: one 24.2s pass with a "you decide" hold at each station.
+   Keep the timings in sync with STAGE_STARTS_MS in BoomerangJourney.tsx. */
 @layer components {
   .traj-draw {
     stroke-dasharray: 1431;
     stroke-dashoffset: 1431;
-    animation: traj-draw 12s linear infinite;
+    animation: traj-draw 24.2s cubic-bezier(0.45, 0, 0.25, 1) forwards;
   }
 
   .traj-dot,
@@ -121,63 +122,149 @@
 
   .traj-dot {
     animation:
-      traj-travel 12s linear infinite,
-      traj-arrive 12s linear infinite;
+      traj-travel 24.2s cubic-bezier(0.45, 0, 0.25, 1) forwards,
+      traj-arrive 24.2s linear forwards;
   }
 
   .traj-ring {
+    opacity: 0;
     animation:
-      traj-travel 12s linear infinite,
-      traj-ring 1.8s ease-out infinite;
+      traj-travel 24.2s cubic-bezier(0.45, 0, 0.25, 1) forwards,
+      traj-gate 24.2s linear forwards,
+      traj-ring 1.4s ease-out 18;
+  }
+
+  /* Paused by the visitor, or while the hero is off screen */
+  [data-playing='false'] :is(.traj-draw, .traj-dot, .traj-ring) {
+    animation-play-state: paused;
   }
 
   @keyframes traj-draw {
-    0% {
+    0%,
+    2.479% {
       stroke-dashoffset: 1431;
-      opacity: 1;
     }
-    85% {
-      stroke-dashoffset: 0;
-      opacity: 1;
+    15.702%,
+    21.488% {
+      stroke-dashoffset: 1144.8;
     }
-    96% {
-      stroke-dashoffset: 0;
-      opacity: 1;
+    34.711%,
+    40.496% {
+      stroke-dashoffset: 858.6;
     }
+    53.719%,
+    59.504% {
+      stroke-dashoffset: 572.4;
+    }
+    72.727%,
+    78.512% {
+      stroke-dashoffset: 286.2;
+    }
+    91.736%,
     100% {
       stroke-dashoffset: 0;
-      opacity: 0;
     }
   }
 
   @keyframes traj-travel {
-    0% {
+    0%,
+    2.479% {
       offset-distance: 0%;
     }
-    85%,
+    15.702%,
+    21.488% {
+      offset-distance: 20%;
+    }
+    34.711%,
+    40.496% {
+      offset-distance: 40%;
+    }
+    53.719%,
+    59.504% {
+      offset-distance: 60%;
+    }
+    72.727%,
+    78.512% {
+      offset-distance: 80%;
+    }
+    91.736%,
     100% {
       offset-distance: 100%;
     }
   }
 
   @keyframes traj-arrive {
-    0%,
-    84% {
+    90.083% {
       fill: var(--color-paper);
     }
-    86%,
+    91.736%,
     100% {
       fill: var(--color-pink);
     }
   }
 
-  @keyframes traj-ring {
+  @keyframes traj-gate {
     0% {
-      opacity: 0.5;
-      stroke-width: 1.5;
+      opacity: 0;
+    }
+    15.207% {
+      opacity: 0;
+    }
+    15.702%,
+    20.992% {
+      opacity: 1;
+    }
+    21.488% {
+      opacity: 0;
+    }
+    34.215% {
+      opacity: 0;
+    }
+    34.711%,
+    40% {
+      opacity: 1;
+    }
+    40.496% {
+      opacity: 0;
+    }
+    53.223% {
+      opacity: 0;
+    }
+    53.719%,
+    59.008% {
+      opacity: 1;
+    }
+    59.504% {
+      opacity: 0;
+    }
+    72.231% {
+      opacity: 0;
+    }
+    72.727%,
+    78.017% {
+      opacity: 1;
+    }
+    78.512% {
+      opacity: 0;
+    }
+    91.24% {
+      opacity: 0;
+    }
+    91.736% {
+      opacity: 1;
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  @keyframes traj-ring {
+    0% {
+      stroke-opacity: 0.5;
+      stroke-width: 1.5;
+    }
+    100% {
+      stroke-opacity: 0;
       stroke-width: 12;
     }
   }
@@ -186,19 +273,19 @@
 /* "Without Boomerang" diagram: the problem bounces between suppliers */
 @layer components {
   .push-token {
-    animation: push 8s ease-in-out infinite;
+    animation: push 8s ease-in-out 3;
   }
 
   .say-software {
-    animation: say-software 8s linear infinite;
+    animation: say-software 8s linear 3;
   }
 
   .say-automation {
-    animation: say-automation 8s linear infinite;
+    animation: say-automation 8s linear 3;
   }
 
   .say-electrical {
-    animation: say-electrical 8s linear infinite;
+    animation: say-electrical 8s linear 3;
   }
 
   @keyframes push {
@@ -292,19 +379,19 @@
 /* "With Boomerang" diagram: suppliers report up, delivery goes back to the client */
 @layer components {
   .report-software {
-    animation: report-software 3s linear infinite;
+    animation: report-software 3s linear 4;
   }
 
   .report-automation {
-    animation: report-automation 3s linear infinite 0.8s;
+    animation: report-automation 3s linear 0.8s 4;
   }
 
   .report-electrical {
-    animation: report-electrical 3s linear infinite 1.6s;
+    animation: report-electrical 3s linear 1.6s 4;
   }
 
   .deliver {
-    animation: deliver 3s ease-in-out infinite;
+    animation: deliver 3s ease-in-out 4;
   }
 
   @keyframes report-software {
@@ -381,6 +468,13 @@
       transform: translate(300px, 72px);
       opacity: 0;
     }
+  }
+}
+
+/* The comparison diagrams only play while on screen, and rest after a few passes */
+@layer components {
+  [data-in-view='false'] * {
+    animation-play-state: paused;
   }
 }
 

@@ -7,9 +7,13 @@ import { SectionIds } from './SectionIds';
 export const DnaSection = async () => {
   const t = await getTranslations('DnaSection');
   const pillars = [
-    { title: t('management_title'), body: t('management_body') },
-    { title: t('processes_title'), body: t('processes_body') },
-    { title: t('technology_title'), body: t('technology_body') },
+    { title: t('management_title'), body: t('management_body'), items: [] },
+    { title: t('processes_title'), body: t('processes_body'), items: [] },
+    {
+      title: t('technology_title'),
+      body: t('technology_body'),
+      items: [t('technology_item_1'), t('technology_item_2'), t('technology_item_3')],
+    },
   ];
 
   return (
@@ -35,6 +39,19 @@ export const DnaSection = async () => {
             >
               <div className="text-xl leading-7 font-bold">{pillar.title}</div>
               <div className="text-base leading-[25px] text-graphite-300">{pillar.body}</div>
+              {pillar.items.length > 0 && (
+                <ul className="m-0 mt-2 flex list-none flex-col gap-2.5 p-0">
+                  {pillar.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-baseline gap-3 text-base leading-6 font-semibold"
+                    >
+                      <span className="size-[7px] shrink-0 -translate-y-0.5 bg-aqua" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

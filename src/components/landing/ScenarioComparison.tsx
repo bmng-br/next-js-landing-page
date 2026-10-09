@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { useInView } from './useInView';
 
 type Scenario = 'without' | 'with';
 
@@ -196,9 +197,14 @@ export const ScenarioComparison = () => {
   const t = useTranslations('ScenarioComparison');
   const [scenario, setScenario] = useState<Scenario>('without');
   const isWith = scenario === 'with';
+  const { ref, isInView } = useInView<HTMLDivElement>();
 
   return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] overflow-hidden rounded-2xl border border-mist-300 bg-white">
+    <div
+      ref={ref}
+      data-in-view={isInView}
+      className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,380px),1fr))] overflow-hidden rounded-2xl border border-mist-300 bg-white"
+    >
       <div className="flex flex-col gap-6 px-10 py-[clamp(1.75rem,4svh,2.75rem)]">
         <fieldset className="m-0 inline-flex gap-1 self-start rounded-xl border-0 bg-mist-100 p-1">
           <legend className="sr-only">{t('toggle_label')}</legend>

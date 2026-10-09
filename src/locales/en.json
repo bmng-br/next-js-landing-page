@@ -10,7 +10,6 @@
     "logo_alt": "Boomerang Soluções",
     "main_navigation_label": "Main navigation",
     "problem_link": "The problem",
-    "fronts_link": "How we work",
     "moments_link": "When to call us",
     "services_link": "Services",
     "contact_button": "Talk to us",
@@ -35,37 +34,45 @@
     "marquee_item_8": "Vendors passing the buck"
   },
   "BoomerangTrajectory": {
-    "svg_label": "Boomerang trajectory: the project goes through diagnosis, design and hiring, processes, implementation and delivery, and comes back working.",
-    "start_label": "YOUR HAND",
-    "stage_label": "Stage",
+    "svg_label": "Boomerang trajectory: your project leaves your hand and goes through diagnosis, design and hiring, processes and implementation. At every stage you decide, and it comes back to you delivered.",
+    "start_label": "YOU DECIDE",
+    "stage_label": "Your project",
+    "pause_button": "Pause animation",
+    "play_button": "Resume animation",
+    "replay_button": "Replay animation",
     "stages": {
       "need": {
         "name": "The need",
-        "desc": "It all starts with a free conversation to understand your situation."
+        "you": "You tell us your situation in a free conversation."
       },
       "diagnosis": {
         "name": "Diagnosis",
         "label": "Diagnosis",
-        "desc": "We learn the business, current processes, systems, contracts and the real pain."
+        "we": "We learn the business, processes, systems and contracts.",
+        "you": "You see everything we find."
       },
       "design": {
         "name": "Design and hiring",
-        "label": "Design",
-        "desc": "We design the solution, weigh buying, customizing or building, and support the hiring."
+        "label": "Design and hiring",
+        "we": "We design the solution and weigh buying, customizing or building.",
+        "you": "You decide and approve who joins."
       },
-      "hiring": {
+      "processes": {
         "name": "Processes",
         "label": "Processes",
-        "desc": "We redesign flows, roles, rules and metrics. We simplify before we automate."
+        "we": "We redesign flows, roles, rules and metrics.",
+        "you": "Your team validates every step."
       },
-      "delivery": {
+      "implementation": {
         "name": "Implementation",
         "label": "Implementation",
-        "desc": "We coordinate vendors and partners through build and testing, and prepare your team."
+        "we": "We coordinate vendors and partners and prepare your team.",
+        "you": "You follow every step and decide."
       },
       "return": {
         "name": "Delivery",
-        "desc": "Signed off, accepted and followed through the warranty period."
+        "you": "You accept the result.",
+        "we": "We stay responsible for it through the warranty period."
       }
     }
   },
@@ -94,44 +101,13 @@
     "node_electrical": "Electrical",
     "node_boomerang": "Boomerang",
     "quote_software": "“Not my problem.”",
-    "quote_automation": "“Ask automation.”",
+    "quote_automation": "“That’s Electrical’s responsibility.”",
     "quote_electrical": "“Ask software.”",
     "delivered_label": "Delivered and accepted",
     "suppliers_caption": "held to deadline, quality and scope"
   },
-  "FrontsSection": {
-    "eyebrow": "02 — How we work",
-    "title": "From process to technology.",
-    "description": "We look at the whole problem. First we understand how the work gets done; only then do we decide whether something needs to be bought, customized or built, and sometimes it doesn’t."
-  },
-  "FrontsAccordion": {
-    "items_title": "What we do",
-    "processes": {
-      "title": "Processes",
-      "body": "Process before tools. We understand how the work happens today and redesign how it will happen, with your team validating each step.",
-      "item_1": "Process mapping and redesign",
-      "item_2": "Flows, roles, rules and metrics",
-      "item_3": "Simplification before automation",
-      "item_4": "Processes documented and validated with your team"
-    },
-    "technology": {
-      "title": "Technology",
-      "body": "We explain the technical side in business terms, so you know what you are buying and why. Then we coordinate the implementation through to sign-off.",
-      "item_1": "Choosing and implementing systems or custom apps",
-      "item_2": "Integration between systems",
-      "item_3": "Cloud migration",
-      "item_4": "Infrastructure for a new site"
-    },
-    "specialists": {
-      "title": "Specialist network",
-      "body": "When the solution calls for expertise we don’t have in-house, we bring in people who do: software development, information security, infrastructure and networks, electrical engineering and automation, data and artificial intelligence.",
-      "item_1": "Specialists presented with the reason for the choice and open pricing",
-      "item_2": "You approve who joins the project",
-      "item_3": "Boomerang stays responsible for the result"
-    }
-  },
   "MomentsSection": {
-    "eyebrow": "03 — When to call us",
+    "eyebrow": "02 — When to call us",
     "title": "Where is your company right now?",
     "description": "We work with companies in any industry. What matters is where the business is. Pick the situation closest to yours."
   },
@@ -139,7 +115,7 @@
     "group_label": "Company moment",
     "moment_label": "Moment: {moment}",
     "start_label": "Where we come in",
-    "cta": "Let’s talk about this",
+    "cta": "Book a conversation",
     "organize": {
       "situation": "The work depends on a few people",
       "moment": "Organize",
@@ -185,7 +161,6 @@
     "eyebrow": "04 — Services",
     "title": "Five ways to work with us.",
     "description": "From a one-off diagnosis to ongoing oversight. Hire the full journey or join at the stage your company is in.",
-    "billing_label": "Billing",
     "diagnosis": {
       "badge": "Start here",
       "title": "Diagnosis",
@@ -197,34 +172,31 @@
       "badge": "Stage 2",
       "title": "Design & Hiring",
       "description": "For those with a project ahead who want to hire right from the start.",
-      "billing": "Fixed price per stage",
-      "cta": "Talk about a project"
+      "billing": "Fixed price per stage"
     },
     "processes": {
       "badge": "Stage 3",
       "title": "Processes",
       "description": "For those who need to adjust how the work happens for a new solution, or get more out of what they already have.",
-      "billing": "Fixed price per scope",
-      "cta": "Talk about processes"
+      "billing": "Fixed price per scope"
     },
     "project_management": {
       "badge": "Stages 4 and 5",
       "title": "Project Management",
       "description": "For those who need someone overseeing vendors and partners through implementation and delivery.",
       "billing": "Monthly fee + bonus",
-      "billing_note": "bonus for meeting deadline and budget, on targets set in the contract before the start",
-      "cta": "Talk about management"
+      "billing_note": "bonus for meeting deadline and budget, on targets set in the contract before the start"
     },
     "ongoing_governance": {
       "badge": "Cross-stage",
       "title": "Ongoing Governance",
       "description": "For those who want a permanent processes and technology function without building a team.",
-      "billing": "Fixed monthly fee",
-      "cta": "Talk about governance"
-    }
+      "billing": "Fixed monthly fee"
+    },
+    "other_cta": "Book a free conversation"
   },
   "DnaSection": {
-    "eyebrow": "05 — Our DNA",
+    "eyebrow": "03 — Our DNA",
     "title": "We speak the language<br></br>of the <word></word>.",
     "title_label": "We speak the language of the engineer, the developer and the business owner.",
     "management_title": "Project and product management",
@@ -232,7 +204,10 @@
     "processes_title": "Processes",
     "processes_body": "Generalists by choice: we look at the whole problem, from process to technology.",
     "technology_title": "Technology and engineering",
-    "technology_body": "We round out our delivery capacity with a network of specialists we select and coordinate."
+    "technology_body": "When the solution calls for expertise we don’t have in-house, we bring in people who do: software development, information security, infrastructure and networks, electrical engineering and automation, data and artificial intelligence.",
+    "technology_item_1": "Specialists presented with the reason for the choice and open pricing",
+    "technology_item_2": "You approve who joins the project",
+    "technology_item_3": "Boomerang stays responsible for the result"
   },
   "RotatingWord": {
     "engineer": "engineer",
@@ -240,7 +215,7 @@
     "owner": "business owner"
   },
   "ContactSection": {
-    "eyebrow": "06 — Next step",
+    "eyebrow": "05 — Next step",
     "title": "A conversation, then a diagnosis<dot>.</dot>",
     "description": "It all starts with a free conversation to understand your situation. Then we send a Diagnosis proposal with a fixed scope and price.",
     "phone_sp_label": "SP",
@@ -248,27 +223,27 @@
   },
   "ContactForm": {
     "name_label": "Your name",
-    "company_label": "Company",
+    "company_label": "Company (optional)",
     "email_label": "Work email",
-    "message_label": "What's happening?",
+    "message_label": "What's happening? (optional)",
     "submit_button": "Book a conversation",
+    "reply_note": "We reply within 3 to 5 business days.",
     "privacy_note": "No commitment. Your data stays with us.",
     "success_title": "Got it. The boomerang has left your hand.",
     "success_body": "We'll reply within 3 to 5 business days with the next steps.",
     "reset_button": "Send another request",
     "name_error": "Enter your name.",
-    "email_error": "Enter a valid email.",
+    "email_error": "Enter a valid email, like name@company.com.",
     "submitting_button": "Sending…",
-    "submit_error": "We couldn’t send your request.",
-    "moment_label": "Where is your company right now?",
+    "submit_error": "We couldn’t send your request. Write to <mail>{email}</mail>.",
+    "moment_label": "Where is your company right now? (optional)",
     "moment_organize": "I need to organize our processes",
     "moment_expansion": "I need a new system",
     "moment_stalled": "The project stalled or is late",
     "moment_integration": "The system arrived and doesn’t fit",
     "moment_ongoing": "I want ongoing oversight",
     "moment_other": "Other",
-    "moment_placeholder": "Select an option",
-    "moment_error": "Choose where your company is."
+    "moment_placeholder": "Select an option"
   },
   "LandingFooter": {
     "logo_alt": "Boomerang Soluções",

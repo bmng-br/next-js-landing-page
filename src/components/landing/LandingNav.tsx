@@ -15,7 +15,6 @@ export const LandingNav = async () => {
 
   const links = [
     { href: `#${SectionIds.problem}`, label: t('problem_link') },
-    { href: `#${SectionIds.fronts}`, label: t('fronts_link') },
     { href: `#${SectionIds.moments}`, label: t('moments_link') },
     { href: `#${SectionIds.services}`, label: t('services_link') },
   ];
@@ -27,7 +26,11 @@ export const LandingNav = async () => {
           aria-label={t('main_navigation_label')}
           className="relative flex h-nav items-center justify-between gap-6"
         >
-          <a href={`#${SectionIds.top}`} aria-label={t('home_label')} className="flex items-center">
+          <a
+            href={`#${SectionIds.top}`}
+            aria-label={t('home_label')}
+            className="flex min-h-11 items-center"
+          >
             <Image
               src={logo}
               alt={t('logo_alt')}
@@ -51,7 +54,7 @@ export const LandingNav = async () => {
               href="/"
               locale={otherLocale}
               aria-label={t('locale_link_label')}
-              className="text-sm font-bold text-graphite-200 no-underline hover:text-paper"
+              className="flex min-h-11 min-w-11 items-center justify-center text-sm font-bold text-graphite-200 no-underline hover:text-paper"
             >
               {t('locale_link')}
             </Link>

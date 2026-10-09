@@ -61,7 +61,7 @@ export const HeroSection = async () => {
               </ButtonLink>
               <a
                 href={`#${SectionIds.problem}`}
-                className="text-base font-semibold text-paper underline hover:text-aqua"
+                className="inline-flex min-h-11 items-center text-base font-semibold text-paper underline hover:text-aqua"
               >
                 {t('secondary_cta')}
               </a>
