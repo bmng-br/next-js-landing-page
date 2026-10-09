@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T00:23:00.189Z",
+  "title": "Design System: Boomerang Soluções",
+  "extensions": {
+    "colorMeta": {
+      "pink": {
+        "role": "primary",
+        "displayName": "Arrival Pink",
+        "canonical": "#ee367e",
+        "tonalRamp": [
+          "#5f1632",
+          "#8f204c",
+          "#be2b65",
+          "#ee367e",
+          "#f15e98",
+          "#f586b2",
+          "#f8afcb",
+          "#fcd7e5"
+        ]
+      },
+      "teal": {
+        "role": "secondary",
+        "displayName": "Harbor Teal",
+        "canonical": "#197a75",
+        "tonalRamp": [
+          "#0a312f",
+          "#0f4946",
+          "#14625e",
+          "#197a75",
+          "#479591",
+          "#75afac",
+          "#a3cac8",
+          "#d1e4e3"
+        ]
+      },
+      "aqua": {
+        "role": "secondary",
+        "displayName": "Signal Aqua",
+        "canonical": "#27bcb4",
+        "tonalRamp": [
+          "#104b48",
+          "#17716c",
+          "#1f9690",
+          "#27bcb4",
+          "#52c9c3",
+          "#7dd7d2",
+          "#a9e4e1",
+          "#d4f2f0"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f5f5f3",
+        "tonalRamp": [
+          "#626261",
+          "#939392",
+          "#c4c4c2",
+          "#f5f5f3",
+          "#f7f7f5",
+          "#f9f9f8",
+          "#fbfbfa",
+          "#fdfdfd"
+        ]
+      },
+      "graphite-950": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "#15181a",
+        "tonalRamp": [
+          "#080a0a",
+          "#0d0e10",
+          "#111315",
+          "#15181a",
+          "#444648",
+          "#737476",
+          "#a1a3a3",
+          "#d0d1d1"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero title and DNA statement."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase eyebrows."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 1px 2px rgb(21 24 26 / 0.12), 0 2px 8px rgb(21 24 26 / 0.08)",
+        "purpose": "Rare small lift; depth is otherwise tonal."
+      }
+    ],
+    "motion": [
+      {
+        "name": "word-in",
+        "value": "0.6s cubic-bezier(0.2, 0.7, 0.2, 1)",
+        "purpose": "Rotating hero word entrance."
+      },
+      {
+        "name": "fade-in",
+        "value": "0.45s ease",
+        "purpose": "Form confirmation and small reveals."
+      },
+      {
+        "name": "state",
+        "value": "200ms color transition",
+        "purpose": "Button hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "nav-inline",
+        "value": "961px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call to action.",
+      "html": "<button class=\"ds-btn-primary\">Fale com a gente</button>",
+      "css": ".ds-btn-primary{background:#ee367e;color:#15181a;min-height:54px;padding:0 26px;border:0;border-radius:10px;font:700 16px Montserrat,Arial,sans-serif;cursor:pointer;transition:background-color .2s}.ds-btn-primary:hover{background:#f25891}.ds-btn-primary:focus-visible{outline:2px solid #197a75;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on graphite.",
+      "html": "<div style=\"background:#15181a;padding:16px\"><button class=\"ds-btn-ghost\">Contato</button></div>",
+      "css": ".ds-btn-ghost{background:transparent;color:#f5f5f3;min-height:44px;padding:0 20px;border:1.5px solid #6b7075;border-radius:10px;font:700 14px Montserrat,Arial,sans-serif;cursor:pointer;transition:background-color .2s,color .2s}.ds-btn-ghost:hover{background:#f5f5f3;color:#15181a}.ds-btn-ghost:focus-visible{outline:2px solid #27bcb4;outline-offset:3px}"
+    },
+    {
+      "name": "Eyebrow",
+      "kind": "chip",
+      "description": "Section label.",
+      "html": "<div class=\"ds-eyebrow\">Serviços</div>",
+      "css": ".ds-eyebrow{font:700 12px/16px Montserrat,Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#197a75}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White card on paper with a teal numeral.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-n\">01</div><h3>Título</h3><p>Texto curto que explica o serviço.</p></div>",
+      "css": ".ds-card{background:#fff;color:#15181a;border-radius:16px;padding:36px 32px;display:flex;flex-direction:column;gap:22px;font-family:Montserrat,Arial,sans-serif;max-width:360px}.ds-card-n{font:700 44px/44px Montserrat,Arial,sans-serif;letter-spacing:-.04em;color:#197a75}.ds-card h3{margin:0;font:700 28px/32px Montserrat,Arial,sans-serif;letter-spacing:-.03em}.ds-card p{margin:0;font-size:16px;line-height:26px;color:#45494d}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "description": "Form field on a white form container.",
+      "html": "<label class=\"ds-field\"><span>E-mail</span><input class=\"ds-input\" placeholder=\"voce@empresa.com\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px;font:600 14px Montserrat,Arial,sans-serif;color:#15181a}.ds-input{min-height:44px;padding:0 14px;border:1px solid #8a8d92;border-radius:10px;font:400 16px Montserrat,Arial,sans-serif;background:#fff}.ds-input:focus-visible{outline:2px solid #197a75;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Sticky dark translucent bar.",
+      "html": "<nav class=\"ds-nav\"><span>Boomerang</span><a href=\"#\">Problema</a><a href=\"#\">Serviços</a><a href=\"#\" class=\"ds-nav-b\">Contato</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:28px;height:72px;padding:0 24px;background:rgba(21,24,26,.9);border-bottom:1px solid #2e3236;color:#f5f5f3;font:600 14px Montserrat,Arial,sans-serif}.ds-nav span{margin-right:auto;font-weight:800}.ds-nav a{color:#d5d6d8;text-decoration:none}.ds-nav a:hover{color:#f5f5f3}.ds-nav-b{border:1.5px solid #6b7075;border-radius:10px;padding:10px 20px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Steady Partner",
+    "overview": "The system behaves like the company it sells: calm, plain-spoken and dependable. Surfaces alternate between warm paper and deep graphite, type is one bold sans, and nothing decorates for its own sake.\n\nColor is held back so that one gesture can carry meaning: the pink point where a boomerang returns. Motion explains and always has a static end state.",
+    "keyCharacteristics": [
+      "Paper and graphite bands, white cards, no gradients.",
+      "One bold sans (Montserrat) at tight negative tracking for headings.",
+      "Pink is the single action and arrival color; teal and aqua carry structure.",
+      "Flat, tonal depth; instructive motion only."
+    ],
+    "rules": [
+      {
+        "name": "The One Landing Rule",
+        "body": "Pink marks action or arrival, and appears a few times per screen at most.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paired Accent Rule",
+        "body": "Teal on paper, aqua on graphite. Never swap them.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tight Heading Rule",
+        "body": "Large headings take negative letter-spacing and a line height near 1. Body text never does.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Depth Rule",
+        "body": "Layer by changing surface color, not by adding shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use pink only for the primary action and for arrival moments.",
+      "Do use teal on paper and aqua on graphite for eyebrows, links and focus.",
+      "Do build depth with surface tone and hairlines.",
+      "Do give every animation a static end state under prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add gradients, glows or colored shadows.",
+      "Don't introduce a second typeface.",
+      "Don't use client logos, testimonials or metrics as visual filler.",
+      "Don't use pink at small sizes on paper for text; use deep pink."
+    ]
+  }
+}
