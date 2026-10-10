@@ -273,19 +273,19 @@
 /* "Without Boomerang" diagram: the problem bounces between suppliers */
 @layer components {
   .push-token {
-    animation: push 8s ease-in-out 3;
+    animation: push 8s ease-in-out 3 forwards;
   }
 
   .say-software {
-    animation: say-software 8s linear 3;
+    animation: say-software 8s linear 3 forwards;
   }
 
   .say-automation {
-    animation: say-automation 8s linear 3;
+    animation: say-automation 8s linear 3 forwards;
   }
 
   .say-electrical {
-    animation: say-electrical 8s linear 3;
+    animation: say-electrical 8s linear 3 forwards;
   }
 
   @keyframes push {
@@ -379,19 +379,19 @@
 /* "With Boomerang" diagram: suppliers report up, delivery goes back to the client */
 @layer components {
   .report-software {
-    animation: report-software 3s linear 4;
+    animation: report-software 3s linear 4 both;
   }
 
   .report-automation {
-    animation: report-automation 3s linear 0.8s 4;
+    animation: report-automation 3s linear 0.8s 4 both;
   }
 
   .report-electrical {
-    animation: report-electrical 3s linear 1.6s 4;
+    animation: report-electrical 3s linear 1.6s 4 both;
   }
 
   .deliver {
-    animation: deliver 3s ease-in-out 4;
+    animation: deliver 3s ease-in-out 4 both;
   }
 
   @keyframes report-software {
