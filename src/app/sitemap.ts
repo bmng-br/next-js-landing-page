@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.flatMap((route) =>
     routing.locales.map((locale) => ({
       url: getLocalizedUrl(locale, route),
-      lastModified: new Date(),
       alternates: {
         languages: getLanguageAlternates(route),
       },

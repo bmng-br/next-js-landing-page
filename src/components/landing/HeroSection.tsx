@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import monogram from '@/public/assets/images/bmng-monogram.png';
+import monogram from '@/public/assets/images/bmng-monogram.webp';
 import { BoomerangJourney } from './BoomerangJourney';
 import { ButtonLink } from './ButtonLink';
 import { Container } from './Container';
