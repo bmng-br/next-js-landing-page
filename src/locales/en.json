@@ -223,9 +223,10 @@
   },
   "ContactForm": {
     "name_label": "Your name",
-    "company_label": "Company (optional)",
+    "company_label": "Company",
     "email_label": "Work email",
     "message_label": "What's happening? (optional)",
+    "message_placeholder": "The more detail, the better our reply.",
     "submit_button": "Book a conversation",
     "reply_note": "We reply within 3 to 5 business days.",
     "privacy_note": "No commitment. Your data stays with us.",
@@ -234,16 +235,18 @@
     "reset_button": "Send another request",
     "name_error": "Enter your name.",
     "email_error": "Enter a valid email, like name@company.com.",
+    "company_error": "Enter your company name.",
     "submitting_button": "Sending…",
     "submit_error": "We couldn’t send your request. Write to <mail>{email}</mail>.",
-    "moment_label": "Where is your company right now? (optional)",
+    "moment_label": "Where is your company right now?",
     "moment_organize": "I need to organize our processes",
     "moment_expansion": "I need a new system",
     "moment_stalled": "The project stalled or is late",
     "moment_integration": "The system arrived and doesn’t fit",
     "moment_ongoing": "I want ongoing oversight",
     "moment_other": "Other",
-    "moment_placeholder": "Select an option"
+    "moment_placeholder": "Select an option",
+    "moment_error": "Choose where your company is."
   },
   "LandingFooter": {
     "logo_alt": "Boomerang Soluções",
