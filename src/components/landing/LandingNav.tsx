@@ -1,17 +1,22 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/libs/I18nNavigation';
-import { routing } from '@/libs/I18nRouting';
 import logo from '@/public/assets/images/boomerang-logo-light.png';
 import { ButtonLink } from './ButtonLink';
 import { Container } from './Container';
+import { LanguageMenu } from './LanguageMenu';
 import { MobileMenu } from './MobileMenu';
 import { SectionIds } from './SectionIds';
 
 export const LandingNav = async () => {
   const t = await getTranslations('LandingNav');
   const locale = await getLocale();
-  const otherLocale = routing.locales.find((elt) => elt !== locale) ?? routing.defaultLocale;
+
+  // Each language is named in its own language, so every visitor can recognize theirs
+  const languages = [
+    { locale: 'pt-BR', code: 'PT', name: t('locale_pt_name') },
+    { locale: 'en', code: 'EN', name: t('locale_en_name') },
+    { locale: 'es', code: 'ES', name: t('locale_es_name') },
+  ] as const;
 
   const links = [
     { href: `#${SectionIds.problem}`, label: t('problem_link') },
@@ -49,15 +54,12 @@ export const LandingNav = async () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            <Link
-              href="/"
-              locale={otherLocale}
-              aria-label={t('locale_link_label')}
-              className="flex min-h-11 min-w-11 items-center justify-center text-sm font-bold text-graphite-200 no-underline hover:text-paper"
-            >
-              {t('locale_link')}
-            </Link>
+          <div className="flex items-center gap-1 sm:gap-3">
+            <LanguageMenu
+              label={t('language_menu_label')}
+              currentLocale={locale}
+              languages={languages}
+            />
             <div className="hidden sm:block">
               <ButtonLink href={`#${SectionIds.contact}`} variant="ghost" size="sm">
                 {t('contact_button')}

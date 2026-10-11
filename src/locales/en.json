@@ -13,8 +13,10 @@
     "moments_link": "When to call us",
     "journey_link": "How we work",
     "contact_button": "Talk to us",
-    "locale_link": "PT",
-    "locale_link_label": "Ler em português",
+    "locale_pt_name": "Português",
+    "locale_en_name": "English",
+    "locale_es_name": "Español",
+    "language_menu_label": "Language",
     "open_menu_label": "Open menu",
     "close_menu_label": "Close menu"
   },

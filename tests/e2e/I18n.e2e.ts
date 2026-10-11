@@ -13,13 +13,29 @@ test.describe('I18n', () => {
         }),
       ).toBeVisible();
 
-      await page.getByRole('link', { name: 'Read in English' }).click();
+      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('link', { name: 'English' }).click();
 
       await expect(page).toHaveURL(/\/en$/u);
 
       await expect(
         page.getByRole('heading', {
           name: 'Your project leaves your hand and comes back working.',
+        }),
+      ).toBeVisible();
+    });
+
+    test('switches the homepage to Spanish using the nav link', async ({ page }) => {
+      await page.goto('/');
+
+      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('link', { name: 'Español' }).click();
+
+      await expect(page).toHaveURL(/\/es$/u);
+
+      await expect(
+        page.getByRole('heading', {
+          name: 'Del problema al resultado, lado a lado con usted.',
         }),
       ).toBeVisible();
     });

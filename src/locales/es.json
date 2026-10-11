@@ -1,0 +1,313 @@
+{
+  "IndexPage": {
+    "meta_title": "Boomerang Soluções · Procesos y tecnología, lado a lado con usted",
+    "meta_description": "Resolvemos problemas de negocio que pasan por procesos y tecnología: del diagnóstico a la entrega, usted ve todo y decide.",
+    "og_locale": "es_LA",
+    "og_image_alt": "Boomerang Soluções: del problema al resultado, lado a lado con usted."
+  },
+  "LandingNav": {
+    "home_label": "Boomerang Soluções, inicio",
+    "logo_alt": "Boomerang Soluções",
+    "main_navigation_label": "Navegación principal",
+    "problem_link": "El problema",
+    "moments_link": "Cuándo llamarnos",
+    "journey_link": "Cómo trabajamos",
+    "contact_button": "Hable con nosotros",
+    "locale_pt_name": "Português",
+    "locale_en_name": "English",
+    "locale_es_name": "Español",
+    "language_menu_label": "Idioma",
+    "open_menu_label": "Abrir menú",
+    "close_menu_label": "Cerrar menú"
+  },
+  "Hero": {
+    "eyebrow": "Procesos y tecnología, del diagnóstico a la entrega",
+    "title": "Del problema al resultado, lado a lado con usted<dot>.</dot>",
+    "description": "Entendemos su operación, organizamos los procesos, diseñamos la solución y acompañamos la entrega hasta que el resultado aparece. Usted ve todo y decide.",
+    "primary_cta": "Agende una conversación sin costo",
+    "secondary_cta": "Cómo funciona",
+    "marquee_item_1": "Procesos en la cabeza de las personas",
+    "marquee_item_2": "Información perdida en correos",
+    "marquee_item_3": "Controles paralelos",
+    "marquee_item_4": "Sistema que nadie diseñó",
+    "marquee_item_5": "Propuestas imposibles de comparar",
+    "marquee_item_6": "Adendas de plazo y costo",
+    "marquee_item_7": "Sistemas que no se hablan",
+    "marquee_item_8": "Proveedores que se pasan la responsabilidad"
+  },
+  "BoomerangTrajectory": {
+    "svg_label": "Trayectoria del boomerang: su proyecto sale de su mano y pasa por diagnóstico, diseño y contratación, procesos e implantación. En cada etapa usted decide, y vuelve a usted entregado.",
+    "start_label": "USTED DECIDE",
+    "stage_label": "Su proyecto",
+    "pause_button": "Pausar animación",
+    "play_button": "Reanudar animación",
+    "replay_button": "Repetir animación",
+    "stages": {
+      "need": {
+        "name": "La necesidad",
+        "you": "Usted nos cuenta su situación en una conversación sin costo."
+      },
+      "diagnosis": {
+        "name": "Diagnóstico",
+        "label": "Diagnóstico",
+        "we": "Entendemos el negocio, los procesos, los sistemas y los contratos.",
+        "you": "Usted ve todo lo que encontramos."
+      },
+      "design": {
+        "name": "Diseño y contratación",
+        "label": "Diseño y contratación",
+        "we": "Diseñamos la solución y comparamos comprar, personalizar o desarrollar.",
+        "you": "Usted decide y aprueba quién entra."
+      },
+      "processes": {
+        "name": "Procesos",
+        "label": "Procesos",
+        "we": "Rediseñamos flujos, roles, reglas e indicadores.",
+        "you": "Su equipo valida cada paso."
+      },
+      "implementation": {
+        "name": "Implantación",
+        "label": "Implantación",
+        "we": "Coordinamos proveedores y socios y preparamos a su equipo.",
+        "you": "Usted sigue cada paso y decide."
+      },
+      "return": {
+        "name": "Entrega",
+        "you": "Usted acepta el resultado.",
+        "we": "Seguimos siendo responsables de él durante la garantía."
+      }
+    }
+  },
+  "ProblemSection": {
+    "eyebrow": "01 — El problema",
+    "title": "La empresa creció. La forma de trabajar no.",
+    "description": "Los procesos viven en la cabeza de las personas, la información se pierde entre correos, mensajes y hojas de cálculo paralelas, y cada equipo trabaja a su manera. Cuando aparece un proyecto para arreglarlo, la decisión suele quedar en manos de quien vende, no de quien compra."
+  },
+  "ScenarioComparison": {
+    "toggle_label": "Comparar escenarios",
+    "without_button": "Sin Boomerang",
+    "with_button": "Con Boomerang",
+    "without_title": "Usted administra el conflicto, no el negocio.",
+    "without_point_1": "Sistemas comprados para resolver un proceso que nadie diseñó, y que por eso no lo resuelven.",
+    "without_point_2": "Propuestas que no puede comparar y adendas de plazo y costo a mitad de camino.",
+    "without_point_3": "Al final, usted paga más, recibe menos y el problema original sigue ahí.",
+    "with_title": "La autoridad técnica del lado de quien paga.",
+    "with_point_1": "Usted al mando: propuestas, cronograma, costos y riesgos visibles todo el tiempo.",
+    "with_point_2": "Exigimos plazo, calidad y alcance a los proveedores, con usted informado y participando en las decisiones.",
+    "with_point_3": "No recibimos comisión de proveedores. La recomendación se basa solo en lo que es mejor para su negocio.",
+    "without_svg_label": "Sin Boomerang: usted se conecta con tres proveedores y el problema se empuja de uno a otro.",
+    "with_svg_label": "Con Boomerang: coordinamos y exigimos a los tres proveedores junto con usted, y la entrega vuelve aceptada.",
+    "node_you": "Usted",
+    "node_software": "Software",
+    "node_automation": "Automatización",
+    "node_electrical": "Eléctrica",
+    "node_boomerang": "Boomerang",
+    "quote_software": "“No es conmigo.”",
+    "quote_automation": "“Es responsabilidad de Eléctrica.”",
+    "quote_electrical": "“Es del software.”",
+    "delivered_label": "Entregado y aceptado",
+    "suppliers_caption": "exigidos por plazo, calidad y alcance"
+  },
+  "MomentsSection": {
+    "eyebrow": "02 — Cuándo llamarnos",
+    "title": "¿En qué momento está su empresa?",
+    "description": "Atendemos empresas de cualquier sector. Lo que importa es el momento del negocio. Elija la situación más parecida a la suya."
+  },
+  "MomentPicker": {
+    "group_label": "Momento de la empresa",
+    "moment_label": "Momento: {moment}",
+    "start_label": "Por dónde entramos",
+    "cta": "Agendar una conversación",
+    "organize": {
+      "situation": "El trabajo depende de pocas personas",
+      "moment": "Organizar",
+      "tag": "Poner la casa en orden",
+      "headline": "Sacamos los procesos de la cabeza de las personas.",
+      "body": "Cada área trabaja a su manera y la información se pierde. Entendemos cómo ocurre el trabajo y organizamos los procesos antes de pensar en cualquier herramienta.",
+      "service": "Diagnóstico y Procesos"
+    },
+    "expansion": {
+      "situation": "Necesito un sistema nuevo y no sé por dónde empezar",
+      "moment": "Empezar",
+      "tag": "Antes de cualquier proveedor",
+      "headline": "Diseñamos la solución antes de que hable con cualquier proveedor.",
+      "body": "Un sistema nuevo, una integración o una reestructuración de TI. Evaluamos comprar, personalizar o desarrollar, y usted compara las propuestas de forma justa, con alcance, costo y cronograma definidos.",
+      "service": "Diagnóstico y Diseño y contratación"
+    },
+    "stalled": {
+      "situation": "El proyecto se trabó y las adendas no paran",
+      "moment": "Destrabar",
+      "tag": "Intervención rápida",
+      "headline": "Entendemos dónde se trabó y retomamos el control.",
+      "body": "Los plazos se agotaron o las adendas siguen llegando. Un diagnóstico rápido muestra qué se entregó, qué falta y quién responde por qué. Después seguimos a su lado en la gestión del proyecto.",
+      "service": "Diagnóstico rápido, luego Implantación y Entrega"
+    },
+    "integration": {
+      "situation": "El sistema llegó y no se conecta con el resto",
+      "moment": "Integrar",
+      "tag": "Encajar en la operación",
+      "headline": "Hacemos que lo que llegó funcione con lo que ya tiene.",
+      "body": "El sistema o el equipo llegó, pero no se comunica con lo que ya existe o no encaja en la operación. Ajustamos los procesos y coordinamos a los proveedores involucrados.",
+      "service": "Procesos y coordinación de proveedores"
+    },
+    "ongoing": {
+      "situation": "La empresa creció y necesita seguimiento continuo",
+      "moment": "Supervisar",
+      "tag": "Continuo",
+      "headline": "Un área de procesos y tecnología, sin armar un equipo.",
+      "body": "La empresa creció y necesita a alguien que supervise procesos y tecnología de forma permanente, con informes en lenguaje de negocio.",
+      "service": "Gobernanza"
+    }
+  },
+  "JourneySection": {
+    "eyebrow": "04 — Cómo trabajamos",
+    "title": "Un recorrido en cinco etapas.",
+    "description": "Todo trabajo empieza en el diagnóstico y termina en la entrega. Puede contratarnos para el recorrido completo o entrar en la etapa en que se encuentra su empresa.",
+    "do_label": "Qué hacemos",
+    "get_label": "Qué recibe",
+    "role_label": "Su papel",
+    "stages": {
+      "diagnosis": {
+        "name": "Diagnóstico",
+        "do": "Entendemos el negocio, los procesos actuales, los sistemas, los contratos y el dolor real.",
+        "get": "Un panorama claro del escenario, de los riesgos y de las prioridades.",
+        "role": "Abrir la operación y validar las prioridades."
+      },
+      "design": {
+        "name": "Diseño y contratación",
+        "do": "Diseñamos la solución, evaluamos comprar, personalizar o desarrollar y apoyamos la contratación.",
+        "get": "Proveedores comparados de forma justa, con alcance, costo y cronograma definidos.",
+        "role": "Elegir la solución y los proveedores, con las opciones y los riesgos a la vista."
+      },
+      "processes": {
+        "name": "Procesos",
+        "do": "Rediseñamos cómo se va a trabajar con la nueva solución: flujos, roles, reglas e indicadores. Simplificamos antes de automatizar.",
+        "get": "Procesos documentados y validados con su equipo.",
+        "role": "Aprobar la nueva forma de trabajar."
+      },
+      "implementation": {
+        "name": "Implantación",
+        "do": "Coordinamos proveedores y socios en la construcción, la configuración y las pruebas, y preparamos a su equipo.",
+        "get": "Solución implantada, probada y equipo preparado.",
+        "role": "Decidir en cada hito y participar en las pruebas."
+      },
+      "delivery": {
+        "name": "Entrega",
+        "do": "Conducimos la homologación y la aceptación, y acompañamos el período de garantía.",
+        "get": "Entrega homologada y acompañada durante la garantía.",
+        "role": "Dar la aceptación final."
+      }
+    },
+    "governance": {
+      "name": "Gobernanza",
+      "span": "De la contratación al fin de la garantía",
+      "do": "Seguimos plazo, costo, calidad, riesgos y decisiones en todas las etapas, con informes en lenguaje de negocio.",
+      "get": "Visión clara del proyecto de principio a fin.",
+      "role": "Definir las metas y decidir en los hitos."
+    },
+    "note": "No todo problema termina en un proyecto. A veces el diagnóstico muestra que ajustar el proceso ya lo resuelve, y eso también es un resultado.",
+    "cta": "Agende una conversación sin costo"
+  },
+  "DnaSection": {
+    "eyebrow": "03 — Nuestro ADN",
+    "title": "Hablamos el idioma<br></br>del <word></word>.",
+    "title_label": "Hablamos el idioma del ingeniero, del desarrollador, del proveedor y del dueño del negocio.",
+    "management_title": "Gestión de proyectos y productos",
+    "management_body": "Integración de sistemas críticos, programas con múltiples proveedores y entregas en entornos regulados, en Brasil y en el exterior.",
+    "processes_title": "Procesos",
+    "processes_body": "Generalistas por elección: miramos el problema completo, del proceso a la tecnología.",
+    "technology_title": "Tecnología e ingeniería",
+    "technology_body": "Cuando la solución exige un conocimiento que no tenemos en casa, traemos a quien lo tiene: desarrollo de software, seguridad de la información, infraestructura y redes, ingeniería eléctrica y automatización, datos e inteligencia artificial.",
+    "technology_item_1": "Especialistas presentados con el motivo de la elección y el precio abierto",
+    "technology_item_2": "Usted aprueba quién entra al proyecto",
+    "technology_item_3": "Boomerang sigue siendo responsable del resultado"
+  },
+  "RotatingWord": {
+    "engineer": "ingeniero",
+    "developer": "desarrollador",
+    "supplier": "proveedor",
+    "owner": "dueño del negocio"
+  },
+  "ContactSection": {
+    "eyebrow": "05 — Próximo paso",
+    "title": "Una conversación, luego un diagnóstico<dot>.</dot>",
+    "description": "Todo empieza con una conversación sin costo para entender su escenario. Después le enviamos una propuesta de Diagnóstico con alcance y valor cerrados.",
+    "phone_sp_label": "SP",
+    "phone_mg_label": "MG"
+  },
+  "ContactForm": {
+    "name_label": "Su nombre",
+    "company_label": "Empresa",
+    "email_label": "Correo de trabajo",
+    "message_label": "¿Qué está pasando? (opcional)",
+    "message_placeholder": "Cuanto más detalle, mejor nuestra respuesta.",
+    "submit_button": "Agendar una conversación",
+    "reply_note": "Respondemos en 3 a 5 días hábiles.",
+    "privacy_note": "Sin compromiso. Sus datos quedan solo con nosotros.",
+    "success_title": "Recibido. El boomerang ya salió de su mano.",
+    "success_body": "Respondemos en 3 a 5 días hábiles con los próximos pasos.",
+    "reset_button": "Enviar otra solicitud",
+    "name_error": "Indique su nombre.",
+    "email_error": "Indique un correo válido, como nombre@empresa.com.",
+    "company_error": "Indique el nombre de la empresa.",
+    "submitting_button": "Enviando…",
+    "submit_error": "No fue posible enviar su solicitud. Escriba a <mail>{email}</mail>.",
+    "moment_label": "¿En qué momento está su empresa?",
+    "moment_organize": "Necesito organizar los procesos",
+    "moment_expansion": "Necesito un sistema nuevo",
+    "moment_stalled": "El proyecto se trabó o se atrasó",
+    "moment_integration": "El sistema llegó y no encaja",
+    "moment_ongoing": "Quiero seguimiento continuo",
+    "moment_other": "Otro",
+    "moment_placeholder": "Seleccione una opción",
+    "moment_error": "Elija el momento de la empresa."
+  },
+  "LandingFooter": {
+    "logo_alt": "Boomerang Soluções",
+    "footer_navigation_label": "Navegación del pie de página",
+    "contact_link": "Contacto",
+    "linkedin_link": "LinkedIn",
+    "legal_line": "{legalName} · CNPJ {cnpj} · Barueri, São Paulo"
+  },
+  "SignIn": {
+    "meta_title": "Iniciar sesión",
+    "meta_description": "Acceda a su cuenta de forma simple y segura."
+  },
+  "Dashboard": {
+    "hello_message": "¡Hola, {email}!",
+    "alternative_message": "¿Necesita funciones avanzadas? Multi-tenancy y equipos, roles y permisos, Shadcn UI, tipado de extremo a extremo con oRPC, pagos con Stripe, modo claro y oscuro. Pruebe <url></url>.",
+    "max_message": "¿O necesita autenticación self-hosted (Better Auth)? Pruebe <url></url>."
+  },
+  "DashboardLayout": {
+    "meta_title": "Panel",
+    "meta_description": "Administre su cuenta desde el panel.",
+    "dashboard_link": "Panel",
+    "user_profile_link": "Administrar su cuenta",
+    "sign_out": "Salir",
+    "leads_link": "Contactos"
+  },
+  "BaseTemplate": {
+    "description": "Procesos y tecnología, lado a lado con usted",
+    "footer_text": "© {year} {name}. Hecho con <author></author>.",
+    "main_navigation_label": "Navegación principal"
+  },
+  "LocaleSwitcher": {
+    "change_language": "Cambiar idioma"
+  },
+  "LeadNotification": {
+    "subject": "Nuevo contacto del sitio: {name}",
+    "intro": "Llegó un nuevo contacto por el formulario del sitio.",
+    "not_saved_warning": "Llegó un nuevo contacto por el sitio, pero NO se guardó en la base de datos. Conserve este correo.",
+    "name_label": "Nombre",
+    "company_label": "Empresa",
+    "email_label": "Correo",
+    "moment_label": "Momento de la empresa",
+    "language_label": "Idioma",
+    "message_label": "Mensaje"
+  },
+  "LeadsPage": {
+    "title": "Contactos recibidos",
+    "empty": "Aún no se recibieron contactos.",
+    "moment_label": "Momento de la empresa"
+  }
+}

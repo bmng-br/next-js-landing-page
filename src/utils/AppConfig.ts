@@ -1,4 +1,4 @@
-import { enUS, ptBR } from '@clerk/localizations';
+import { enUS, esES, ptBR } from '@clerk/localizations';
 import type { LocalizationResource } from '@clerk/shared/types';
 import type { LocalePrefixMode } from 'next-intl/routing';
 
@@ -9,7 +9,7 @@ const localePrefix: LocalePrefixMode = 'as-needed';
 export const AppConfig = {
   name: 'Boomerang Soluções',
   i18n: {
-    locales: ['pt-BR', 'en'],
+    locales: ['pt-BR', 'en', 'es'],
     defaultLocale: 'pt-BR',
     localePrefix,
   },
@@ -37,6 +37,7 @@ export const AppConfig = {
 const supportedLocales: Record<string, LocalizationResource> = {
   'pt-BR': ptBR,
   en: enUS,
+  es: esES,
 };
 
 export const ClerkLocalizations = {
