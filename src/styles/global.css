@@ -270,68 +270,66 @@
   }
 }
 
-/* "Without Boomerang" diagram: the problem bounces between suppliers */
+/* "Without Boomerang" diagram: the problem keeps coming back to the client */
 @layer components {
   .push-token {
-    animation: push 8s ease-in-out infinite;
+    animation: push 12s ease-in-out infinite;
   }
 
   .say-software {
-    animation: say-software 8s linear infinite;
+    animation: say-software 12s linear infinite;
   }
 
   .say-automation {
-    animation: say-automation 8s linear infinite;
+    animation: say-automation 12s linear infinite;
   }
 
   .say-electrical {
-    animation: say-electrical 8s linear infinite;
+    animation: say-electrical 12s linear infinite;
   }
 
+  /* The problem goes from a supplier up to the client, who passes it on to the next supplier.
+     Each pass holds 1.5s at the supplier, climbs the dashed line, holds at the client, then comes down. */
   @keyframes push {
     0%,
-    8% {
-      transform: translate(110px, 268px);
+    12.5% {
+      transform: translate(129px, 282px);
     }
-    17% {
-      transform: translate(205px, 212px);
+    20.833%,
+    23.333% {
+      transform: translate(300px, 104px);
     }
-    25%,
-    33% {
-      transform: translate(300px, 268px);
+    33.333%,
+    45.833% {
+      transform: translate(300px, 282px);
     }
-    42% {
-      transform: translate(395px, 212px);
+    54.167%,
+    56.667% {
+      transform: translate(300px, 104px);
     }
-    50%,
-    58% {
-      transform: translate(490px, 268px);
+    66.667%,
+    79.167% {
+      transform: translate(471px, 282px);
     }
-    67% {
-      transform: translate(395px, 212px);
-    }
-    75%,
-    83% {
-      transform: translate(300px, 268px);
-    }
-    92% {
-      transform: translate(205px, 212px);
+    87.5%,
+    90% {
+      transform: translate(300px, 104px);
     }
     100% {
-      transform: translate(110px, 268px);
+      transform: translate(129px, 282px);
     }
   }
 
   @keyframes say-software {
     0%,
-    9% {
+    12.5% {
       opacity: 1;
     }
-    12%,
-    88% {
+    14%,
+    95% {
       opacity: 0;
     }
-    92%,
+    98%,
     100% {
       opacity: 1;
     }
@@ -339,22 +337,14 @@
 
   @keyframes say-automation {
     0%,
-    24% {
+    31% {
       opacity: 0;
     }
-    26%,
-    33% {
+    33.333%,
+    45.833% {
       opacity: 1;
     }
-    36%,
-    74% {
-      opacity: 0;
-    }
-    76%,
-    83% {
-      opacity: 1;
-    }
-    86%,
+    48%,
     100% {
       opacity: 0;
     }
@@ -362,14 +352,14 @@
 
   @keyframes say-electrical {
     0%,
-    49% {
+    64% {
       opacity: 0;
     }
-    51%,
-    58% {
+    66.667%,
+    79.167% {
       opacity: 1;
     }
-    61%,
+    81%,
     100% {
       opacity: 0;
     }
