@@ -30,6 +30,7 @@ export const AppConfig = {
     legalName: 'Boomerang Soluções em Tecnologia LTDA',
     cnpj: '46.994.388/0001-94',
     domain: 'boomerangsolucoes.com.br',
+    address: { locality: 'Barueri', region: 'SP', country: 'BR' },
   },
 };
 

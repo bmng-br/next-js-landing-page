@@ -8,10 +8,10 @@ const INTERVAL_MS = 2400;
 
 export const RotatingWord = () => {
   const t = useTranslations('RotatingWord');
-  const words = [t('engineer'), t('developer'), t('owner')];
+  const words = [t('engineer'), t('developer'), t('supplier'), t('owner')];
   const [index, setIndex] = useState(0);
 
-  // With reduced motion, the word stays on the first one
+  // Keep cycling through the words. With reduced motion, the word stays on the first one
   useEffect(() => {
     const interval = prefersReducedMotion()
       ? undefined

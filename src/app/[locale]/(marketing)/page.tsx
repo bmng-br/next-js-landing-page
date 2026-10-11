@@ -3,10 +3,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ContactMomentProvider } from '@/components/landing/ContactMomentContext';
 import { ContactSection } from '@/components/landing/ContactSection';
 import { DnaSection } from '@/components/landing/DnaSection';
-import { FrontsSection } from '@/components/landing/FrontsSection';
 import { HeroSection } from '@/components/landing/HeroSection';
 import { LandingFooter } from '@/components/landing/LandingFooter';
 import { LandingNav } from '@/components/landing/LandingNav';
+import { MobileContactBar } from '@/components/landing/MobileContactBar';
 import { MomentsSection } from '@/components/landing/MomentsSection';
 import { ProblemSection } from '@/components/landing/ProblemSection';
 import { ServicesSection } from '@/components/landing/ServicesSection';
@@ -76,11 +76,13 @@ export default async function IndexPage(props: IndexPageProps) {
       <HeroSection />
       <main>
         <ContactMomentProvider>
-          <ProblemSection />
-          <FrontsSection />
-          <MomentsSection />
-          <ServicesSection />
-          <DnaSection />
+          <div>
+            <ProblemSection />
+            <MomentsSection />
+            <DnaSection />
+            <ServicesSection />
+            <MobileContactBar />
+          </div>
           <ContactSection />
         </ContactMomentProvider>
       </main>

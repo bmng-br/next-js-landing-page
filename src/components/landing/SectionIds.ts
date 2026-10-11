@@ -2,7 +2,6 @@
 export const SectionIds = {
   top: 'topo',
   problem: 'problema',
-  fronts: 'frentes',
   moments: 'momento',
   services: 'servicos',
   dna: 'dna',
