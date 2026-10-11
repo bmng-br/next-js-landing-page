@@ -50,12 +50,14 @@ export default defineConfig({
     // More information: https://playwright.dev/docs/api/class-testoptions#test-options-base-url
     baseURL,
 
+    // The site answers in the browser language, so the tests ask for Portuguese, its default
+    locale: 'pt-BR',
+
     // Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer
     trace: process.env.CI ? 'on' : 'retain-on-failure',
 
     // Record videos when retrying the failed test.
     video: process.env.CI ? 'retain-on-failure' : undefined,
-
   },
 
   projects: [

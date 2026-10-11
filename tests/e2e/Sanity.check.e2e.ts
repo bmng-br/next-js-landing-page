@@ -40,7 +40,7 @@ test.describe('Sanity', () => {
       await page.getByRole('button', { name: 'Solicitar uma conversa' }).click();
 
       await expect(page.getByLabel('Seu nome')).toHaveAccessibleDescription('Informe seu nome.');
-      await expect(page.getByLabel('Empresa', { exact: true })).toHaveAccessibleDescription(
+      await expect(page.locator('input[name="company"]')).toHaveAccessibleDescription(
         'Informe o nome da empresa.',
       );
       await expect(page.getByLabel('Seu nome')).toBeFocused();
