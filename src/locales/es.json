@@ -24,7 +24,7 @@
     "eyebrow": "Procesos y tecnología, del diagnóstico a la entrega",
     "title": "Del problema al resultado, lado a lado con usted<dot>.</dot>",
     "description": "Entendemos su operación, organizamos los procesos, diseñamos la solución y acompañamos la entrega hasta que el resultado aparece. Usted ve todo y decide.",
-    "primary_cta": "Agende una conversación sin costo",
+    "primary_cta": "Solicite una conversación sin costo",
     "secondary_cta": "Cómo funciona",
     "marquee_item_1": "Procesos en la cabeza de las personas",
     "marquee_item_2": "Información perdida en correos",
@@ -117,7 +117,7 @@
     "group_label": "Momento de la empresa",
     "moment_label": "Momento: {moment}",
     "start_label": "Por dónde entramos",
-    "cta": "Agendar una conversación",
+    "cta": "Solicitar una conversación",
     "organize": {
       "situation": "El trabajo depende de pocas personas",
       "moment": "Organizar",
@@ -206,7 +206,7 @@
       "role": "Definir las metas y decidir en los hitos."
     },
     "note": "No todo problema termina en un proyecto. A veces el diagnóstico muestra que ajustar el proceso ya lo resuelve, y eso también es un resultado.",
-    "cta": "Agende una conversación sin costo"
+    "cta": "Solicite una conversación sin costo"
   },
   "DnaSection": {
     "eyebrow": "03 — Nuestro ADN",
@@ -241,7 +241,14 @@
     "email_label": "Correo de trabajo",
     "message_label": "¿Qué está pasando? (opcional)",
     "message_placeholder": "Cuanto más detalle, mejor nuestra respuesta.",
-    "submit_button": "Agendar una conversación",
+    "date_label": "Fecha preferida (opcional)",
+    "window_label": "Mejor horario (opcional)",
+    "window_any": "Cualquier horario",
+    "window_morning": "Mañana (8:00 a 12:00)",
+    "window_afternoon": "Tarde (13:00 a 18:00)",
+    "schedule_hint": "Sugiera una fecha y confirmamos el horario por correo.",
+    "timezone_hint": "Su zona horaria: {timezone}.",
+    "submit_button": "Solicitar una conversación",
     "reply_note": "Respondemos en 3 a 5 días hábiles.",
     "privacy_note": "Sin compromiso. Sus datos quedan solo con nosotros.",
     "success_title": "Recibido. El boomerang ya salió de su mano.",
@@ -302,12 +309,19 @@
     "company_label": "Empresa",
     "email_label": "Correo",
     "moment_label": "Momento de la empresa",
+    "preferred_date_label": "Fecha preferida",
+    "window_label": "Mejor horario",
+    "timezone_label": "Zona horaria",
+    "calendar_label": "Crear invitación en Google Calendar",
+    "calendar_title": "Conversación con {name} · Boomerang",
     "language_label": "Idioma",
     "message_label": "Mensaje"
   },
   "LeadsPage": {
     "title": "Contactos recibidos",
     "empty": "Aún no se recibieron contactos.",
-    "moment_label": "Momento de la empresa"
+    "moment_label": "Momento de la empresa",
+    "preferred_label": "Fecha preferida",
+    "calendar_link": "Crear invitación en Google Calendar"
   }
 }

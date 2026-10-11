@@ -1,4 +1,4 @@
-import { integer, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
+import { date, integer, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
 
 // This file defines the structure of your database tables using the Drizzle ORM.
 
@@ -31,6 +31,10 @@ export const leadsSchema = pgTable('leads', {
   email: text('email').notNull(),
   moment: text('moment').notNull(),
   message: text('message'),
+  // Optional first-conversation preference: a date, a part of the day and the visitor's time zone
+  preferredDate: date('preferred_date'),
+  preferredWindow: text('preferred_window'),
+  timezone: text('timezone'),
   locale: text('locale'),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
 });

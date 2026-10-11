@@ -24,7 +24,7 @@
     "eyebrow": "Processes and technology, from diagnosis to delivery",
     "title": "From problem to result, side by side with you<dot>.</dot>",
     "description": "We learn how you operate, organize your processes, design the solution and follow the delivery until the results show up. You see everything and you decide.",
-    "primary_cta": "Book a free conversation",
+    "primary_cta": "Request a free conversation",
     "secondary_cta": "How it works",
     "marquee_item_1": "Processes that live in people’s heads",
     "marquee_item_2": "Information lost in emails",
@@ -117,7 +117,7 @@
     "group_label": "Company moment",
     "moment_label": "Moment: {moment}",
     "start_label": "Where we come in",
-    "cta": "Book a conversation",
+    "cta": "Request a conversation",
     "organize": {
       "situation": "The work depends on a few people",
       "moment": "Organize",
@@ -206,7 +206,7 @@
       "role": "Set the goals and decide at the milestones."
     },
     "note": "Not every problem ends in a project. Sometimes the diagnosis shows that adjusting the process is enough, and that is a result too.",
-    "cta": "Book a free conversation"
+    "cta": "Request a free conversation"
   },
   "DnaSection": {
     "eyebrow": "03 — Our DNA",
@@ -241,7 +241,14 @@
     "email_label": "Work email",
     "message_label": "What's happening? (optional)",
     "message_placeholder": "The more detail, the better our reply.",
-    "submit_button": "Book a conversation",
+    "date_label": "Preferred date (optional)",
+    "window_label": "Best time (optional)",
+    "window_any": "Any time",
+    "window_morning": "Morning (8 am to 12 pm)",
+    "window_afternoon": "Afternoon (1 pm to 6 pm)",
+    "schedule_hint": "Suggest a date and we'll confirm the time by email.",
+    "timezone_hint": "Your time zone: {timezone}.",
+    "submit_button": "Request a conversation",
     "reply_note": "We reply within 3 to 5 business days.",
     "privacy_note": "No commitment. Your data stays with us.",
     "success_title": "Got it. The boomerang has left your hand.",
@@ -302,12 +309,19 @@
     "company_label": "Company",
     "email_label": "Email",
     "moment_label": "Company moment",
+    "preferred_date_label": "Preferred date",
+    "window_label": "Best time",
+    "timezone_label": "Time zone",
+    "calendar_label": "Create a Google Calendar invite",
+    "calendar_title": "Conversation with {name} · Boomerang",
     "language_label": "Language",
     "message_label": "Message"
   },
   "LeadsPage": {
     "title": "Received contacts",
     "empty": "No contacts received yet.",
-    "moment_label": "Company moment"
+    "moment_label": "Company moment",
+    "preferred_label": "Preferred date",
+    "calendar_link": "Create a Google Calendar invite"
   }
 }

@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { leadsSchema } from '@/models/Schema';
 import { AppConfig } from '@/utils/AppConfig';
 import type { ContactRequest } from '@/validations/ContactValidation';
+import { buildCalendarUrl } from './CalendarLink';
 import { withDb } from './DB';
 import { routing } from './I18nRouting';
 
@@ -60,6 +61,9 @@ export const saveLead = async (lead: ContactRequest) => {
       email: lead.email,
       moment: lead.moment,
       message: emptyToNull(lead.message),
+      preferredDate: lead.preferredDate ?? null,
+      preferredWindow: lead.preferredWindow ?? null,
+      timezone: lead.timezone ?? null,
       locale: lead.locale ?? null,
     }),
   );
@@ -80,6 +84,30 @@ export const notifyNewLead = async (options: { lead: ContactRequest; saved: bool
   const t = await getTranslations({ locale: routing.defaultLocale, namespace: 'LeadNotification' });
   const tForm = await getTranslations({ locale: routing.defaultLocale, namespace: 'ContactForm' });
   const { lead } = options;
+  const momentLabel = tForm(`moment_${lead.moment}`);
+  const windowLabel = lead.preferredWindow
+    ? tForm(`window_${lead.preferredWindow}`)
+    : tForm('window_any');
+
+  // A preferred date comes with a one-click Google Calendar event the team can still adjust
+  const preferredLines = lead.preferredDate
+    ? [
+        `${t('preferred_date_label')}: ${lead.preferredDate}`,
+        `${t('window_label')}: ${windowLabel}`,
+        `${t('calendar_label')}: ${buildCalendarUrl({
+          date: lead.preferredDate,
+          window: lead.preferredWindow,
+          timezone: lead.timezone,
+          title: t('calendar_title', { name: lead.name }),
+          details: [
+            `${t('company_label')}: ${lead.company}`,
+            `${t('moment_label')}: ${momentLabel}`,
+            emptyToNull(lead.message) ?? '',
+          ].join('\n'),
+          guestEmail: lead.email,
+        })}`,
+      ]
+    : [];
 
   const lines = [
     options.saved ? t('intro') : t('not_saved_warning'),
@@ -87,7 +115,9 @@ export const notifyNewLead = async (options: { lead: ContactRequest; saved: bool
     `${t('name_label')}: ${lead.name}`,
     `${t('company_label')}: ${emptyToNull(lead.company) ?? '-'}`,
     `${t('email_label')}: ${lead.email}`,
-    `${t('moment_label')}: ${tForm(`moment_${lead.moment}`)}`,
+    `${t('moment_label')}: ${momentLabel}`,
+    ...preferredLines,
+    `${t('timezone_label')}: ${lead.timezone ?? '-'}`,
     `${t('language_label')}: ${lead.locale ?? '-'}`,
     '',
     `${t('message_label')}:`,
