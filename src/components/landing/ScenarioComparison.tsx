@@ -197,7 +197,7 @@ export const ScenarioComparison = () => {
   const t = useTranslations('ScenarioComparison');
   const [scenario, setScenario] = useState<Scenario>('without');
   const isWith = scenario === 'with';
-  const { ref, isInView } = useInView<HTMLDivElement>();
+  const { ref, isInView } = useInView<HTMLDivElement>({ initial: true });
 
   return (
     <div

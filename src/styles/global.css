@@ -44,7 +44,7 @@
   --animate-fade-in: fade-in 0.45s ease;
   --animate-word-in: word-in 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
   --animate-marquee: marquee 120s linear infinite;
-  --animate-flow: flow 1.4s linear 9;
+  --animate-flow: flow 1.4s linear infinite;
 
   @keyframes fade-in {
     from {
@@ -273,19 +273,19 @@
 /* "Without Boomerang" diagram: the problem bounces between suppliers */
 @layer components {
   .push-token {
-    animation: push 8s ease-in-out 3 forwards;
+    animation: push 8s ease-in-out infinite;
   }
 
   .say-software {
-    animation: say-software 8s linear 3 forwards;
+    animation: say-software 8s linear infinite;
   }
 
   .say-automation {
-    animation: say-automation 8s linear 3 forwards;
+    animation: say-automation 8s linear infinite;
   }
 
   .say-electrical {
-    animation: say-electrical 8s linear 3 forwards;
+    animation: say-electrical 8s linear infinite;
   }
 
   @keyframes push {
@@ -379,19 +379,19 @@
 /* "With Boomerang" diagram: suppliers report up, delivery goes back to the client */
 @layer components {
   .report-software {
-    animation: report-software 3s linear 4 both;
+    animation: report-software 3s linear infinite backwards;
   }
 
   .report-automation {
-    animation: report-automation 3s linear 0.8s 4 both;
+    animation: report-automation 3s linear 0.8s infinite backwards;
   }
 
   .report-electrical {
-    animation: report-electrical 3s linear 1.6s 4 both;
+    animation: report-electrical 3s linear 1.6s infinite backwards;
   }
 
   .deliver {
-    animation: deliver 3s ease-in-out 4 both;
+    animation: deliver 3s ease-in-out infinite backwards;
   }
 
   @keyframes report-software {
@@ -471,7 +471,7 @@
   }
 }
 
-/* The comparison diagrams only play while on screen, and rest after a few passes */
+/* The comparison diagrams loop while on screen and pause when scrolled away */
 @layer components {
   [data-in-view='false'] * {
     animation-play-state: paused;

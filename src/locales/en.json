@@ -198,7 +198,7 @@
   "DnaSection": {
     "eyebrow": "03 — Our DNA",
     "title": "We speak the language<br></br>of the <word></word>.",
-    "title_label": "We speak the language of the engineer, the developer and the business owner.",
+    "title_label": "We speak the language of the engineer, the developer, the vendor and the business owner.",
     "management_title": "Project and product management",
     "management_body": "Critical systems integration, multi-vendor programs and deliveries in regulated environments, in Brazil and abroad.",
     "processes_title": "Processes",
@@ -212,6 +212,7 @@
   "RotatingWord": {
     "engineer": "engineer",
     "developer": "developer",
+    "supplier": "vendor",
     "owner": "business owner"
   },
   "ContactSection": {

@@ -198,7 +198,7 @@
   "DnaSection": {
     "eyebrow": "03 — Nosso DNA",
     "title": "Falamos a língua<br></br>do <word></word>.",
-    "title_label": "Falamos a língua do engenheiro, do desenvolvedor e do dono do negócio.",
+    "title_label": "Falamos a língua do engenheiro, do desenvolvedor, do fornecedor e do dono do negócio.",
     "management_title": "Gestão de projetos e produtos",
     "management_body": "Integração de sistemas críticos, programas com múltiplos fornecedores e entregas em ambientes regulados, no Brasil e no exterior.",
     "processes_title": "Processos",
@@ -212,6 +212,7 @@
   "RotatingWord": {
     "engineer": "engenheiro",
     "developer": "desenvolvedor",
+    "supplier": "fornecedor",
     "owner": "dono do negócio"
   },
   "ContactSection": {

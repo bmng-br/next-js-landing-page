@@ -9,25 +9,23 @@ const INTERVAL_MS = 2400;
 
 export const RotatingWord = () => {
   const t = useTranslations('RotatingWord');
-  const words = [t('engineer'), t('developer'), t('owner')];
-  const lastIndex = words.length - 1;
+  const words = [t('engineer'), t('developer'), t('supplier'), t('owner')];
   const [index, setIndex] = useState(0);
-  const { ref, isInView } = useInView<HTMLSpanElement>({ once: true });
+  const { ref, isInView } = useInView<HTMLSpanElement>({ initial: true });
 
-  // Cycle once when the word first scrolls into view, then rest on the last word (the business owner).
-  // With reduced motion, the word stays on the first one
+  // Keep cycling while the word is on screen. With reduced motion, the word stays on the first one
   useEffect(() => {
-    const shouldAdvance = isInView && index !== lastIndex && !prefersReducedMotion();
+    const shouldAdvance = isInView && !prefersReducedMotion();
     const timeout = shouldAdvance
       ? setTimeout(() => {
-          setIndex(index + 1);
+          setIndex((index + 1) % words.length);
         }, INTERVAL_MS)
       : undefined;
 
     return () => {
       clearTimeout(timeout);
     };
-  }, [isInView, index, lastIndex]);
+  }, [isInView, index, words.length]);
 
   return (
     <span
