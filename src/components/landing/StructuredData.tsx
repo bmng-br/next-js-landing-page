@@ -2,13 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { AppConfig } from '@/utils/AppConfig';
 import { getBaseUrl, getLocalizedUrl } from '@/utils/Helpers';
 
-const SERVICE_KEYS = [
-  'diagnosis',
-  'design_hiring',
-  'processes',
-  'project_management',
-  'ongoing_governance',
-] as const;
+const STAGE_KEYS = ['diagnosis', 'design', 'processes', 'implementation', 'delivery'] as const;
 
 /**
  * Describes the business to search engines (schema.org JSON-LD) for rich results.
@@ -18,7 +12,7 @@ const SERVICE_KEYS = [
  */
 export const StructuredData = async (props: { locale: string }) => {
   const t = await getTranslations({ locale: props.locale, namespace: 'IndexPage' });
-  const tServices = await getTranslations({ locale: props.locale, namespace: 'ServicesSection' });
+  const tJourney = await getTranslations({ locale: props.locale, namespace: 'JourneySection' });
   const baseUrl = getBaseUrl();
   const organizationId = `${baseUrl}/#organization`;
 
@@ -50,16 +44,16 @@ export const StructuredData = async (props: { locale: string }) => {
       areaServed: 'BR',
       availableLanguage: ['Portuguese', 'English'],
     })),
-    // The five ways to hire Boomerang, from the services section copy
+    // The five stages of the journey, from the journey section copy
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: tServices('title'),
-      itemListElement: SERVICE_KEYS.map((key) => ({
+      name: tJourney('title'),
+      itemListElement: STAGE_KEYS.map((key) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: tServices(`${key}.title`),
-          description: tServices(`${key}.description`),
+          name: tJourney(`stages.${key}.name`),
+          description: tJourney(`stages.${key}.do`),
           provider: { '@id': organizationId },
         },
       })),

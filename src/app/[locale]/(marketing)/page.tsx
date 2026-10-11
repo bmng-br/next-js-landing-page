@@ -4,12 +4,12 @@ import { ContactMomentProvider } from '@/components/landing/ContactMomentContext
 import { ContactSection } from '@/components/landing/ContactSection';
 import { DnaSection } from '@/components/landing/DnaSection';
 import { HeroSection } from '@/components/landing/HeroSection';
+import { JourneySection } from '@/components/landing/JourneySection';
 import { LandingFooter } from '@/components/landing/LandingFooter';
 import { LandingNav } from '@/components/landing/LandingNav';
 import { MobileContactBar } from '@/components/landing/MobileContactBar';
 import { MomentsSection } from '@/components/landing/MomentsSection';
 import { ProblemSection } from '@/components/landing/ProblemSection';
-import { ServicesSection } from '@/components/landing/ServicesSection';
 import { StructuredData } from '@/components/landing/StructuredData';
 import { AppConfig } from '@/utils/AppConfig';
 import { getBaseUrl, getLanguageAlternates, getLocalizedUrl } from '@/utils/Helpers';
@@ -80,7 +80,7 @@ export default async function IndexPage(props: IndexPageProps) {
             <ProblemSection />
             <MomentsSection />
             <DnaSection />
-            <ServicesSection />
+            <JourneySection />
             <MobileContactBar />
           </div>
           <ContactSection />
