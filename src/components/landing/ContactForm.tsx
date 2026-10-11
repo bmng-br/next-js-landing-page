@@ -1,7 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
-import { useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { CONTACT_MOMENTS, ContactValidation } from '@/validations/ContactValidation';
 import { useContactMoment } from './ContactMomentContext';
 
@@ -13,6 +13,35 @@ const REQUIRED_FIELDS: RequiredField[] = ['name', 'company', 'email', 'moment'];
 
 /** Gives up on a request that never answers, so the form can offer the email fallback. */
 const SUBMIT_TIMEOUT_MS = 15_000;
+
+/**
+ * Finds the first date a conversation can be proposed for: five business days from today.
+ * @returns The date as YYYY-MM-DD, in the visitor's time zone.
+ */
+const getEarliestPreferredDate = () => {
+  const date = new Date();
+  let remaining = 5;
+
+  while (remaining > 0) {
+    date.setDate(date.getDate() + 1);
+
+    if (date.getDay() !== 0 && date.getDay() !== 6) {
+      remaining -= 1;
+    }
+  }
+
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+
+  return `${date.getFullYear()}-${month}-${day}`;
+};
+
+const getTimeZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+const doNothing = () => 0;
+
+// The values above never change while the page is open, so there is nothing to subscribe to
+const subscribeToNothing = () => doNothing;
 
 const fieldClassName =
   'min-h-[50px] rounded-[10px] border-[1.5px] bg-white px-4 font-sans text-base font-normal text-graphite-950 aria-invalid:border-pink';
@@ -52,6 +81,9 @@ export const ContactForm = (props: { email: string }) => {
   const contactMoment = useContactMoment();
   const [status, setStatus] = useState<Status>('idle');
   const [invalidFields, setInvalidFields] = useState<RequiredField[]>([]);
+  // These depend on the visitor's browser: they are blank on the server and filled in on the client
+  const minDate = useSyncExternalStore(subscribeToNothing, getEarliestPreferredDate, () => '');
+  const timezone = useSyncExternalStore(subscribeToNothing, getTimeZone, () => '');
 
   if (status === 'success') {
     return (
@@ -99,7 +131,11 @@ export const ContactForm = (props: { email: string }) => {
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...result.request, locale }),
+      body: JSON.stringify({
+        ...result.request,
+        locale,
+        timezone: getTimeZone(),
+      }),
       signal: AbortSignal.timeout(SUBMIT_TIMEOUT_MS),
     }).catch(() => null);
 
@@ -211,6 +247,33 @@ export const ContactForm = (props: { email: string }) => {
           {t('moment_error')}
         </FieldError>
       </label>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] gap-[18px]">
+        <label className={labelClassName}>
+          {t('date_label')}
+          <input
+            type="date"
+            name="preferredDate"
+            min={minDate || undefined}
+            className={`${fieldClassName} border-graphite-500`}
+          />
+        </label>
+        <label className={labelClassName}>
+          {t('window_label')}
+          <select
+            name="preferredWindow"
+            defaultValue=""
+            className={`${fieldClassName} border-graphite-500 px-3.5`}
+          >
+            <option value="">{t('window_any')}</option>
+            <option value="morning">{t('window_morning')}</option>
+            <option value="afternoon">{t('window_afternoon')}</option>
+          </select>
+        </label>
+      </div>
+      <div className="-mt-2 text-[13px] leading-5 text-graphite-700">
+        {t('schedule_hint')}
+        {timezone && ` ${t('timezone_hint', { timezone })}`}
+      </div>
       <label className={labelClassName}>
         {t('message_label')}
         <textarea

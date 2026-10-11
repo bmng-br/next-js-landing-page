@@ -24,7 +24,7 @@
     "eyebrow": "Processos e tecnologia, do diagnóstico à entrega",
     "title": "Do problema ao resultado, lado a lado com você<dot>.</dot>",
     "description": "Entendemos a operação, organizamos os processos, desenhamos a solução e acompanhamos a entrega até o resultado aparecer. Você enxerga tudo e decide.",
-    "primary_cta": "Agendar uma conversa sem custo",
+    "primary_cta": "Solicitar uma conversa sem custo",
     "secondary_cta": "Como funciona",
     "marquee_item_1": "Processos na cabeça das pessoas",
     "marquee_item_2": "Informação perdida em e-mails",
@@ -117,7 +117,7 @@
     "group_label": "Momento da empresa",
     "moment_label": "Momento: {moment}",
     "start_label": "Por onde entramos",
-    "cta": "Agendar uma conversa",
+    "cta": "Solicitar uma conversa",
     "organize": {
       "situation": "O trabalho depende de poucas pessoas",
       "moment": "Organizar",
@@ -206,11 +206,11 @@
       "role": "Definir as metas e decidir nos marcos."
     },
     "note": "Nem todo problema termina em um projeto. Às vezes o diagnóstico mostra que ajustar o processo já resolve, e isso também é um resultado.",
-    "cta": "Agendar uma conversa sem custo"
+    "cta": "Solicitar uma conversa sem custo"
   },
   "DnaSection": {
     "eyebrow": "03 — Nosso DNA",
-    "title": "Falamos a língua<br></br>do <word></word>.",
+    "title": "Falamos a língua<br></br>do <word></word><dot>.</dot>",
     "title_label": "Falamos a língua do engenheiro, do desenvolvedor, do fornecedor e do dono do negócio.",
     "management_title": "Gestão de projetos e produtos",
     "management_body": "Integração de sistemas críticos, programas com múltiplos fornecedores e entregas em ambientes regulados, no Brasil e no exterior.",
@@ -241,7 +241,14 @@
     "email_label": "E-mail de trabalho",
     "message_label": "O que está acontecendo? (opcional)",
     "message_placeholder": "Quanto mais detalhe, melhor a nossa resposta.",
-    "submit_button": "Agendar uma conversa",
+    "date_label": "Data preferida (opcional)",
+    "window_label": "Melhor horário (opcional)",
+    "window_any": "Qualquer horário",
+    "window_morning": "Manhã (8h às 12h)",
+    "window_afternoon": "Tarde (13h às 18h)",
+    "schedule_hint": "Sugira uma data e confirmamos o horário por e-mail.",
+    "timezone_hint": "Seu fuso horário: {timezone}.",
+    "submit_button": "Solicitar uma conversa",
     "reply_note": "Respondemos em 3 a 5 dias úteis.",
     "privacy_note": "Sem compromisso. Seus dados ficam só com a gente.",
     "success_title": "Recebemos. O boomerang já saiu da sua mão.",
@@ -302,12 +309,19 @@
     "company_label": "Empresa",
     "email_label": "E-mail",
     "moment_label": "Momento da empresa",
+    "preferred_date_label": "Data preferida",
+    "window_label": "Melhor horário",
+    "timezone_label": "Fuso horário",
+    "calendar_label": "Criar convite no Google Agenda",
+    "calendar_title": "Conversa com {name} · Boomerang",
     "language_label": "Idioma",
     "message_label": "Mensagem"
   },
   "LeadsPage": {
     "title": "Contatos recebidos",
     "empty": "Nenhum contato recebido ainda.",
-    "moment_label": "Momento da empresa"
+    "moment_label": "Momento da empresa",
+    "preferred_label": "Data preferida",
+    "calendar_link": "Criar convite no Google Agenda"
   }
 }

@@ -28,6 +28,7 @@ export const DnaSection = async () => {
             {t.rich('title', {
               br: () => <br />,
               word: () => <RotatingWord />,
+              dot: (chunks) => <span className="text-pink">{chunks}</span>,
             })}
           </h2>
         </div>
