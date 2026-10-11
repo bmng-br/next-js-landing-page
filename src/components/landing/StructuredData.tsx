@@ -2,6 +2,14 @@ import { getTranslations } from 'next-intl/server';
 import { AppConfig } from '@/utils/AppConfig';
 import { getBaseUrl, getLocalizedUrl } from '@/utils/Helpers';
 
+const SERVICE_KEYS = [
+  'diagnosis',
+  'design_hiring',
+  'processes',
+  'project_management',
+  'ongoing_governance',
+] as const;
+
 /**
  * Describes the business to search engines (schema.org JSON-LD) for rich results.
  * @param props The component props.
@@ -10,11 +18,13 @@ import { getBaseUrl, getLocalizedUrl } from '@/utils/Helpers';
  */
 export const StructuredData = async (props: { locale: string }) => {
   const t = await getTranslations({ locale: props.locale, namespace: 'IndexPage' });
+  const tServices = await getTranslations({ locale: props.locale, namespace: 'ServicesSection' });
   const baseUrl = getBaseUrl();
+  const organizationId = `${baseUrl}/#organization`;
 
-  const data = {
-    '@context': 'https://schema.org',
+  const organization = {
     '@type': 'ProfessionalService',
+    '@id': organizationId,
     name: AppConfig.name,
     legalName: AppConfig.company.legalName,
     url: getLocalizedUrl(props.locale),
@@ -22,6 +32,7 @@ export const StructuredData = async (props: { locale: string }) => {
     image: `${baseUrl}/og/${props.locale}.png`,
     description: t('meta_description'),
     email: AppConfig.contact.email,
+    telephone: AppConfig.contact.phones[0].tel,
     areaServed: { '@type': 'Country', name: 'Brazil' },
     address: {
       '@type': 'PostalAddress',
@@ -39,7 +50,32 @@ export const StructuredData = async (props: { locale: string }) => {
       areaServed: 'BR',
       availableLanguage: ['Portuguese', 'English'],
     })),
+    // The five ways to hire Boomerang, from the services section copy
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: tServices('title'),
+      itemListElement: SERVICE_KEYS.map((key) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: tServices(`${key}.title`),
+          description: tServices(`${key}.description`),
+          provider: { '@id': organizationId },
+        },
+      })),
+    },
   };
+
+  const website = {
+    '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
+    url: baseUrl,
+    name: AppConfig.name,
+    inLanguage: props.locale,
+    publisher: { '@id': organizationId },
+  };
+
+  const data = { '@context': 'https://schema.org', '@graph': [organization, website] };
 
   return (
     <script
