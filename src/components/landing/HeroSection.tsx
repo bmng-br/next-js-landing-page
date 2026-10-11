@@ -37,6 +37,7 @@ export const HeroSection = async () => {
       <Image
         src={monogram}
         alt=""
+        unoptimized
         className="pointer-events-none absolute -top-40 -left-[220px] h-[1240px] w-auto max-w-none"
       />
 
