@@ -24,6 +24,20 @@ test.describe('I18n', () => {
       ).toBeVisible();
     });
 
+    test('switches the homepage to Spanish using the nav link', async ({ page }) => {
+      await page.goto('/');
+
+      await page.getByRole('link', { name: 'Leer en español' }).click();
+
+      await expect(page).toHaveURL(/\/es$/u);
+
+      await expect(
+        page.getByRole('heading', {
+          name: 'Del problema al resultado, lado a lado con usted.',
+        }),
+      ).toBeVisible();
+    });
+
     test('displays the sign-in page in English using the URL', async ({ page }) => {
       await page.goto('/en/sign-in');
 

@@ -42,7 +42,7 @@ export const StructuredData = async (props: { locale: string }) => {
       email: AppConfig.contact.email,
       contactType: 'sales',
       areaServed: 'BR',
-      availableLanguage: ['Portuguese', 'English'],
+      availableLanguage: ['Portuguese', 'English', 'Spanish'],
     })),
     // The five stages of the journey, from the journey section copy
     hasOfferCatalog: {

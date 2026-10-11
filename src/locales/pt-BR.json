@@ -13,8 +13,9 @@
     "moments_link": "Quando nos chamar",
     "journey_link": "Como trabalhamos",
     "contact_button": "Fale com a gente",
-    "locale_link": "EN",
-    "locale_link_label": "Read in English",
+    "locale_pt_label": "Ler em português",
+    "locale_en_label": "Read in English",
+    "locale_es_label": "Leer en español",
     "open_menu_label": "Abrir menu",
     "close_menu_label": "Fechar menu"
   },

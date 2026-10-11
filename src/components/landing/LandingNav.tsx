@@ -1,7 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/libs/I18nNavigation';
-import { routing } from '@/libs/I18nRouting';
 import logo from '@/public/assets/images/boomerang-logo-light.png';
 import { ButtonLink } from './ButtonLink';
 import { Container } from './Container';
@@ -11,7 +10,13 @@ import { SectionIds } from './SectionIds';
 export const LandingNav = async () => {
   const t = await getTranslations('LandingNav');
   const locale = await getLocale();
-  const otherLocale = routing.locales.find((elt) => elt !== locale) ?? routing.defaultLocale;
+
+  // Each language is named in its own language, so every visitor can recognize theirs
+  const localeLinks = [
+    { locale: 'pt-BR', code: 'PT', label: t('locale_pt_label') },
+    { locale: 'en', code: 'EN', label: t('locale_en_label') },
+    { locale: 'es', code: 'ES', label: t('locale_es_label') },
+  ] as const;
 
   const links = [
     { href: `#${SectionIds.problem}`, label: t('problem_link') },
@@ -49,15 +54,21 @@ export const LandingNav = async () => {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3 sm:gap-4">
-            <Link
-              href="/"
-              locale={otherLocale}
-              aria-label={t('locale_link_label')}
-              className="flex min-h-11 min-w-11 items-center justify-center text-sm font-bold text-graphite-200 no-underline hover:text-paper"
-            >
-              {t('locale_link')}
-            </Link>
+          <div className="flex items-center gap-1 sm:gap-3">
+            {localeLinks
+              .filter((link) => link.locale !== locale)
+              .map((link) => (
+                <Link
+                  key={link.locale}
+                  href="/"
+                  locale={link.locale}
+                  lang={link.locale}
+                  aria-label={link.label}
+                  className="flex min-h-11 min-w-10 items-center justify-center text-sm font-bold text-graphite-200 no-underline hover:text-paper"
+                >
+                  {link.code}
+                </Link>
+              ))}
             <div className="hidden sm:block">
               <ButtonLink href={`#${SectionIds.contact}`} variant="ghost" size="sm">
                 {t('contact_button')}
