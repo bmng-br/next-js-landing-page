@@ -13,9 +13,7 @@ test.describe('Sanity', () => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Seu projeto sai da sua mão e volta funcionando.',
-        }),
+        page.getByRole('heading', { name: 'Do problema ao resultado, lado a lado com você.' }),
       ).toBeVisible();
     });
 
@@ -23,11 +21,12 @@ test.describe('Sanity', () => {
       await page.goto('/');
 
       await page.getByLabel('Seu nome').fill('Maria');
+      await page.getByLabel('Empresa', { exact: true }).fill('Acme');
       await page.getByLabel('E-mail de trabalho').fill('maria@example.com');
       await page
-        .getByLabel('Em que momento está o projeto?')
+        .getByLabel('Em que momento está a sua empresa?')
         .selectOption({ label: 'O projeto travou ou atrasou' });
-      await page.getByRole('button', { name: 'Pedir um Technical Health Check' }).click();
+      await page.getByRole('button', { name: 'Solicitar uma conversa' }).click();
 
       await expect(page.getByRole('status')).toContainText(
         'Recebemos. O boomerang já saiu da sua mão.',
@@ -38,19 +37,21 @@ test.describe('Sanity', () => {
     test('shows inline errors when submitting an empty contact form', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByRole('button', { name: 'Pedir um Technical Health Check' }).click();
+      await page.getByRole('button', { name: 'Solicitar uma conversa' }).click();
 
       await expect(page.getByLabel('Seu nome')).toHaveAccessibleDescription('Informe seu nome.');
+      await expect(page.locator('input[name="company"]')).toHaveAccessibleDescription(
+        'Informe o nome da empresa.',
+      );
       await expect(page.getByLabel('Seu nome')).toBeFocused();
     });
 
     test('pre-fills the contact form from the triage section', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByText('Vou expandir, automatizar ou trocar o ERP').click();
-      await page.getByRole('link', { name: 'Quero conversar sobre isso' }).click();
+      await page.getByText('O projeto travou e os aditivos não param').click();
 
-      await expect(page.getByLabel('Em que momento está o projeto?')).toHaveValue('expansion');
+      await expect(page.getByLabel('Em que momento está a sua empresa?')).toHaveValue('stalled');
     });
   });
 });

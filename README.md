@@ -127,7 +127,7 @@ Developer experience first, extremely flexible code structure and only keep what
 - 📦 Type-safe ORM with DrizzleORM, compatible with PostgreSQL, SQLite, and MySQL
 - 💽 Offline and local development database with PGlite
 - ☁️ Remote and production database with [Neon](https://get.neon.com/BMFYNtx)
-- 🌐 Multi-language (i18n) with next-intl and [Crowdin](https://l.crowdin.com/next-js)
+- 🌐 Multi-language (i18n) with next-intl (Portuguese, English and Spanish)
 - ♻️ Type-safe environment variables with T3 Env
 - ⌨️ Form handling with React Hook Form
 - 🔴 Validation library with Zod
@@ -241,13 +241,9 @@ After creating your Neon account, you can get the connection string and copy it 
 
 If you want to create a fresh and empty database, you just need to remove the folder `local.db` from the root of the project. The next time you run the project, a new database will be created automatically.
 
-### Translation (i18n) setup
+### Translation (i18n)
 
-For translation, the project uses `next-intl` combined with [Crowdin](https://l.crowdin.com/next-js). As a developer, you only need to take care of the English (or another default language) version. Translations for other languages are automatically generated and handled by Crowdin. You can use Crowdin to collaborate with your translation team or translate the messages yourself with the help of machine translation.
-
-To set up translation (i18n), create an account at [Crowdin.com](https://l.crowdin.com/next-js) and create a new project. In the newly created project, you will be able to find the project ID. You will also need to create a new Personal Access Token by going to Account Settings > API. Then, in your GitHub Actions, you need to define the following environment variables: `CROWDIN_PROJECT_ID` and `CROWDIN_PERSONAL_TOKEN`.
-
-After defining the environment variables in your GitHub Actions, your localization files will be synchronized with Crowdin every time you push a new commit to the `main` branch.
+The site uses `next-intl`. Each language has one message file in `src/locales` (`pt-BR.json`, `en.json` and `es.json`), edited directly in the repository. `pt-BR` is the default language and the source of truth: `npm run check:i18n` fails when another language misses a key or has an unused one. To add a language, create its message file and add its code to `AppConfig.i18n.locales`.
 
 ### Project structure
 
