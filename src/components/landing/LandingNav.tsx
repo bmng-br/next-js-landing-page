@@ -16,7 +16,7 @@ export const LandingNav = async () => {
   const links = [
     { href: `#${SectionIds.problem}`, label: t('problem_link') },
     { href: `#${SectionIds.moments}`, label: t('moments_link') },
-    { href: `#${SectionIds.services}`, label: t('services_link') },
+    { href: `#${SectionIds.journey}`, label: t('journey_link') },
   ];
 
   return (

@@ -11,7 +11,7 @@
     "main_navigation_label": "Main navigation",
     "problem_link": "The problem",
     "moments_link": "When to call us",
-    "services_link": "Services",
+    "journey_link": "How we work",
     "contact_button": "Talk to us",
     "locale_link": "PT",
     "locale_link_label": "Ler em português",
@@ -130,7 +130,7 @@
       "tag": "Before any vendor",
       "headline": "We design the solution before you talk to any vendor.",
       "body": "A new system, an integration or an IT restructuring. We weigh buying, customizing or building, and you compare proposals fairly, with scope, cost and schedule defined.",
-      "service": "Diagnosis and Design & Hiring"
+      "service": "Diagnosis and Design and hiring"
     },
     "stalled": {
       "situation": "The project stalled and change orders keep coming",
@@ -138,7 +138,7 @@
       "tag": "Fast intervention",
       "headline": "We find where it got stuck and take back control.",
       "body": "Deadlines blew up or change orders keep arriving. A quick diagnosis shows what was delivered, what is missing and who is responsible for what. Then we stay by your side managing the project.",
-      "service": "Quick diagnosis, then Project Management"
+      "service": "Quick diagnosis, then Implementation and Delivery"
     },
     "integration": {
       "situation": "The system arrived and doesn’t talk to the rest",
@@ -154,46 +154,57 @@
       "tag": "Ongoing",
       "headline": "A processes and technology team, without hiring one.",
       "body": "The company grew and needs someone overseeing processes and technology on an ongoing basis, with reports in business language.",
-      "service": "Ongoing Governance"
+      "service": "Governance"
     }
   },
-  "ServicesSection": {
-    "eyebrow": "04 — Services",
-    "title": "Five ways to work with us.",
-    "description": "From a one-off diagnosis to ongoing oversight. Hire the full journey or join at the stage your company is in.",
-    "diagnosis": {
-      "badge": "Start here",
-      "title": "Diagnosis",
-      "description": "For those who need to decide what to do, review a proposal before signing, or understand why something isn’t working.",
-      "billing": "Fixed price",
-      "cta": "Request a diagnosis"
+  "JourneySection": {
+    "eyebrow": "04 — How we work",
+    "title": "A journey in five stages.",
+    "description": "Every project starts with a diagnosis and ends with the delivery. You can hire us for the full journey or join at the stage your company is in.",
+    "do_label": "What we do",
+    "get_label": "What you get",
+    "role_label": "Your role",
+    "stages": {
+      "diagnosis": {
+        "name": "Diagnosis",
+        "do": "We learn the business, current processes, systems, contracts and the real pain.",
+        "get": "A clear picture of the situation, the risks and the priorities.",
+        "role": "Open up the operation and validate the priorities."
+      },
+      "design": {
+        "name": "Design and hiring",
+        "do": "We design the solution, weigh buying, customizing or building, and support the hiring.",
+        "get": "Vendors compared fairly, with scope, cost and schedule defined.",
+        "role": "Choose the solution and the vendors, with the options and risks in plain view."
+      },
+      "processes": {
+        "name": "Processes",
+        "do": "We redesign how work will happen with the new solution: flows, roles, rules and metrics. We simplify before we automate.",
+        "get": "Processes documented and validated with your team.",
+        "role": "Approve the new way of working."
+      },
+      "implementation": {
+        "name": "Implementation",
+        "do": "We coordinate vendors and partners through build, configuration and testing, and prepare your team.",
+        "get": "A solution deployed and tested, with your team ready.",
+        "role": "Decide at every milestone and take part in the tests."
+      },
+      "delivery": {
+        "name": "Delivery",
+        "do": "We lead the sign-off and acceptance, and follow through the warranty period.",
+        "get": "A delivery signed off and followed through the warranty.",
+        "role": "Give the final acceptance."
+      }
     },
-    "design_hiring": {
-      "badge": "Stage 2",
-      "title": "Design & Hiring",
-      "description": "For those with a project ahead who want to hire right from the start.",
-      "billing": "Fixed price per stage"
+    "governance": {
+      "name": "Governance",
+      "span": "From hiring to the end of the warranty",
+      "do": "We track deadlines, cost, quality, risks and decisions at every stage, with reports in business language.",
+      "get": "A clear view of the project from start to finish.",
+      "role": "Set the goals and decide at the milestones."
     },
-    "processes": {
-      "badge": "Stage 3",
-      "title": "Processes",
-      "description": "For those who need to adjust how the work happens for a new solution, or get more out of what they already have.",
-      "billing": "Fixed price per scope"
-    },
-    "project_management": {
-      "badge": "Stages 4 and 5",
-      "title": "Project Management",
-      "description": "For those who need someone overseeing vendors and partners through implementation and delivery.",
-      "billing": "Monthly fee + bonus",
-      "billing_note": "bonus for meeting deadline and budget, on targets set in the contract before the start"
-    },
-    "ongoing_governance": {
-      "badge": "Cross-stage",
-      "title": "Ongoing Governance",
-      "description": "For those who want a permanent processes and technology function without building a team.",
-      "billing": "Fixed monthly fee"
-    },
-    "other_cta": "Book a free conversation"
+    "note": "Not every problem ends in a project. Sometimes the diagnosis shows that adjusting the process is enough, and that is a result too.",
+    "cta": "Book a free conversation"
   },
   "DnaSection": {
     "eyebrow": "03 — Our DNA",

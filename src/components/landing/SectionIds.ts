@@ -3,7 +3,7 @@ export const SectionIds = {
   top: 'topo',
   problem: 'problema',
   moments: 'momento',
-  services: 'servicos',
+  journey: 'jornada',
   dna: 'dna',
   contact: 'contato',
 } as const;

@@ -11,7 +11,7 @@
     "main_navigation_label": "Navegação principal",
     "problem_link": "O problema",
     "moments_link": "Quando nos chamar",
-    "services_link": "Serviços",
+    "journey_link": "Como trabalhamos",
     "contact_button": "Fale com a gente",
     "locale_link": "EN",
     "locale_link_label": "Read in English",
@@ -130,7 +130,7 @@
       "tag": "Antes do fornecedor",
       "headline": "Desenhamos a solução antes de você falar com qualquer fornecedor.",
       "body": "Sistema novo, integração ou reestruturação da TI. Avaliamos comprar, customizar ou desenvolver, e você compara propostas de forma justa, com escopo, custo e cronograma definidos.",
-      "service": "Diagnóstico e Desenho & Contratação"
+      "service": "Diagnóstico e Desenho e contratação"
     },
     "stalled": {
       "situation": "O projeto travou e os aditivos não param",
@@ -138,7 +138,7 @@
       "tag": "Intervenção rápida",
       "headline": "Entendemos onde travou e retomamos o controle.",
       "body": "Os prazos estouraram ou os aditivos não param de chegar. Um diagnóstico rápido mostra o que foi entregue, o que falta e quem responde por quê. Depois seguimos ao seu lado na gestão do projeto.",
-      "service": "Diagnóstico rápido, depois Gestão do Projeto"
+      "service": "Diagnóstico rápido, depois Implantação e Entrega"
     },
     "integration": {
       "situation": "O sistema chegou e não conversa com o resto",
@@ -154,46 +154,57 @@
       "tag": "Contínuo",
       "headline": "Uma área de processos e tecnologia, sem montar uma equipe.",
       "body": "A empresa cresceu e precisa de alguém acompanhando processos e tecnologia de forma contínua, com relatórios em linguagem de negócio.",
-      "service": "Governança Contínua"
+      "service": "Governança"
     }
   },
-  "ServicesSection": {
-    "eyebrow": "04 — Serviços",
-    "title": "Cinco formas de contratar.",
-    "description": "Do diagnóstico pontual ao acompanhamento contínuo. Contrate a jornada completa ou entre na etapa em que a sua empresa está.",
-    "diagnosis": {
-      "badge": "Comece por aqui",
-      "title": "Diagnóstico",
-      "description": "Para quem precisa decidir o que fazer, revisar uma proposta antes de assinar ou entender por que algo não funciona.",
-      "billing": "Valor fechado",
-      "cta": "Pedir um diagnóstico"
+  "JourneySection": {
+    "eyebrow": "04 — Como trabalhamos",
+    "title": "Uma jornada em cinco etapas.",
+    "description": "Todo trabalho começa no diagnóstico e termina na entrega. Você pode nos contratar para a jornada completa ou entrar na etapa em que a sua empresa está.",
+    "do_label": "O que fazemos",
+    "get_label": "O que você recebe",
+    "role_label": "O seu papel",
+    "stages": {
+      "diagnosis": {
+        "name": "Diagnóstico",
+        "do": "Entendemos o negócio, os processos atuais, os sistemas, os contratos e a dor real.",
+        "get": "Um retrato claro do cenário, dos riscos e das prioridades.",
+        "role": "Abrir a operação e validar as prioridades."
+      },
+      "design": {
+        "name": "Desenho e contratação",
+        "do": "Desenhamos a solução, avaliamos comprar, customizar ou desenvolver e apoiamos a contratação.",
+        "get": "Fornecedores comparados de forma justa, com escopo, custo e cronograma definidos.",
+        "role": "Escolher a solução e os fornecedores, com as opções e os riscos à vista."
+      },
+      "processes": {
+        "name": "Processos",
+        "do": "Redesenhamos como o trabalho vai acontecer com a nova solução: fluxos, papéis, regras e indicadores. Simplificamos antes de automatizar.",
+        "get": "Processos documentados e validados com a sua equipe.",
+        "role": "Aprovar o novo jeito de trabalhar."
+      },
+      "implementation": {
+        "name": "Implantação",
+        "do": "Coordenamos fornecedores e parceiros na construção, configuração e testes, e preparamos a sua equipe.",
+        "get": "Solução implantada, testada e equipe preparada.",
+        "role": "Decidir em cada marco e participar dos testes."
+      },
+      "delivery": {
+        "name": "Entrega",
+        "do": "Conduzimos a homologação e o aceite, e acompanhamos o período de garantia.",
+        "get": "Entrega homologada e acompanhada na garantia.",
+        "role": "Dar o aceite final."
+      }
     },
-    "design_hiring": {
-      "badge": "Etapa 2",
-      "title": "Desenho & Contratação",
-      "description": "Para quem tem um projeto pela frente e quer contratar certo desde o início.",
-      "billing": "Valor fechado por etapa"
+    "governance": {
+      "name": "Governança",
+      "span": "Da contratação ao fim da garantia",
+      "do": "Acompanhamos prazo, custo, qualidade, riscos e decisões em todas as etapas, com relatórios em linguagem de negócio.",
+      "get": "Visão clara do projeto do início ao fim.",
+      "role": "Definir as metas e decidir nos marcos."
     },
-    "processes": {
-      "badge": "Etapa 3",
-      "title": "Processos",
-      "description": "Para quem precisa ajustar como o trabalho acontece para uma nova solução, ou tirar mais do que já tem.",
-      "billing": "Valor fechado por escopo"
-    },
-    "project_management": {
-      "badge": "Etapas 4 e 5",
-      "title": "Gestão do Projeto",
-      "description": "Para quem precisa de alguém acompanhando fornecedores e parceiros na implantação até a entrega.",
-      "billing": "Mensalidade + bônus",
-      "billing_note": "bônus por prazo e orçamento cumpridos, sobre metas definidas em contrato antes do início"
-    },
-    "ongoing_governance": {
-      "badge": "Transversal",
-      "title": "Governança Contínua",
-      "description": "Para quem quer uma área de processos e tecnologia permanente, sem montar uma equipe.",
-      "billing": "Mensalidade fixa"
-    },
-    "other_cta": "Agendar uma conversa sem custo"
+    "note": "Nem todo problema termina em um projeto. Às vezes o diagnóstico mostra que ajustar o processo já resolve, e isso também é um resultado.",
+    "cta": "Agendar uma conversa sem custo"
   },
   "DnaSection": {
     "eyebrow": "03 — Nosso DNA",

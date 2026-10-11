@@ -12,7 +12,7 @@ export const LandingFooter = async () => {
   const links = [
     { href: `#${SectionIds.problem}`, label: tNav('problem_link') },
     { href: `#${SectionIds.moments}`, label: tNav('moments_link') },
-    { href: `#${SectionIds.services}`, label: tNav('services_link') },
+    { href: `#${SectionIds.journey}`, label: tNav('journey_link') },
     { href: `#${SectionIds.contact}`, label: t('contact_link') },
     { href: AppConfig.contact.linkedinUrl, label: t('linkedin_link') },
   ];
