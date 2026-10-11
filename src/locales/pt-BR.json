@@ -210,7 +210,7 @@
   },
   "DnaSection": {
     "eyebrow": "03 — Nosso DNA",
-    "title": "Falamos a língua<br></br>do <word></word>.",
+    "title": "Falamos a língua<br></br>do <word></word><dot>.</dot>",
     "title_label": "Falamos a língua do engenheiro, do desenvolvedor, do fornecedor e do dono do negócio.",
     "management_title": "Gestão de projetos e produtos",
     "management_body": "Integração de sistemas críticos, programas com múltiplos fornecedores e entregas em ambientes regulados, no Brasil e no exterior.",

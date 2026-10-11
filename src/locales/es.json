@@ -210,7 +210,7 @@
   },
   "DnaSection": {
     "eyebrow": "03 — Nuestro ADN",
-    "title": "Hablamos el idioma<br></br>del <word></word>.",
+    "title": "Hablamos el idioma<br></br>del <word></word><dot>.</dot>",
     "title_label": "Hablamos el idioma del ingeniero, del desarrollador, del proveedor y del dueño del negocio.",
     "management_title": "Gestión de proyectos y productos",
     "management_body": "Integración de sistemas críticos, programas con múltiples proveedores y entregas en entornos regulados, en Brasil y en el exterior.",
