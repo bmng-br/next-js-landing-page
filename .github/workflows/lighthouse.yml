@@ -1,0 +1,40 @@
+name: Lighthouse
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    name: Check Lighthouse scores
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Node.js environment
+        uses: ./.github/actions/setup-project
+        with:
+          node-version: 24.x
+
+      - name: Build Next.js
+        run: npx next build
+        env:
+          NEXT_PUBLIC_SENTRY_DISABLED: 'true'
+          NEXT_PUBLIC_APP_URL: http://localhost:3010
+
+      # Fails the job when a score or a budget in lighthouserc.json gets worse
+      - name: Run Lighthouse
+        run: npm run check:lighthouse
+        env:
+          NEXT_PUBLIC_APP_URL: http://localhost:3010
+
+      - if: always()
+        name: Upload Lighthouse reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci
+          if-no-files-found: ignore

@@ -43,7 +43,7 @@ export const LanguageMenu = (props: {
       <button
         ref={buttonRef}
         type="button"
-        aria-label={props.label}
+        aria-label={`${props.label}: ${current?.code} (${current?.name})`}
         aria-haspopup="true"
         aria-expanded={isOpen}
         onClick={() => {
