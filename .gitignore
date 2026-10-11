@@ -67,3 +67,6 @@ build-archive.log
 
 # Local Claude Code settings (machine-specific paths)
 /.claude/
+
+# Lighthouse CI reports
+/.lighthouseci/
