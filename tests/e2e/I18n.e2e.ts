@@ -2,48 +2,42 @@ import { expect, test } from '@playwright/test';
 
 test.describe('I18n', () => {
   test.describe('Language switching', () => {
-    test('switches the homepage from Portuguese to English using the nav link', async ({
+    test('switches the homepage from Portuguese to English using the language menu', async ({
       page,
     }) => {
       await page.goto('/');
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Seu projeto sai da sua mão e volta funcionando.',
-        }),
+        page.getByRole('heading', { name: 'Do problema ao resultado, lado a lado com você.' }),
       ).toBeVisible();
 
-      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('button', { name: /^Idioma/u }).click();
       await page.getByRole('link', { name: 'English' }).click();
 
       await expect(page).toHaveURL(/\/en$/u);
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Your project leaves your hand and comes back working.',
-        }),
+        page.getByRole('heading', { name: 'From problem to result, side by side with you.' }),
       ).toBeVisible();
     });
 
-    test('switches the homepage to Spanish using the nav link', async ({ page }) => {
+    test('switches the homepage to Spanish using the language menu', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('button', { name: /^Idioma/u }).click();
       await page.getByRole('link', { name: 'Español' }).click();
 
       await expect(page).toHaveURL(/\/es$/u);
 
       await expect(
-        page.getByRole('heading', {
-          name: 'Del problema al resultado, lado a lado con usted.',
-        }),
+        page.getByRole('heading', { name: 'Del problema al resultado, lado a lado con usted.' }),
       ).toBeVisible();
     });
 
-    test('displays the sign-in page in English using the URL', async ({ page }) => {
-      await page.goto('/en/sign-in');
+    test('marks the language of each page', async ({ page }) => {
+      await page.goto('/en');
 
-      await expect(page.getByText('Email address')).toBeVisible();
+      await expect(page.locator('html')).toHaveAttribute('lang', 'en');
     });
   });
 });
