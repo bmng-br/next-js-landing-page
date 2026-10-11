@@ -13,7 +13,8 @@ test.describe('I18n', () => {
         }),
       ).toBeVisible();
 
-      await page.getByRole('link', { name: 'Read in English' }).click();
+      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('link', { name: 'English' }).click();
 
       await expect(page).toHaveURL(/\/en$/u);
 
@@ -27,7 +28,8 @@ test.describe('I18n', () => {
     test('switches the homepage to Spanish using the nav link', async ({ page }) => {
       await page.goto('/');
 
-      await page.getByRole('link', { name: 'Leer en español' }).click();
+      await page.getByRole('button', { name: 'Idioma' }).click();
+      await page.getByRole('link', { name: 'Español' }).click();
 
       await expect(page).toHaveURL(/\/es$/u);
 

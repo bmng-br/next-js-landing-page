@@ -1,9 +1,9 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/libs/I18nNavigation';
 import logo from '@/public/assets/images/boomerang-logo-light.png';
 import { ButtonLink } from './ButtonLink';
 import { Container } from './Container';
+import { LanguageMenu } from './LanguageMenu';
 import { MobileMenu } from './MobileMenu';
 import { SectionIds } from './SectionIds';
 
@@ -12,10 +12,10 @@ export const LandingNav = async () => {
   const locale = await getLocale();
 
   // Each language is named in its own language, so every visitor can recognize theirs
-  const localeLinks = [
-    { locale: 'pt-BR', code: 'PT', label: t('locale_pt_label') },
-    { locale: 'en', code: 'EN', label: t('locale_en_label') },
-    { locale: 'es', code: 'ES', label: t('locale_es_label') },
+  const languages = [
+    { locale: 'pt-BR', code: 'PT', name: t('locale_pt_name') },
+    { locale: 'en', code: 'EN', name: t('locale_en_name') },
+    { locale: 'es', code: 'ES', name: t('locale_es_name') },
   ] as const;
 
   const links = [
@@ -55,20 +55,11 @@ export const LandingNav = async () => {
           </ul>
 
           <div className="flex items-center gap-1 sm:gap-3">
-            {localeLinks
-              .filter((link) => link.locale !== locale)
-              .map((link) => (
-                <Link
-                  key={link.locale}
-                  href="/"
-                  locale={link.locale}
-                  lang={link.locale}
-                  aria-label={link.label}
-                  className="flex min-h-11 min-w-10 items-center justify-center text-sm font-bold text-graphite-200 no-underline hover:text-paper"
-                >
-                  {link.code}
-                </Link>
-              ))}
+            <LanguageMenu
+              label={t('language_menu_label')}
+              currentLocale={locale}
+              languages={languages}
+            />
             <div className="hidden sm:block">
               <ButtonLink href={`#${SectionIds.contact}`} variant="ghost" size="sm">
                 {t('contact_button')}
