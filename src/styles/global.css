@@ -471,13 +471,6 @@
   }
 }
 
-/* The comparison diagrams loop while on screen and pause when scrolled away */
-@layer components {
-  [data-in-view='false'] * {
-    animation-play-state: paused;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
