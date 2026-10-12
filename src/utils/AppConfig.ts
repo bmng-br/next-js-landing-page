@@ -16,7 +16,7 @@ export const AppConfig = {
   contact: {
     email: 'contato@bmng.com.br',
     phones: [
-      { region: 'sp', display: '+55 31 93624-5393', tel: '+5531936245393' },
+      { region: 'sp', display: '+55 11 93624-5393', tel: '+5511936245393' },
       { region: 'mg', display: '+55 31 93618-3916', tel: '+5531936183916' },
     ] as const,
     linkedinUrl: 'https://www.linkedin.com/company/boomerangsolucoes',
