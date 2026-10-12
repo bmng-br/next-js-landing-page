@@ -16,7 +16,7 @@ Landing page for Boomerang Soluções (Barueri, SP; CNPJ 46.994.388/0001-94). It
 Boomerang works on processes and technology side by side with the client, instead of delivering software from a distance. This follows the Testamento v3: a 5-stage journey, 5 services, and 5 company moments.
 
 ## Operating Context
-Bilingual site, pt-BR (default) and en, with copy in `src/locales/`. Hosted on Cloudflare Workers (free plan) at https://boomerangsolucoes.com.br. Contact: `contato@bmng.com.br`; phones SP +55 31 93624-5393 and MG +55 31 93618-3916 (the SP area code is unconfirmed); LinkedIn https://www.linkedin.com/company/boomerangsolucoes.
+Bilingual site, pt-BR (default) and en, with copy in `src/locales/`. Hosted on Cloudflare Workers (free plan) at https://boomerangsolucoes.com.br. Contact: `contato@bmng.com.br`; phones SP +55 11 93624-5393 and MG +55 31 93618-3916; LinkedIn https://www.linkedin.com/company/boomerangsolucoes.
 
 ## Capabilities and Constraints
 - Landing page, contact form with lead storage and email alert, and a Clerk-protected `/dashboard` with `/dashboard/leads` limited to `DASHBOARD_ALLOWED_EMAILS`.
